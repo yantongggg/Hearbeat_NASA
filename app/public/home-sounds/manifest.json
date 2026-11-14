@@ -1,0 +1,26 @@
+{
+  "note": "Sounds of a home for \"Hear home\". Public-domain recordings from Wikimedia Commons (SHA-1 checked against Commons when downloaded). They are not data and not the listener's home. No clip contains a person's voice: the NASA Space Apps terms bar recognizable voices of anyone under 18, need the consent of any adult who is featured, and require third-party material to be free of restrictions. Each excerpt starts where the household is busiest, because the app plays it from its start. Each was cut with ffmpeg, high-passed (mains hum removed), mixed to mono and encoded as 96 kbps MP3 so every browser, iPhone included, can play it. Where a recording was made very close to its source, short knocks are brought nearer to the rest (a test checks that none stands far over it).",
+  "clips": [
+    {
+      "id": "cook",
+      "kind": "cook",
+      "file": "cook.mp3",
+      "en": "Someone cooking: leeks sizzling in a pan, a utensil stirring",
+      "zh": "有人在炒菜：锅里滋滋响，锅铲翻炒",
+      "title": "Sauteing leeks",
+      "author": "hugh (pdsounds.org)",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "source": "https://commons.wikimedia.org/wiki/File:Sauteing_leeks.ogg",
+      "excerpt": "0:00.3–0:13.3 of 0:23.5",
+      "changes": "trimmed to the first 13 seconds (the stirring), 120 Hz high-pass, 10 kHz low-pass, the utensil's knocks brought about 6 dB nearer to the sizzle (2:1 compression above -24 dBFS; they were recorded very close), fades, mono, MP3",
+      "people": "none",
+      "downloaded": "2026-11-11",
+      "gain": 0.8,
+      "pan": -0.2,
+      "edited": "2026-11-13",
+      "zhExcerpt": "节选 0:00.3–0:13.3（全长 0:23.5）",
+      "zhChanges": "截取开头 13 秒（翻炒的部分），120 Hz 高通、10 kHz 低通，把锅铲的敲击声拉近约 6 分贝（录音离锅很近；高于 −24 dBFS 部分做 2:1 压缩），淡入淡出，单声道，MP3"
+    }
+  ]
+}

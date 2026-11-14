@@ -1,0 +1,7 @@
+.claude/
+# system
+.DS_Store
+pipeline/out/
+app/public/data.staging/
+app/test-results/
+app/playwright-report/

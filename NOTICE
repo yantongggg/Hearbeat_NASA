@@ -1,0 +1,42 @@
+Hearthbeat
+Copyright 2026 the Hearthbeat authors
+
+The original code and documentation in this repository are licensed under the
+Apache License, Version 2.0 (see LICENSE). That licence does not cover the
+third-party material listed here, which keeps its own terms.
+
+NASA material (public; credit NASA)
+- NASA Earth Information Center daily visualizations, NASA Scientific
+  Visualization Studio: SVS 5149 (precipitation), 5151 (PM2.5), 5147
+  (near-surface temperature). Frames and the grids decoded from them are in
+  app/public/data/.
+- NASA GEOS-CF v2 surface PM2.5 (pm25_rh35), NASA GMAO, read from NCCS OPeNDAP.
+- NASA GISS Surface Temperature Analysis (GISTEMP v4).
+- NASA Visible Earth: Blue Marble and Black Marble (app/public/tex/).
+- NASA SVS 5313, Change in Night Lights between 2012 and 2023 - EIC Version
+  (Black Marble, NASA/NOAA Suomi NPP VIIRS): app/public/data/lights/.
+- NASA SVS 5011, Lightning Events Detected from the International Space Station
+  (ISS) 2017-2023 (LIS on the ISS, NASA GHRC DAAC): app/public/data/lightning/.
+- International Space Station predicted trajectory (CCSDS OEM), NASA Johnson
+  Space Center, Flight Operations Directorate (TOPO): app/public/data/station.json.
+
+Other material
+- Coastlines: Natural Earth via world-atlas (public domain; package ISC).
+- Sounds of a home (app/public/home-sounds/): public-domain recordings from
+  Wikimedia Commons; author, source and changes for each clip are in
+  app/public/home-sounds/manifest.json. No clip contains a person's voice.
+- Libraries: three.js (MIT), d3-geo (ISC), topojson-client (ISC), Vite (MIT),
+  Vitest (MIT), Playwright (Apache-2.0), axe-core (MPL-2.0), TypeScript
+  (Apache-2.0); numpy (BSD-3-Clause), Pillow (MIT-CMU), requests (Apache-2.0),
+  netCDF4 (MIT), reportlab (BSD-3-Clause).
+- Fonts, loaded from Google Fonts: Archivo and Noto Sans SC (SIL Open Font
+  License 1.1).
+
+Use of AI
+Most of the code, tests and documentation were written with an AI coding
+assistant, directed and reviewed by the team; many commits in the git history
+carry a Co-Authored-By trailer. The sounds are synthesized at run
+time by app/src/audio/engine.ts from NASA data, the home sounds are
+recordings made by people, and the globe pictures are NASA's. The team
+poster, demo videos and project document were assembled with AI assistance
+from screen recordings of the app and carry a visible "AI-assisted (SI)" mark.

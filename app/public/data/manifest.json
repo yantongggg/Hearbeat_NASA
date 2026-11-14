@@ -1,0 +1,3252 @@
+{
+ "version": 2,
+ "generated": "2026-11-13T04:34:31Z",
+ "themes": {
+  "rain": {
+   "layer": "precip",
+   "context": [
+    "temp",
+    "pm25"
+   ]
+  },
+  "air": {
+   "layer": "pm25",
+   "context": [
+    "temp",
+    "precip"
+   ]
+  },
+  "climate": {
+   "layer": "tanom"
+  },
+  "lights": {
+   "layer": "lights"
+  },
+  "lightning": {
+   "layer": "lightning"
+  }
+ },
+ "layers": {
+  "precip": {
+   "key": "precip",
+   "title": "GEOS-FP precipitation",
+   "unit": "mm/h",
+   "simulated": false,
+   "encoding": {
+    "scale": "log",
+    "min": 0.1,
+    "max": 20.0
+   },
+   "grid": {
+    "w": 360,
+    "h": 180,
+    "lat0": 89.5,
+    "lon0": -179.5,
+    "step": 1.0
+   },
+   "source": {
+    "kind": "eic-svs-frames",
+    "agency": "NASA GMAO",
+    "product": "GEOS-FP",
+    "page": "https://svs.gsfc.nasa.gov/5149",
+    "svs": 5149,
+    "values": {
+     "from": "picture-colorbar"
+    },
+    "citation": "NASA Scientific Visualization Studio, Earth Information Center daily visualization 5149: GEOS-FP precipitation. https://svs.gsfc.nasa.gov/5149"
+   },
+   "time": {
+    "cadence": "PT6H",
+    "label": "datetime",
+    "timing": "hourly frames; last frame = 2026-11-12 20:00 UTC (20:00 UTC on the day of the Last-Modified of the last frame, 2026-11-12 07:32Z), one hour earlier per frame; checked against the burned-in US Eastern date labels"
+   },
+   "steps": [
+    {
+     "t": "2026-11-08T00:00Z",
+     "grid": "precip/g000.bin",
+     "image": "precip/o000.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005149/frames/2048x1024_2x1_12p/MC03_stage3_GMAO_precipitation_2048x1024_en-hwtool/00000256.png",
+     "stats": {
+      "matchedFraction": 0.091,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-08T06:00Z",
+     "grid": "precip/g001.bin",
+     "image": "precip/o001.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005149/frames/2048x1024_2x1_12p/MC03_stage3_GMAO_precipitation_2048x1024_en-hwtool/00000262.png",
+     "stats": {
+      "matchedFraction": 0.086,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-08T12:00Z",
+     "grid": "precip/g002.bin",
+     "image": "precip/o002.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005149/frames/2048x1024_2x1_12p/MC03_stage3_GMAO_precipitation_2048x1024_en-hwtool/00000268.png",
+     "stats": {
+      "matchedFraction": 0.087,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-08T18:00Z",
+     "grid": "precip/g003.bin",
+     "image": "precip/o003.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005149/frames/2048x1024_2x1_12p/MC03_stage3_GMAO_precipitation_2048x1024_en-hwtool/00000274.png",
+     "stats": {
+      "matchedFraction": 0.091,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-09T00:00Z",
+     "grid": "precip/g004.bin",
+     "image": "precip/o004.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005149/frames/2048x1024_2x1_12p/MC03_stage3_GMAO_precipitation_2048x1024_en-hwtool/00000280.png",
+     "stats": {
+      "matchedFraction": 0.086,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-09T06:00Z",
+     "grid": "precip/g005.bin",
+     "image": "precip/o005.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005149/frames/2048x1024_2x1_12p/MC03_stage3_GMAO_precipitation_2048x1024_en-hwtool/00000286.png",
+     "stats": {
+      "matchedFraction": 0.084,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-09T12:00Z",
+     "grid": "precip/g006.bin",
+     "image": "precip/o006.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005149/frames/2048x1024_2x1_12p/MC03_stage3_GMAO_precipitation_2048x1024_en-hwtool/00000292.png",
+     "stats": {
+      "matchedFraction": 0.085,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-09T18:00Z",
+     "grid": "precip/g007.bin",
+     "image": "precip/o007.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005149/frames/2048x1024_2x1_12p/MC03_stage3_GMAO_precipitation_2048x1024_en-hwtool/00000298.png",
+     "stats": {
+      "matchedFraction": 0.09,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-10T00:00Z",
+     "grid": "precip/g008.bin",
+     "image": "precip/o008.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005149/frames/2048x1024_2x1_12p/MC03_stage3_GMAO_precipitation_2048x1024_en-hwtool/00000304.png",
+     "stats": {
+      "matchedFraction": 0.084,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-10T06:00Z",
+     "grid": "precip/g009.bin",
+     "image": "precip/o009.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005149/frames/2048x1024_2x1_12p/MC03_stage3_GMAO_precipitation_2048x1024_en-hwtool/00000310.png",
+     "stats": {
+      "matchedFraction": 0.081,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-10T12:00Z",
+     "grid": "precip/g010.bin",
+     "image": "precip/o010.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005149/frames/2048x1024_2x1_12p/MC03_stage3_GMAO_precipitation_2048x1024_en-hwtool/00000316.png",
+     "stats": {
+      "matchedFraction": 0.081,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-10T18:00Z",
+     "grid": "precip/g011.bin",
+     "image": "precip/o011.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005149/frames/2048x1024_2x1_12p/MC03_stage3_GMAO_precipitation_2048x1024_en-hwtool/00000322.png",
+     "stats": {
+      "matchedFraction": 0.087,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-11T00:00Z",
+     "grid": "precip/g012.bin",
+     "image": "precip/o012.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005149/frames/2048x1024_2x1_12p/MC03_stage3_GMAO_precipitation_2048x1024_en-hwtool/00000328.png",
+     "stats": {
+      "matchedFraction": 0.081,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-11T06:00Z",
+     "grid": "precip/g013.bin",
+     "image": "precip/o013.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005149/frames/2048x1024_2x1_12p/MC03_stage3_GMAO_precipitation_2048x1024_en-hwtool/00000334.png",
+     "stats": {
+      "matchedFraction": 0.078,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-11T12:00Z",
+     "grid": "precip/g014.bin",
+     "image": "precip/o014.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005149/frames/2048x1024_2x1_12p/MC03_stage3_GMAO_precipitation_2048x1024_en-hwtool/00000340.png",
+     "stats": {
+      "matchedFraction": 0.08,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-11T18:00Z",
+     "grid": "precip/g015.bin",
+     "image": "precip/o015.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005149/frames/2048x1024_2x1_12p/MC03_stage3_GMAO_precipitation_2048x1024_en-hwtool/00000346.png",
+     "stats": {
+      "matchedFraction": 0.084,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-12T00:00Z",
+     "grid": "precip/g016.bin",
+     "image": "precip/o016.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005149/frames/2048x1024_2x1_12p/MC03_stage3_GMAO_precipitation_2048x1024_en-hwtool/00000352.png",
+     "stats": {
+      "matchedFraction": 0.081,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-12T06:00Z",
+     "grid": "precip/g017.bin",
+     "image": "precip/o017.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005149/frames/2048x1024_2x1_12p/MC03_stage3_GMAO_precipitation_2048x1024_en-hwtool/00000358.png",
+     "stats": {
+      "matchedFraction": 0.082,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-12T12:00Z",
+     "grid": "precip/g018.bin",
+     "image": "precip/o018.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005149/frames/2048x1024_2x1_12p/MC03_stage3_GMAO_precipitation_2048x1024_en-hwtool/00000364.png",
+     "stats": {
+      "matchedFraction": 0.083,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-12T18:00Z",
+     "grid": "precip/g019.bin",
+     "image": "precip/o019.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005149/frames/2048x1024_2x1_12p/MC03_stage3_GMAO_precipitation_2048x1024_en-hwtool/00000370.png",
+     "stats": {
+      "matchedFraction": 0.086,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    }
+   ],
+   "colorbar": {
+    "image": "precip/colorbar.png",
+    "scale": "linear",
+    "min": 0.0,
+    "max": 20.0,
+    "source": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005149/Precipitation_colorbar_plain.png"
+   },
+   "overlays": [
+    [
+     0.0,
+     0.0,
+     0.175,
+     0.075
+    ],
+    [
+     0.0,
+     0.9,
+     0.25,
+     1.0
+    ]
+   ],
+   "picture": {
+    "mode": "rain-clouds",
+    "from": "NASA EIC frame"
+   },
+   "notes": "Precipitation rate from GEOS-FP, recovered only where rain colours are visible. Pixels showing clouds, land or ocean count as no rain, so rain under thick cloud is under-counted. Cell value = mean over the 1° cell. Stored log 0.1–20 mm/h; the lowest code (0.1) means dry or ≤0.1 mm/h. The newest steps are short forecasts. Cells under the NASA logo and date label have no data.",
+   "pack": "precip/grids.json"
+  },
+  "pm25": {
+   "key": "pm25",
+   "title": "GEOS-CF surface PM2.5",
+   "unit": "µg/m³",
+   "simulated": false,
+   "encoding": {
+    "scale": "log",
+    "min": 0.4,
+    "max": 409.6
+   },
+   "grid": {
+    "w": 360,
+    "h": 180,
+    "lat0": 89.5,
+    "lon0": -179.5,
+    "step": 1.0
+   },
+   "source": {
+    "kind": "eic-svs-frames",
+    "agency": "NASA GMAO",
+    "product": "GEOS-CF",
+    "page": "https://svs.gsfc.nasa.gov/5151",
+    "svs": 5151,
+    "values": {
+     "from": "nasa-model-output",
+     "variable": "pm25_rh35",
+     "datasets": [
+      "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv",
+      "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/fcst/aqc_tavg_1hr_glo_L1440x721_slv.latest"
+     ],
+     "label": "GEOS-CF v2 surface PM2.5 at 35% relative humidity (analysis, then the latest forecast), NASA NCCS OPeNDAP"
+    },
+    "citation": "NASA Scientific Visualization Studio, Earth Information Center daily visualization 5151: GEOS-CF surface PM2.5. https://svs.gsfc.nasa.gov/5151"
+   },
+   "time": {
+    "cadence": "PT6H",
+    "label": "datetime",
+    "timing": "hourly frames; last frame = 2026-11-12 20:00 UTC (20:00 UTC on the day of the Last-Modified of the last frame, 2026-11-12 07:33Z), one hour earlier per frame; checked against the burned-in US Eastern date labels"
+   },
+   "steps": [
+    {
+     "t": "2026-11-08T00:00Z",
+     "grid": "pm25/g000.bin",
+     "image": "pm25/o000.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005151/frames/2048x1024_2x1_12p/MC01_stage4_GMAO_pm25_2048x1024_en-hwtool/00000256.png",
+     "stats": {
+      "valuesFrom": [
+       "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv"
+      ],
+      "validCells": 64800,
+      "nodataCells": 0
+     }
+    },
+    {
+     "t": "2026-11-08T06:00Z",
+     "grid": "pm25/g001.bin",
+     "image": "pm25/o001.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005151/frames/2048x1024_2x1_12p/MC01_stage4_GMAO_pm25_2048x1024_en-hwtool/00000262.png",
+     "stats": {
+      "valuesFrom": [
+       "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv"
+      ],
+      "validCells": 64800,
+      "nodataCells": 0
+     }
+    },
+    {
+     "t": "2026-11-08T12:00Z",
+     "grid": "pm25/g002.bin",
+     "image": "pm25/o002.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005151/frames/2048x1024_2x1_12p/MC01_stage4_GMAO_pm25_2048x1024_en-hwtool/00000268.png",
+     "stats": {
+      "valuesFrom": [
+       "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv"
+      ],
+      "validCells": 64800,
+      "nodataCells": 0
+     }
+    },
+    {
+     "t": "2026-11-08T18:00Z",
+     "grid": "pm25/g003.bin",
+     "image": "pm25/o003.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005151/frames/2048x1024_2x1_12p/MC01_stage4_GMAO_pm25_2048x1024_en-hwtool/00000274.png",
+     "stats": {
+      "valuesFrom": [
+       "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv"
+      ],
+      "validCells": 64800,
+      "nodataCells": 0
+     }
+    },
+    {
+     "t": "2026-11-09T00:00Z",
+     "grid": "pm25/g004.bin",
+     "image": "pm25/o004.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005151/frames/2048x1024_2x1_12p/MC01_stage4_GMAO_pm25_2048x1024_en-hwtool/00000280.png",
+     "stats": {
+      "valuesFrom": [
+       "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv"
+      ],
+      "validCells": 64800,
+      "nodataCells": 0
+     }
+    },
+    {
+     "t": "2026-11-09T06:00Z",
+     "grid": "pm25/g005.bin",
+     "image": "pm25/o005.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005151/frames/2048x1024_2x1_12p/MC01_stage4_GMAO_pm25_2048x1024_en-hwtool/00000286.png",
+     "stats": {
+      "valuesFrom": [
+       "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv"
+      ],
+      "validCells": 64800,
+      "nodataCells": 0
+     }
+    },
+    {
+     "t": "2026-11-09T12:00Z",
+     "grid": "pm25/g006.bin",
+     "image": "pm25/o006.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005151/frames/2048x1024_2x1_12p/MC01_stage4_GMAO_pm25_2048x1024_en-hwtool/00000292.png",
+     "stats": {
+      "valuesFrom": [
+       "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv"
+      ],
+      "validCells": 64800,
+      "nodataCells": 0
+     }
+    },
+    {
+     "t": "2026-11-09T18:00Z",
+     "grid": "pm25/g007.bin",
+     "image": "pm25/o007.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005151/frames/2048x1024_2x1_12p/MC01_stage4_GMAO_pm25_2048x1024_en-hwtool/00000298.png",
+     "stats": {
+      "valuesFrom": [
+       "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv"
+      ],
+      "validCells": 64800,
+      "nodataCells": 0
+     }
+    },
+    {
+     "t": "2026-11-10T00:00Z",
+     "grid": "pm25/g008.bin",
+     "image": "pm25/o008.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005151/frames/2048x1024_2x1_12p/MC01_stage4_GMAO_pm25_2048x1024_en-hwtool/00000304.png",
+     "stats": {
+      "valuesFrom": [
+       "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv"
+      ],
+      "validCells": 64800,
+      "nodataCells": 0
+     }
+    },
+    {
+     "t": "2026-11-10T06:00Z",
+     "grid": "pm25/g009.bin",
+     "image": "pm25/o009.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005151/frames/2048x1024_2x1_12p/MC01_stage4_GMAO_pm25_2048x1024_en-hwtool/00000310.png",
+     "stats": {
+      "valuesFrom": [
+       "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv"
+      ],
+      "validCells": 64800,
+      "nodataCells": 0
+     }
+    },
+    {
+     "t": "2026-11-10T12:00Z",
+     "grid": "pm25/g010.bin",
+     "image": "pm25/o010.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005151/frames/2048x1024_2x1_12p/MC01_stage4_GMAO_pm25_2048x1024_en-hwtool/00000316.png",
+     "stats": {
+      "valuesFrom": [
+       "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv"
+      ],
+      "validCells": 64800,
+      "nodataCells": 0
+     }
+    },
+    {
+     "t": "2026-11-10T18:00Z",
+     "grid": "pm25/g011.bin",
+     "image": "pm25/o011.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005151/frames/2048x1024_2x1_12p/MC01_stage4_GMAO_pm25_2048x1024_en-hwtool/00000322.png",
+     "stats": {
+      "valuesFrom": [
+       "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv"
+      ],
+      "validCells": 64800,
+      "nodataCells": 0
+     }
+    },
+    {
+     "t": "2026-11-11T00:00Z",
+     "grid": "pm25/g012.bin",
+     "image": "pm25/o012.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005151/frames/2048x1024_2x1_12p/MC01_stage4_GMAO_pm25_2048x1024_en-hwtool/00000328.png",
+     "stats": {
+      "valuesFrom": [
+       "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv"
+      ],
+      "validCells": 64800,
+      "nodataCells": 0
+     }
+    },
+    {
+     "t": "2026-11-11T06:00Z",
+     "grid": "pm25/g013.bin",
+     "image": "pm25/o013.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005151/frames/2048x1024_2x1_12p/MC01_stage4_GMAO_pm25_2048x1024_en-hwtool/00000334.png",
+     "stats": {
+      "valuesFrom": [
+       "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv"
+      ],
+      "validCells": 64800,
+      "nodataCells": 0
+     }
+    },
+    {
+     "t": "2026-11-11T12:00Z",
+     "grid": "pm25/g014.bin",
+     "image": "pm25/o014.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005151/frames/2048x1024_2x1_12p/MC01_stage4_GMAO_pm25_2048x1024_en-hwtool/00000340.png",
+     "stats": {
+      "valuesFrom": [
+       "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv"
+      ],
+      "validCells": 64800,
+      "nodataCells": 0
+     }
+    },
+    {
+     "t": "2026-11-11T18:00Z",
+     "grid": "pm25/g015.bin",
+     "image": "pm25/o015.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005151/frames/2048x1024_2x1_12p/MC01_stage4_GMAO_pm25_2048x1024_en-hwtool/00000346.png",
+     "stats": {
+      "valuesFrom": [
+       "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv"
+      ],
+      "validCells": 64800,
+      "nodataCells": 0
+     }
+    },
+    {
+     "t": "2026-11-12T00:00Z",
+     "grid": "pm25/g016.bin",
+     "image": "pm25/o016.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005151/frames/2048x1024_2x1_12p/MC01_stage4_GMAO_pm25_2048x1024_en-hwtool/00000352.png",
+     "stats": {
+      "valuesFrom": [
+       "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv"
+      ],
+      "validCells": 64800,
+      "nodataCells": 0
+     }
+    },
+    {
+     "t": "2026-11-12T06:00Z",
+     "grid": "pm25/g017.bin",
+     "image": "pm25/o017.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005151/frames/2048x1024_2x1_12p/MC01_stage4_GMAO_pm25_2048x1024_en-hwtool/00000358.png",
+     "stats": {
+      "valuesFrom": [
+       "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv"
+      ],
+      "validCells": 64800,
+      "nodataCells": 0
+     }
+    },
+    {
+     "t": "2026-11-12T12:00Z",
+     "grid": "pm25/g018.bin",
+     "image": "pm25/o018.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005151/frames/2048x1024_2x1_12p/MC01_stage4_GMAO_pm25_2048x1024_en-hwtool/00000364.png",
+     "stats": {
+      "valuesFrom": [
+       "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/fcst/aqc_tavg_1hr_glo_L1440x721_slv.latest"
+      ],
+      "validCells": 64800,
+      "nodataCells": 0
+     }
+    },
+    {
+     "t": "2026-11-12T18:00Z",
+     "grid": "pm25/g019.bin",
+     "image": "pm25/o019.webp",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005151/frames/2048x1024_2x1_12p/MC01_stage4_GMAO_pm25_2048x1024_en-hwtool/00000370.png",
+     "stats": {
+      "valuesFrom": [
+       "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/fcst/aqc_tavg_1hr_glo_L1440x721_slv.latest"
+      ],
+      "validCells": 64800,
+      "nodataCells": 0
+     }
+    }
+   ],
+   "colorbar": {
+    "image": "pm25/colorbar.png",
+    "scale": "log",
+    "min": 0.4,
+    "max": 409.6,
+    "source": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005151/PM2.5_colorbar_plain.png"
+   },
+   "overlays": [
+    [
+     0.0,
+     0.0,
+     0.175,
+     0.075
+    ],
+    [
+     0.0,
+     0.9,
+     0.25,
+     1.0
+    ]
+   ],
+   "picture": {
+    "mode": "field",
+    "from": "NASA EIC frame"
+   },
+   "notes": "Surface fine particulate matter (PM2.5) from NASA's GEOS-CF composition model, not ground stations. The globe shows the EIC frame's colours (more opaque where the air is dirtier); the numbers come directly from GEOS-CF output at the same hour (analysis, then the latest forecast for the newest hours), because the accuracy test found the frame's colours do not follow its colorbar (values read from the picture were about 4x too low).",
+   "pack": "pm25/grids.json"
+  },
+  "temp": {
+   "key": "temp",
+   "title": "GEOS-FP near-surface temperature",
+   "unit": "°C",
+   "simulated": false,
+   "encoding": {
+    "scale": "linear",
+    "min": -40.0,
+    "max": 40.0
+   },
+   "grid": {
+    "w": 360,
+    "h": 180,
+    "lat0": 89.5,
+    "lon0": -179.5,
+    "step": 1.0
+   },
+   "source": {
+    "kind": "eic-svs-frames",
+    "agency": "NASA GMAO",
+    "product": "GEOS-FP",
+    "page": "https://svs.gsfc.nasa.gov/5147",
+    "svs": 5147,
+    "values": {
+     "from": "picture-colorbar"
+    },
+    "citation": "NASA Scientific Visualization Studio, Earth Information Center daily visualization 5147: GEOS-FP near-surface temperature. https://svs.gsfc.nasa.gov/5147"
+   },
+   "time": {
+    "cadence": "PT6H",
+    "label": "datetime",
+    "timing": "hourly frames; last frame = 2026-11-12 20:00 UTC (20:00 UTC on the day of the Last-Modified of the last frame, 2026-11-12 07:30Z), one hour earlier per frame; checked against the burned-in US Eastern date labels"
+   },
+   "steps": [
+    {
+     "t": "2026-11-08T00:00Z",
+     "grid": "temp/g000.bin",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005147/frames/2048x1024_2x1_12p/MC01_stage3_GMAO_near_surface_temperature_2048x1024_en-hwtool/00000256.png",
+     "stats": {
+      "matchedFraction": 0.973,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-08T06:00Z",
+     "grid": "temp/g001.bin",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005147/frames/2048x1024_2x1_12p/MC01_stage3_GMAO_near_surface_temperature_2048x1024_en-hwtool/00000262.png",
+     "stats": {
+      "matchedFraction": 0.972,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-08T12:00Z",
+     "grid": "temp/g002.bin",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005147/frames/2048x1024_2x1_12p/MC01_stage3_GMAO_near_surface_temperature_2048x1024_en-hwtool/00000268.png",
+     "stats": {
+      "matchedFraction": 0.973,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-08T18:00Z",
+     "grid": "temp/g003.bin",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005147/frames/2048x1024_2x1_12p/MC01_stage3_GMAO_near_surface_temperature_2048x1024_en-hwtool/00000274.png",
+     "stats": {
+      "matchedFraction": 0.971,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-09T00:00Z",
+     "grid": "temp/g004.bin",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005147/frames/2048x1024_2x1_12p/MC01_stage3_GMAO_near_surface_temperature_2048x1024_en-hwtool/00000280.png",
+     "stats": {
+      "matchedFraction": 0.969,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-09T06:00Z",
+     "grid": "temp/g005.bin",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005147/frames/2048x1024_2x1_12p/MC01_stage3_GMAO_near_surface_temperature_2048x1024_en-hwtool/00000286.png",
+     "stats": {
+      "matchedFraction": 0.97,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-09T12:00Z",
+     "grid": "temp/g006.bin",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005147/frames/2048x1024_2x1_12p/MC01_stage3_GMAO_near_surface_temperature_2048x1024_en-hwtool/00000292.png",
+     "stats": {
+      "matchedFraction": 0.968,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-09T18:00Z",
+     "grid": "temp/g007.bin",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005147/frames/2048x1024_2x1_12p/MC01_stage3_GMAO_near_surface_temperature_2048x1024_en-hwtool/00000298.png",
+     "stats": {
+      "matchedFraction": 0.97,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-10T00:00Z",
+     "grid": "temp/g008.bin",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005147/frames/2048x1024_2x1_12p/MC01_stage3_GMAO_near_surface_temperature_2048x1024_en-hwtool/00000304.png",
+     "stats": {
+      "matchedFraction": 0.968,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-10T06:00Z",
+     "grid": "temp/g009.bin",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005147/frames/2048x1024_2x1_12p/MC01_stage3_GMAO_near_surface_temperature_2048x1024_en-hwtool/00000310.png",
+     "stats": {
+      "matchedFraction": 0.97,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-10T12:00Z",
+     "grid": "temp/g010.bin",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005147/frames/2048x1024_2x1_12p/MC01_stage3_GMAO_near_surface_temperature_2048x1024_en-hwtool/00000316.png",
+     "stats": {
+      "matchedFraction": 0.971,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-10T18:00Z",
+     "grid": "temp/g011.bin",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005147/frames/2048x1024_2x1_12p/MC01_stage3_GMAO_near_surface_temperature_2048x1024_en-hwtool/00000322.png",
+     "stats": {
+      "matchedFraction": 0.97,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-11T00:00Z",
+     "grid": "temp/g012.bin",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005147/frames/2048x1024_2x1_12p/MC01_stage3_GMAO_near_surface_temperature_2048x1024_en-hwtool/00000328.png",
+     "stats": {
+      "matchedFraction": 0.968,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-11T06:00Z",
+     "grid": "temp/g013.bin",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005147/frames/2048x1024_2x1_12p/MC01_stage3_GMAO_near_surface_temperature_2048x1024_en-hwtool/00000334.png",
+     "stats": {
+      "matchedFraction": 0.97,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-11T12:00Z",
+     "grid": "temp/g014.bin",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005147/frames/2048x1024_2x1_12p/MC01_stage3_GMAO_near_surface_temperature_2048x1024_en-hwtool/00000340.png",
+     "stats": {
+      "matchedFraction": 0.971,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-11T18:00Z",
+     "grid": "temp/g015.bin",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005147/frames/2048x1024_2x1_12p/MC01_stage3_GMAO_near_surface_temperature_2048x1024_en-hwtool/00000346.png",
+     "stats": {
+      "matchedFraction": 0.97,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-12T00:00Z",
+     "grid": "temp/g016.bin",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005147/frames/2048x1024_2x1_12p/MC01_stage3_GMAO_near_surface_temperature_2048x1024_en-hwtool/00000352.png",
+     "stats": {
+      "matchedFraction": 0.969,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-12T06:00Z",
+     "grid": "temp/g017.bin",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005147/frames/2048x1024_2x1_12p/MC01_stage3_GMAO_near_surface_temperature_2048x1024_en-hwtool/00000358.png",
+     "stats": {
+      "matchedFraction": 0.971,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-12T12:00Z",
+     "grid": "temp/g018.bin",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005147/frames/2048x1024_2x1_12p/MC01_stage3_GMAO_near_surface_temperature_2048x1024_en-hwtool/00000364.png",
+     "stats": {
+      "matchedFraction": 0.972,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    },
+    {
+     "t": "2026-11-12T18:00Z",
+     "grid": "temp/g019.bin",
+     "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005147/frames/2048x1024_2x1_12p/MC01_stage3_GMAO_near_surface_temperature_2048x1024_en-hwtool/00000370.png",
+     "stats": {
+      "matchedFraction": 0.971,
+      "filledCells": 0,
+      "overlayCells": 2502,
+      "nodataCells": 2502
+     }
+    }
+   ],
+   "colorbar": {
+    "image": "temp/colorbar.png",
+    "scale": "linear",
+    "min": -40.0,
+    "max": 40.0,
+    "source": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005147/NearSurfaceTemperature_colorbar_plain.png"
+   },
+   "overlays": [
+    [
+     0.0,
+     0.0,
+     0.175,
+     0.075
+    ],
+    [
+     0.0,
+     0.9,
+     0.25,
+     1.0
+    ]
+   ],
+   "picture": {
+    "mode": "none",
+    "from": null
+   },
+   "notes": "Air temperature about 3 m above the surface from GEOS-FP; clipped to the colorbar range −40…40 °C (−40 means −40 or colder). The newest steps are short forecasts. Cells under the NASA logo and date label (part of West Antarctica and the far North Pacific) have no data.",
+   "pack": "temp/grids.json"
+  },
+  "tanom": {
+   "key": "tanom",
+   "title": "GISTEMP v4 surface temperature anomaly (vs 1951–1980)",
+   "unit": "°C",
+   "simulated": false,
+   "encoding": {
+    "scale": "linear",
+    "min": -6,
+    "max": 6
+   },
+   "grid": {
+    "w": 180,
+    "h": 90,
+    "lat0": 89,
+    "lon0": -179,
+    "step": 2
+   },
+   "source": {
+    "kind": "gistemp-netcdf",
+    "agency": "NASA GISS",
+    "product": "GISTEMP v4",
+    "page": "https://data.giss.nasa.gov/gistemp/",
+    "url": "https://data.giss.nasa.gov/pub/gistemp/gistemp1200_GHCNv4_ERSSTv5.nc.gz",
+    "seriesUrl": "https://data.giss.nasa.gov/gistemp/tabledata_v4/GLB.Ts+dSST.csv",
+    "citation": "GISTEMP Team, 2026: GISS Surface Temperature Analysis (GISTEMP), version 4. NASA Goddard Institute for Space Studies. Dataset accessed 2026-11-05 at https://data.giss.nasa.gov/gistemp/. Lenssen, N., G.A. Schmidt, M. Hendrickson, P. Jacobs, M. Menne, and R. Ruedy, 2024: A GISTEMPv4 observational uncertainty ensemble. J. Geophys. Res. Atmos., 129, no. 17, e2023JD040179, doi:10.1029/2023JD040179. Lenssen, N., G. Schmidt, J. Hansen, M. Menne, A. Persin, R. Ruedy, and D. Zyss, 2019: Improvements in the GISTEMP uncertainty model. J. Geophys. Res. Atmos., 124, no. 12, 6307-6326, doi:10.1029/2018JD029522."
+   },
+   "time": {
+    "cadence": "P1Y",
+    "label": "year",
+    "timing": "annual mean of monthly anomalies, Jan–Dec"
+   },
+   "steps": [
+    {
+     "t": "1880",
+     "grid": "tanom/g1880.bin",
+     "image": "tanom/o1880.webp",
+     "stats": {
+      "validCells": 11016,
+      "nodataCells": 5184
+     }
+    },
+    {
+     "t": "1881",
+     "grid": "tanom/g1881.bin",
+     "image": "tanom/o1881.webp",
+     "stats": {
+      "validCells": 11213,
+      "nodataCells": 4987
+     }
+    },
+    {
+     "t": "1882",
+     "grid": "tanom/g1882.bin",
+     "image": "tanom/o1882.webp",
+     "stats": {
+      "validCells": 11363,
+      "nodataCells": 4837
+     }
+    },
+    {
+     "t": "1883",
+     "grid": "tanom/g1883.bin",
+     "image": "tanom/o1883.webp",
+     "stats": {
+      "validCells": 11361,
+      "nodataCells": 4839
+     }
+    },
+    {
+     "t": "1884",
+     "grid": "tanom/g1884.bin",
+     "image": "tanom/o1884.webp",
+     "stats": {
+      "validCells": 11345,
+      "nodataCells": 4855
+     }
+    },
+    {
+     "t": "1885",
+     "grid": "tanom/g1885.bin",
+     "image": "tanom/o1885.webp",
+     "stats": {
+      "validCells": 11355,
+      "nodataCells": 4845
+     }
+    },
+    {
+     "t": "1886",
+     "grid": "tanom/g1886.bin",
+     "image": "tanom/o1886.webp",
+     "stats": {
+      "validCells": 11517,
+      "nodataCells": 4683
+     }
+    },
+    {
+     "t": "1887",
+     "grid": "tanom/g1887.bin",
+     "image": "tanom/o1887.webp",
+     "stats": {
+      "validCells": 11628,
+      "nodataCells": 4572
+     }
+    },
+    {
+     "t": "1888",
+     "grid": "tanom/g1888.bin",
+     "image": "tanom/o1888.webp",
+     "stats": {
+      "validCells": 11625,
+      "nodataCells": 4575
+     }
+    },
+    {
+     "t": "1889",
+     "grid": "tanom/g1889.bin",
+     "image": "tanom/o1889.webp",
+     "stats": {
+      "validCells": 11655,
+      "nodataCells": 4545
+     }
+    },
+    {
+     "t": "1890",
+     "grid": "tanom/g1890.bin",
+     "image": "tanom/o1890.webp",
+     "stats": {
+      "validCells": 11670,
+      "nodataCells": 4530
+     }
+    },
+    {
+     "t": "1891",
+     "grid": "tanom/g1891.bin",
+     "image": "tanom/o1891.webp",
+     "stats": {
+      "validCells": 11742,
+      "nodataCells": 4458
+     }
+    },
+    {
+     "t": "1892",
+     "grid": "tanom/g1892.bin",
+     "image": "tanom/o1892.webp",
+     "stats": {
+      "validCells": 11699,
+      "nodataCells": 4501
+     }
+    },
+    {
+     "t": "1893",
+     "grid": "tanom/g1893.bin",
+     "image": "tanom/o1893.webp",
+     "stats": {
+      "validCells": 11667,
+      "nodataCells": 4533
+     }
+    },
+    {
+     "t": "1894",
+     "grid": "tanom/g1894.bin",
+     "image": "tanom/o1894.webp",
+     "stats": {
+      "validCells": 12035,
+      "nodataCells": 4165
+     }
+    },
+    {
+     "t": "1895",
+     "grid": "tanom/g1895.bin",
+     "image": "tanom/o1895.webp",
+     "stats": {
+      "validCells": 11927,
+      "nodataCells": 4273
+     }
+    },
+    {
+     "t": "1896",
+     "grid": "tanom/g1896.bin",
+     "image": "tanom/o1896.webp",
+     "stats": {
+      "validCells": 12093,
+      "nodataCells": 4107
+     }
+    },
+    {
+     "t": "1897",
+     "grid": "tanom/g1897.bin",
+     "image": "tanom/o1897.webp",
+     "stats": {
+      "validCells": 12183,
+      "nodataCells": 4017
+     }
+    },
+    {
+     "t": "1898",
+     "grid": "tanom/g1898.bin",
+     "image": "tanom/o1898.webp",
+     "stats": {
+      "validCells": 12212,
+      "nodataCells": 3988
+     }
+    },
+    {
+     "t": "1899",
+     "grid": "tanom/g1899.bin",
+     "image": "tanom/o1899.webp",
+     "stats": {
+      "validCells": 12198,
+      "nodataCells": 4002
+     }
+    },
+    {
+     "t": "1900",
+     "grid": "tanom/g1900.bin",
+     "image": "tanom/o1900.webp",
+     "stats": {
+      "validCells": 12348,
+      "nodataCells": 3852
+     }
+    },
+    {
+     "t": "1901",
+     "grid": "tanom/g1901.bin",
+     "image": "tanom/o1901.webp",
+     "stats": {
+      "validCells": 12328,
+      "nodataCells": 3872
+     }
+    },
+    {
+     "t": "1902",
+     "grid": "tanom/g1902.bin",
+     "image": "tanom/o1902.webp",
+     "stats": {
+      "validCells": 12394,
+      "nodataCells": 3806
+     }
+    },
+    {
+     "t": "1903",
+     "grid": "tanom/g1903.bin",
+     "image": "tanom/o1903.webp",
+     "stats": {
+      "validCells": 12507,
+      "nodataCells": 3693
+     }
+    },
+    {
+     "t": "1904",
+     "grid": "tanom/g1904.bin",
+     "image": "tanom/o1904.webp",
+     "stats": {
+      "validCells": 12561,
+      "nodataCells": 3639
+     }
+    },
+    {
+     "t": "1905",
+     "grid": "tanom/g1905.bin",
+     "image": "tanom/o1905.webp",
+     "stats": {
+      "validCells": 12608,
+      "nodataCells": 3592
+     }
+    },
+    {
+     "t": "1906",
+     "grid": "tanom/g1906.bin",
+     "image": "tanom/o1906.webp",
+     "stats": {
+      "validCells": 12511,
+      "nodataCells": 3689
+     }
+    },
+    {
+     "t": "1907",
+     "grid": "tanom/g1907.bin",
+     "image": "tanom/o1907.webp",
+     "stats": {
+      "validCells": 12639,
+      "nodataCells": 3561
+     }
+    },
+    {
+     "t": "1908",
+     "grid": "tanom/g1908.bin",
+     "image": "tanom/o1908.webp",
+     "stats": {
+      "validCells": 12656,
+      "nodataCells": 3544
+     }
+    },
+    {
+     "t": "1909",
+     "grid": "tanom/g1909.bin",
+     "image": "tanom/o1909.webp",
+     "stats": {
+      "validCells": 12657,
+      "nodataCells": 3543
+     }
+    },
+    {
+     "t": "1910",
+     "grid": "tanom/g1910.bin",
+     "image": "tanom/o1910.webp",
+     "stats": {
+      "validCells": 12705,
+      "nodataCells": 3495
+     }
+    },
+    {
+     "t": "1911",
+     "grid": "tanom/g1911.bin",
+     "image": "tanom/o1911.webp",
+     "stats": {
+      "validCells": 12621,
+      "nodataCells": 3579
+     }
+    },
+    {
+     "t": "1912",
+     "grid": "tanom/g1912.bin",
+     "image": "tanom/o1912.webp",
+     "stats": {
+      "validCells": 12709,
+      "nodataCells": 3491
+     }
+    },
+    {
+     "t": "1913",
+     "grid": "tanom/g1913.bin",
+     "image": "tanom/o1913.webp",
+     "stats": {
+      "validCells": 12723,
+      "nodataCells": 3477
+     }
+    },
+    {
+     "t": "1914",
+     "grid": "tanom/g1914.bin",
+     "image": "tanom/o1914.webp",
+     "stats": {
+      "validCells": 12757,
+      "nodataCells": 3443
+     }
+    },
+    {
+     "t": "1915",
+     "grid": "tanom/g1915.bin",
+     "image": "tanom/o1915.webp",
+     "stats": {
+      "validCells": 12783,
+      "nodataCells": 3417
+     }
+    },
+    {
+     "t": "1916",
+     "grid": "tanom/g1916.bin",
+     "image": "tanom/o1916.webp",
+     "stats": {
+      "validCells": 12786,
+      "nodataCells": 3414
+     }
+    },
+    {
+     "t": "1917",
+     "grid": "tanom/g1917.bin",
+     "image": "tanom/o1917.webp",
+     "stats": {
+      "validCells": 12770,
+      "nodataCells": 3430
+     }
+    },
+    {
+     "t": "1918",
+     "grid": "tanom/g1918.bin",
+     "image": "tanom/o1918.webp",
+     "stats": {
+      "validCells": 12752,
+      "nodataCells": 3448
+     }
+    },
+    {
+     "t": "1919",
+     "grid": "tanom/g1919.bin",
+     "image": "tanom/o1919.webp",
+     "stats": {
+      "validCells": 12752,
+      "nodataCells": 3448
+     }
+    },
+    {
+     "t": "1920",
+     "grid": "tanom/g1920.bin",
+     "image": "tanom/o1920.webp",
+     "stats": {
+      "validCells": 12764,
+      "nodataCells": 3436
+     }
+    },
+    {
+     "t": "1921",
+     "grid": "tanom/g1921.bin",
+     "image": "tanom/o1921.webp",
+     "stats": {
+      "validCells": 12746,
+      "nodataCells": 3454
+     }
+    },
+    {
+     "t": "1922",
+     "grid": "tanom/g1922.bin",
+     "image": "tanom/o1922.webp",
+     "stats": {
+      "validCells": 12796,
+      "nodataCells": 3404
+     }
+    },
+    {
+     "t": "1923",
+     "grid": "tanom/g1923.bin",
+     "image": "tanom/o1923.webp",
+     "stats": {
+      "validCells": 12780,
+      "nodataCells": 3420
+     }
+    },
+    {
+     "t": "1924",
+     "grid": "tanom/g1924.bin",
+     "image": "tanom/o1924.webp",
+     "stats": {
+      "validCells": 12801,
+      "nodataCells": 3399
+     }
+    },
+    {
+     "t": "1925",
+     "grid": "tanom/g1925.bin",
+     "image": "tanom/o1925.webp",
+     "stats": {
+      "validCells": 12793,
+      "nodataCells": 3407
+     }
+    },
+    {
+     "t": "1926",
+     "grid": "tanom/g1926.bin",
+     "image": "tanom/o1926.webp",
+     "stats": {
+      "validCells": 12850,
+      "nodataCells": 3350
+     }
+    },
+    {
+     "t": "1927",
+     "grid": "tanom/g1927.bin",
+     "image": "tanom/o1927.webp",
+     "stats": {
+      "validCells": 12911,
+      "nodataCells": 3289
+     }
+    },
+    {
+     "t": "1928",
+     "grid": "tanom/g1928.bin",
+     "image": "tanom/o1928.webp",
+     "stats": {
+      "validCells": 12930,
+      "nodataCells": 3270
+     }
+    },
+    {
+     "t": "1929",
+     "grid": "tanom/g1929.bin",
+     "image": "tanom/o1929.webp",
+     "stats": {
+      "validCells": 12930,
+      "nodataCells": 3270
+     }
+    },
+    {
+     "t": "1930",
+     "grid": "tanom/g1930.bin",
+     "image": "tanom/o1930.webp",
+     "stats": {
+      "validCells": 12926,
+      "nodataCells": 3274
+     }
+    },
+    {
+     "t": "1931",
+     "grid": "tanom/g1931.bin",
+     "image": "tanom/o1931.webp",
+     "stats": {
+      "validCells": 13702,
+      "nodataCells": 2498
+     }
+    },
+    {
+     "t": "1932",
+     "grid": "tanom/g1932.bin",
+     "image": "tanom/o1932.webp",
+     "stats": {
+      "validCells": 13704,
+      "nodataCells": 2496
+     }
+    },
+    {
+     "t": "1933",
+     "grid": "tanom/g1933.bin",
+     "image": "tanom/o1933.webp",
+     "stats": {
+      "validCells": 13704,
+      "nodataCells": 2496
+     }
+    },
+    {
+     "t": "1934",
+     "grid": "tanom/g1934.bin",
+     "image": "tanom/o1934.webp",
+     "stats": {
+      "validCells": 12952,
+      "nodataCells": 3248
+     }
+    },
+    {
+     "t": "1935",
+     "grid": "tanom/g1935.bin",
+     "image": "tanom/o1935.webp",
+     "stats": {
+      "validCells": 12952,
+      "nodataCells": 3248
+     }
+    },
+    {
+     "t": "1936",
+     "grid": "tanom/g1936.bin",
+     "image": "tanom/o1936.webp",
+     "stats": {
+      "validCells": 13703,
+      "nodataCells": 2497
+     }
+    },
+    {
+     "t": "1937",
+     "grid": "tanom/g1937.bin",
+     "image": "tanom/o1937.webp",
+     "stats": {
+      "validCells": 13701,
+      "nodataCells": 2499
+     }
+    },
+    {
+     "t": "1938",
+     "grid": "tanom/g1938.bin",
+     "image": "tanom/o1938.webp",
+     "stats": {
+      "validCells": 13702,
+      "nodataCells": 2498
+     }
+    },
+    {
+     "t": "1939",
+     "grid": "tanom/g1939.bin",
+     "image": "tanom/o1939.webp",
+     "stats": {
+      "validCells": 13710,
+      "nodataCells": 2490
+     }
+    },
+    {
+     "t": "1940",
+     "grid": "tanom/g1940.bin",
+     "image": "tanom/o1940.webp",
+     "stats": {
+      "validCells": 13708,
+      "nodataCells": 2492
+     }
+    },
+    {
+     "t": "1941",
+     "grid": "tanom/g1941.bin",
+     "image": "tanom/o1941.webp",
+     "stats": {
+      "validCells": 13726,
+      "nodataCells": 2474
+     }
+    },
+    {
+     "t": "1942",
+     "grid": "tanom/g1942.bin",
+     "image": "tanom/o1942.webp",
+     "stats": {
+      "validCells": 13714,
+      "nodataCells": 2486
+     }
+    },
+    {
+     "t": "1943",
+     "grid": "tanom/g1943.bin",
+     "image": "tanom/o1943.webp",
+     "stats": {
+      "validCells": 13002,
+      "nodataCells": 3198
+     }
+    },
+    {
+     "t": "1944",
+     "grid": "tanom/g1944.bin",
+     "image": "tanom/o1944.webp",
+     "stats": {
+      "validCells": 13079,
+      "nodataCells": 3121
+     }
+    },
+    {
+     "t": "1945",
+     "grid": "tanom/g1945.bin",
+     "image": "tanom/o1945.webp",
+     "stats": {
+      "validCells": 13082,
+      "nodataCells": 3118
+     }
+    },
+    {
+     "t": "1946",
+     "grid": "tanom/g1946.bin",
+     "image": "tanom/o1946.webp",
+     "stats": {
+      "validCells": 13850,
+      "nodataCells": 2350
+     }
+    },
+    {
+     "t": "1947",
+     "grid": "tanom/g1947.bin",
+     "image": "tanom/o1947.webp",
+     "stats": {
+      "validCells": 13862,
+      "nodataCells": 2338
+     }
+    },
+    {
+     "t": "1948",
+     "grid": "tanom/g1948.bin",
+     "image": "tanom/o1948.webp",
+     "stats": {
+      "validCells": 13881,
+      "nodataCells": 2319
+     }
+    },
+    {
+     "t": "1949",
+     "grid": "tanom/g1949.bin",
+     "image": "tanom/o1949.webp",
+     "stats": {
+      "validCells": 13863,
+      "nodataCells": 2337
+     }
+    },
+    {
+     "t": "1950",
+     "grid": "tanom/g1950.bin",
+     "image": "tanom/o1950.webp",
+     "stats": {
+      "validCells": 14006,
+      "nodataCells": 2194
+     }
+    },
+    {
+     "t": "1951",
+     "grid": "tanom/g1951.bin",
+     "image": "tanom/o1951.webp",
+     "stats": {
+      "validCells": 14067,
+      "nodataCells": 2133
+     }
+    },
+    {
+     "t": "1952",
+     "grid": "tanom/g1952.bin",
+     "image": "tanom/o1952.webp",
+     "stats": {
+      "validCells": 13831,
+      "nodataCells": 2369
+     }
+    },
+    {
+     "t": "1953",
+     "grid": "tanom/g1953.bin",
+     "image": "tanom/o1953.webp",
+     "stats": {
+      "validCells": 13831,
+      "nodataCells": 2369
+     }
+    },
+    {
+     "t": "1954",
+     "grid": "tanom/g1954.bin",
+     "image": "tanom/o1954.webp",
+     "stats": {
+      "validCells": 14077,
+      "nodataCells": 2123
+     }
+    },
+    {
+     "t": "1955",
+     "grid": "tanom/g1955.bin",
+     "image": "tanom/o1955.webp",
+     "stats": {
+      "validCells": 14336,
+      "nodataCells": 1864
+     }
+    },
+    {
+     "t": "1956",
+     "grid": "tanom/g1956.bin",
+     "image": "tanom/o1956.webp",
+     "stats": {
+      "validCells": 14862,
+      "nodataCells": 1338
+     }
+    },
+    {
+     "t": "1957",
+     "grid": "tanom/g1957.bin",
+     "image": "tanom/o1957.webp",
+     "stats": {
+      "validCells": 16011,
+      "nodataCells": 189
+     }
+    },
+    {
+     "t": "1958",
+     "grid": "tanom/g1958.bin",
+     "image": "tanom/o1958.webp",
+     "stats": {
+      "validCells": 15954,
+      "nodataCells": 246
+     }
+    },
+    {
+     "t": "1959",
+     "grid": "tanom/g1959.bin",
+     "image": "tanom/o1959.webp",
+     "stats": {
+      "validCells": 16019,
+      "nodataCells": 181
+     }
+    },
+    {
+     "t": "1960",
+     "grid": "tanom/g1960.bin",
+     "image": "tanom/o1960.webp",
+     "stats": {
+      "validCells": 16009,
+      "nodataCells": 191
+     }
+    },
+    {
+     "t": "1961",
+     "grid": "tanom/g1961.bin",
+     "image": "tanom/o1961.webp",
+     "stats": {
+      "validCells": 16013,
+      "nodataCells": 187
+     }
+    },
+    {
+     "t": "1962",
+     "grid": "tanom/g1962.bin",
+     "image": "tanom/o1962.webp",
+     "stats": {
+      "validCells": 15946,
+      "nodataCells": 254
+     }
+    },
+    {
+     "t": "1963",
+     "grid": "tanom/g1963.bin",
+     "image": "tanom/o1963.webp",
+     "stats": {
+      "validCells": 16013,
+      "nodataCells": 187
+     }
+    },
+    {
+     "t": "1964",
+     "grid": "tanom/g1964.bin",
+     "image": "tanom/o1964.webp",
+     "stats": {
+      "validCells": 16021,
+      "nodataCells": 179
+     }
+    },
+    {
+     "t": "1965",
+     "grid": "tanom/g1965.bin",
+     "image": "tanom/o1965.webp",
+     "stats": {
+      "validCells": 16021,
+      "nodataCells": 179
+     }
+    },
+    {
+     "t": "1966",
+     "grid": "tanom/g1966.bin",
+     "image": "tanom/o1966.webp",
+     "stats": {
+      "validCells": 16023,
+      "nodataCells": 177
+     }
+    },
+    {
+     "t": "1967",
+     "grid": "tanom/g1967.bin",
+     "image": "tanom/o1967.webp",
+     "stats": {
+      "validCells": 16023,
+      "nodataCells": 177
+     }
+    },
+    {
+     "t": "1968",
+     "grid": "tanom/g1968.bin",
+     "image": "tanom/o1968.webp",
+     "stats": {
+      "validCells": 16023,
+      "nodataCells": 177
+     }
+    },
+    {
+     "t": "1969",
+     "grid": "tanom/g1969.bin",
+     "image": "tanom/o1969.webp",
+     "stats": {
+      "validCells": 16023,
+      "nodataCells": 177
+     }
+    },
+    {
+     "t": "1970",
+     "grid": "tanom/g1970.bin",
+     "image": "tanom/o1970.webp",
+     "stats": {
+      "validCells": 15912,
+      "nodataCells": 288
+     }
+    },
+    {
+     "t": "1971",
+     "grid": "tanom/g1971.bin",
+     "image": "tanom/o1971.webp",
+     "stats": {
+      "validCells": 15904,
+      "nodataCells": 296
+     }
+    },
+    {
+     "t": "1972",
+     "grid": "tanom/g1972.bin",
+     "image": "tanom/o1972.webp",
+     "stats": {
+      "validCells": 15912,
+      "nodataCells": 288
+     }
+    },
+    {
+     "t": "1973",
+     "grid": "tanom/g1973.bin",
+     "image": "tanom/o1973.webp",
+     "stats": {
+      "validCells": 15912,
+      "nodataCells": 288
+     }
+    },
+    {
+     "t": "1974",
+     "grid": "tanom/g1974.bin",
+     "image": "tanom/o1974.webp",
+     "stats": {
+      "validCells": 15912,
+      "nodataCells": 288
+     }
+    },
+    {
+     "t": "1975",
+     "grid": "tanom/g1975.bin",
+     "image": "tanom/o1975.webp",
+     "stats": {
+      "validCells": 15912,
+      "nodataCells": 288
+     }
+    },
+    {
+     "t": "1976",
+     "grid": "tanom/g1976.bin",
+     "image": "tanom/o1976.webp",
+     "stats": {
+      "validCells": 15916,
+      "nodataCells": 284
+     }
+    },
+    {
+     "t": "1977",
+     "grid": "tanom/g1977.bin",
+     "image": "tanom/o1977.webp",
+     "stats": {
+      "validCells": 15916,
+      "nodataCells": 284
+     }
+    },
+    {
+     "t": "1978",
+     "grid": "tanom/g1978.bin",
+     "image": "tanom/o1978.webp",
+     "stats": {
+      "validCells": 15914,
+      "nodataCells": 286
+     }
+    },
+    {
+     "t": "1979",
+     "grid": "tanom/g1979.bin",
+     "image": "tanom/o1979.webp",
+     "stats": {
+      "validCells": 15916,
+      "nodataCells": 284
+     }
+    },
+    {
+     "t": "1980",
+     "grid": "tanom/g1980.bin",
+     "image": "tanom/o1980.webp",
+     "stats": {
+      "validCells": 15914,
+      "nodataCells": 286
+     }
+    },
+    {
+     "t": "1981",
+     "grid": "tanom/g1981.bin",
+     "image": "tanom/o1981.webp",
+     "stats": {
+      "validCells": 15914,
+      "nodataCells": 286
+     }
+    },
+    {
+     "t": "1982",
+     "grid": "tanom/g1982.bin",
+     "image": "tanom/o1982.webp",
+     "stats": {
+      "validCells": 15908,
+      "nodataCells": 292
+     }
+    },
+    {
+     "t": "1983",
+     "grid": "tanom/g1983.bin",
+     "image": "tanom/o1983.webp",
+     "stats": {
+      "validCells": 15908,
+      "nodataCells": 292
+     }
+    },
+    {
+     "t": "1984",
+     "grid": "tanom/g1984.bin",
+     "image": "tanom/o1984.webp",
+     "stats": {
+      "validCells": 15916,
+      "nodataCells": 284
+     }
+    },
+    {
+     "t": "1985",
+     "grid": "tanom/g1985.bin",
+     "image": "tanom/o1985.webp",
+     "stats": {
+      "validCells": 15914,
+      "nodataCells": 286
+     }
+    },
+    {
+     "t": "1986",
+     "grid": "tanom/g1986.bin",
+     "image": "tanom/o1986.webp",
+     "stats": {
+      "validCells": 15932,
+      "nodataCells": 268
+     }
+    },
+    {
+     "t": "1987",
+     "grid": "tanom/g1987.bin",
+     "image": "tanom/o1987.webp",
+     "stats": {
+      "validCells": 15934,
+      "nodataCells": 266
+     }
+    },
+    {
+     "t": "1988",
+     "grid": "tanom/g1988.bin",
+     "image": "tanom/o1988.webp",
+     "stats": {
+      "validCells": 15926,
+      "nodataCells": 274
+     }
+    },
+    {
+     "t": "1989",
+     "grid": "tanom/g1989.bin",
+     "image": "tanom/o1989.webp",
+     "stats": {
+      "validCells": 15916,
+      "nodataCells": 284
+     }
+    },
+    {
+     "t": "1990",
+     "grid": "tanom/g1990.bin",
+     "image": "tanom/o1990.webp",
+     "stats": {
+      "validCells": 15916,
+      "nodataCells": 284
+     }
+    },
+    {
+     "t": "1991",
+     "grid": "tanom/g1991.bin",
+     "image": "tanom/o1991.webp",
+     "stats": {
+      "validCells": 15926,
+      "nodataCells": 274
+     }
+    },
+    {
+     "t": "1992",
+     "grid": "tanom/g1992.bin",
+     "image": "tanom/o1992.webp",
+     "stats": {
+      "validCells": 15928,
+      "nodataCells": 272
+     }
+    },
+    {
+     "t": "1993",
+     "grid": "tanom/g1993.bin",
+     "image": "tanom/o1993.webp",
+     "stats": {
+      "validCells": 15942,
+      "nodataCells": 258
+     }
+    },
+    {
+     "t": "1994",
+     "grid": "tanom/g1994.bin",
+     "image": "tanom/o1994.webp",
+     "stats": {
+      "validCells": 15991,
+      "nodataCells": 209
+     }
+    },
+    {
+     "t": "1995",
+     "grid": "tanom/g1995.bin",
+     "image": "tanom/o1995.webp",
+     "stats": {
+      "validCells": 16000,
+      "nodataCells": 200
+     }
+    },
+    {
+     "t": "1996",
+     "grid": "tanom/g1996.bin",
+     "image": "tanom/o1996.webp",
+     "stats": {
+      "validCells": 15990,
+      "nodataCells": 210
+     }
+    },
+    {
+     "t": "1997",
+     "grid": "tanom/g1997.bin",
+     "image": "tanom/o1997.webp",
+     "stats": {
+      "validCells": 16018,
+      "nodataCells": 182
+     }
+    },
+    {
+     "t": "1998",
+     "grid": "tanom/g1998.bin",
+     "image": "tanom/o1998.webp",
+     "stats": {
+      "validCells": 16015,
+      "nodataCells": 185
+     }
+    },
+    {
+     "t": "1999",
+     "grid": "tanom/g1999.bin",
+     "image": "tanom/o1999.webp",
+     "stats": {
+      "validCells": 16008,
+      "nodataCells": 192
+     }
+    },
+    {
+     "t": "2000",
+     "grid": "tanom/g2000.bin",
+     "image": "tanom/o2000.webp",
+     "stats": {
+      "validCells": 16006,
+      "nodataCells": 194
+     }
+    },
+    {
+     "t": "2001",
+     "grid": "tanom/g2001.bin",
+     "image": "tanom/o2001.webp",
+     "stats": {
+      "validCells": 16008,
+      "nodataCells": 192
+     }
+    },
+    {
+     "t": "2002",
+     "grid": "tanom/g2002.bin",
+     "image": "tanom/o2002.webp",
+     "stats": {
+      "validCells": 15978,
+      "nodataCells": 222
+     }
+    },
+    {
+     "t": "2003",
+     "grid": "tanom/g2003.bin",
+     "image": "tanom/o2003.webp",
+     "stats": {
+      "validCells": 15994,
+      "nodataCells": 206
+     }
+    },
+    {
+     "t": "2004",
+     "grid": "tanom/g2004.bin",
+     "image": "tanom/o2004.webp",
+     "stats": {
+      "validCells": 16002,
+      "nodataCells": 198
+     }
+    },
+    {
+     "t": "2005",
+     "grid": "tanom/g2005.bin",
+     "image": "tanom/o2005.webp",
+     "stats": {
+      "validCells": 16008,
+      "nodataCells": 192
+     }
+    },
+    {
+     "t": "2006",
+     "grid": "tanom/g2006.bin",
+     "image": "tanom/o2006.webp",
+     "stats": {
+      "validCells": 16008,
+      "nodataCells": 192
+     }
+    },
+    {
+     "t": "2007",
+     "grid": "tanom/g2007.bin",
+     "image": "tanom/o2007.webp",
+     "stats": {
+      "validCells": 16021,
+      "nodataCells": 179
+     }
+    },
+    {
+     "t": "2008",
+     "grid": "tanom/g2008.bin",
+     "image": "tanom/o2008.webp",
+     "stats": {
+      "validCells": 16008,
+      "nodataCells": 192
+     }
+    },
+    {
+     "t": "2009",
+     "grid": "tanom/g2009.bin",
+     "image": "tanom/o2009.webp",
+     "stats": {
+      "validCells": 16021,
+      "nodataCells": 179
+     }
+    },
+    {
+     "t": "2010",
+     "grid": "tanom/g2010.bin",
+     "image": "tanom/o2010.webp",
+     "stats": {
+      "validCells": 16021,
+      "nodataCells": 179
+     }
+    },
+    {
+     "t": "2011",
+     "grid": "tanom/g2011.bin",
+     "image": "tanom/o2011.webp",
+     "stats": {
+      "validCells": 16021,
+      "nodataCells": 179
+     }
+    },
+    {
+     "t": "2012",
+     "grid": "tanom/g2012.bin",
+     "image": "tanom/o2012.webp",
+     "stats": {
+      "validCells": 16021,
+      "nodataCells": 179
+     }
+    },
+    {
+     "t": "2013",
+     "grid": "tanom/g2013.bin",
+     "image": "tanom/o2013.webp",
+     "stats": {
+      "validCells": 16021,
+      "nodataCells": 179
+     }
+    },
+    {
+     "t": "2014",
+     "grid": "tanom/g2014.bin",
+     "image": "tanom/o2014.webp",
+     "stats": {
+      "validCells": 16021,
+      "nodataCells": 179
+     }
+    },
+    {
+     "t": "2015",
+     "grid": "tanom/g2015.bin",
+     "image": "tanom/o2015.webp",
+     "stats": {
+      "validCells": 16021,
+      "nodataCells": 179
+     }
+    },
+    {
+     "t": "2016",
+     "grid": "tanom/g2016.bin",
+     "image": "tanom/o2016.webp",
+     "stats": {
+      "validCells": 16021,
+      "nodataCells": 179
+     }
+    },
+    {
+     "t": "2017",
+     "grid": "tanom/g2017.bin",
+     "image": "tanom/o2017.webp",
+     "stats": {
+      "validCells": 16021,
+      "nodataCells": 179
+     }
+    },
+    {
+     "t": "2018",
+     "grid": "tanom/g2018.bin",
+     "image": "tanom/o2018.webp",
+     "stats": {
+      "validCells": 16021,
+      "nodataCells": 179
+     }
+    },
+    {
+     "t": "2019",
+     "grid": "tanom/g2019.bin",
+     "image": "tanom/o2019.webp",
+     "stats": {
+      "validCells": 16021,
+      "nodataCells": 179
+     }
+    },
+    {
+     "t": "2020",
+     "grid": "tanom/g2020.bin",
+     "image": "tanom/o2020.webp",
+     "stats": {
+      "validCells": 16021,
+      "nodataCells": 179
+     }
+    },
+    {
+     "t": "2021",
+     "grid": "tanom/g2021.bin",
+     "image": "tanom/o2021.webp",
+     "stats": {
+      "validCells": 16021,
+      "nodataCells": 179
+     }
+    },
+    {
+     "t": "2022",
+     "grid": "tanom/g2022.bin",
+     "image": "tanom/o2022.webp",
+     "stats": {
+      "validCells": 16021,
+      "nodataCells": 179
+     }
+    },
+    {
+     "t": "2023",
+     "grid": "tanom/g2023.bin",
+     "image": "tanom/o2023.webp",
+     "stats": {
+      "validCells": 16021,
+      "nodataCells": 179
+     }
+    },
+    {
+     "t": "2024",
+     "grid": "tanom/g2024.bin",
+     "image": "tanom/o2024.webp",
+     "stats": {
+      "validCells": 16021,
+      "nodataCells": 179
+     }
+    },
+    {
+     "t": "2025",
+     "grid": "tanom/g2025.bin",
+     "image": "tanom/o2025.webp",
+     "stats": {
+      "validCells": 16019,
+      "nodataCells": 181
+     }
+    }
+   ],
+   "colorbar": {
+    "image": "tanom/colorbar.png",
+    "scale": "linear",
+    "min": -4,
+    "max": 4
+   },
+   "picture": {
+    "mode": "field",
+    "from": "drawn from the GISTEMP values (opacity grows with |anomaly|)"
+   },
+   "series": {
+    "global": [
+     {
+      "t": "1880",
+      "v": -0.17
+     },
+     {
+      "t": "1881",
+      "v": -0.09
+     },
+     {
+      "t": "1882",
+      "v": -0.11
+     },
+     {
+      "t": "1883",
+      "v": -0.18
+     },
+     {
+      "t": "1884",
+      "v": -0.28
+     },
+     {
+      "t": "1885",
+      "v": -0.33
+     },
+     {
+      "t": "1886",
+      "v": -0.31
+     },
+     {
+      "t": "1887",
+      "v": -0.36
+     },
+     {
+      "t": "1888",
+      "v": -0.18
+     },
+     {
+      "t": "1889",
+      "v": -0.11
+     },
+     {
+      "t": "1890",
+      "v": -0.36
+     },
+     {
+      "t": "1891",
+      "v": -0.22
+     },
+     {
+      "t": "1892",
+      "v": -0.27
+     },
+     {
+      "t": "1893",
+      "v": -0.31
+     },
+     {
+      "t": "1894",
+      "v": -0.3
+     },
+     {
+      "t": "1895",
+      "v": -0.23
+     },
+     {
+      "t": "1896",
+      "v": -0.11
+     },
+     {
+      "t": "1897",
+      "v": -0.11
+     },
+     {
+      "t": "1898",
+      "v": -0.28
+     },
+     {
+      "t": "1899",
+      "v": -0.18
+     },
+     {
+      "t": "1900",
+      "v": -0.08
+     },
+     {
+      "t": "1901",
+      "v": -0.16
+     },
+     {
+      "t": "1902",
+      "v": -0.28
+     },
+     {
+      "t": "1903",
+      "v": -0.37
+     },
+     {
+      "t": "1904",
+      "v": -0.47
+     },
+     {
+      "t": "1905",
+      "v": -0.26
+     },
+     {
+      "t": "1906",
+      "v": -0.22
+     },
+     {
+      "t": "1907",
+      "v": -0.38
+     },
+     {
+      "t": "1908",
+      "v": -0.42
+     },
+     {
+      "t": "1909",
+      "v": -0.48
+     },
+     {
+      "t": "1910",
+      "v": -0.44
+     },
+     {
+      "t": "1911",
+      "v": -0.44
+     },
+     {
+      "t": "1912",
+      "v": -0.37
+     },
+     {
+      "t": "1913",
+      "v": -0.34
+     },
+     {
+      "t": "1914",
+      "v": -0.15
+     },
+     {
+      "t": "1915",
+      "v": -0.14
+     },
+     {
+      "t": "1916",
+      "v": -0.36
+     },
+     {
+      "t": "1917",
+      "v": -0.46
+     },
+     {
+      "t": "1918",
+      "v": -0.3
+     },
+     {
+      "t": "1919",
+      "v": -0.27
+     },
+     {
+      "t": "1920",
+      "v": -0.27
+     },
+     {
+      "t": "1921",
+      "v": -0.18
+     },
+     {
+      "t": "1922",
+      "v": -0.28
+     },
+     {
+      "t": "1923",
+      "v": -0.26
+     },
+     {
+      "t": "1924",
+      "v": -0.27
+     },
+     {
+      "t": "1925",
+      "v": -0.22
+     },
+     {
+      "t": "1926",
+      "v": -0.11
+     },
+     {
+      "t": "1927",
+      "v": -0.22
+     },
+     {
+      "t": "1928",
+      "v": -0.2
+     },
+     {
+      "t": "1929",
+      "v": -0.36
+     },
+     {
+      "t": "1930",
+      "v": -0.15
+     },
+     {
+      "t": "1931",
+      "v": -0.09
+     },
+     {
+      "t": "1932",
+      "v": -0.16
+     },
+     {
+      "t": "1933",
+      "v": -0.28
+     },
+     {
+      "t": "1934",
+      "v": -0.13
+     },
+     {
+      "t": "1935",
+      "v": -0.2
+     },
+     {
+      "t": "1936",
+      "v": -0.15
+     },
+     {
+      "t": "1937",
+      "v": -0.03
+     },
+     {
+      "t": "1938",
+      "v": 0.0
+     },
+     {
+      "t": "1939",
+      "v": -0.02
+     },
+     {
+      "t": "1940",
+      "v": 0.12
+     },
+     {
+      "t": "1941",
+      "v": 0.18
+     },
+     {
+      "t": "1942",
+      "v": 0.06
+     },
+     {
+      "t": "1943",
+      "v": 0.09
+     },
+     {
+      "t": "1944",
+      "v": 0.2
+     },
+     {
+      "t": "1945",
+      "v": 0.09
+     },
+     {
+      "t": "1946",
+      "v": -0.07
+     },
+     {
+      "t": "1947",
+      "v": -0.03
+     },
+     {
+      "t": "1948",
+      "v": -0.11
+     },
+     {
+      "t": "1949",
+      "v": -0.11
+     },
+     {
+      "t": "1950",
+      "v": -0.17
+     },
+     {
+      "t": "1951",
+      "v": -0.07
+     },
+     {
+      "t": "1952",
+      "v": 0.01
+     },
+     {
+      "t": "1953",
+      "v": 0.08
+     },
+     {
+      "t": "1954",
+      "v": -0.13
+     },
+     {
+      "t": "1955",
+      "v": -0.14
+     },
+     {
+      "t": "1956",
+      "v": -0.19
+     },
+     {
+      "t": "1957",
+      "v": 0.05
+     },
+     {
+      "t": "1958",
+      "v": 0.06
+     },
+     {
+      "t": "1959",
+      "v": 0.03
+     },
+     {
+      "t": "1960",
+      "v": -0.02
+     },
+     {
+      "t": "1961",
+      "v": 0.06
+     },
+     {
+      "t": "1962",
+      "v": 0.03
+     },
+     {
+      "t": "1963",
+      "v": 0.05
+     },
+     {
+      "t": "1964",
+      "v": -0.2
+     },
+     {
+      "t": "1965",
+      "v": -0.11
+     },
+     {
+      "t": "1966",
+      "v": -0.06
+     },
+     {
+      "t": "1967",
+      "v": -0.02
+     },
+     {
+      "t": "1968",
+      "v": -0.08
+     },
+     {
+      "t": "1969",
+      "v": 0.05
+     },
+     {
+      "t": "1970",
+      "v": 0.03
+     },
+     {
+      "t": "1971",
+      "v": -0.08
+     },
+     {
+      "t": "1972",
+      "v": 0.01
+     },
+     {
+      "t": "1973",
+      "v": 0.16
+     },
+     {
+      "t": "1974",
+      "v": -0.07
+     },
+     {
+      "t": "1975",
+      "v": -0.01
+     },
+     {
+      "t": "1976",
+      "v": -0.1
+     },
+     {
+      "t": "1977",
+      "v": 0.18
+     },
+     {
+      "t": "1978",
+      "v": 0.07
+     },
+     {
+      "t": "1979",
+      "v": 0.16
+     },
+     {
+      "t": "1980",
+      "v": 0.26
+     },
+     {
+      "t": "1981",
+      "v": 0.32
+     },
+     {
+      "t": "1982",
+      "v": 0.14
+     },
+     {
+      "t": "1983",
+      "v": 0.31
+     },
+     {
+      "t": "1984",
+      "v": 0.16
+     },
+     {
+      "t": "1985",
+      "v": 0.12
+     },
+     {
+      "t": "1986",
+      "v": 0.18
+     },
+     {
+      "t": "1987",
+      "v": 0.32
+     },
+     {
+      "t": "1988",
+      "v": 0.39
+     },
+     {
+      "t": "1989",
+      "v": 0.27
+     },
+     {
+      "t": "1990",
+      "v": 0.45
+     },
+     {
+      "t": "1991",
+      "v": 0.41
+     },
+     {
+      "t": "1992",
+      "v": 0.22
+     },
+     {
+      "t": "1993",
+      "v": 0.23
+     },
+     {
+      "t": "1994",
+      "v": 0.31
+     },
+     {
+      "t": "1995",
+      "v": 0.45
+     },
+     {
+      "t": "1996",
+      "v": 0.33
+     },
+     {
+      "t": "1997",
+      "v": 0.47
+     },
+     {
+      "t": "1998",
+      "v": 0.61
+     },
+     {
+      "t": "1999",
+      "v": 0.38
+     },
+     {
+      "t": "2000",
+      "v": 0.39
+     },
+     {
+      "t": "2001",
+      "v": 0.53
+     },
+     {
+      "t": "2002",
+      "v": 0.63
+     },
+     {
+      "t": "2003",
+      "v": 0.62
+     },
+     {
+      "t": "2004",
+      "v": 0.53
+     },
+     {
+      "t": "2005",
+      "v": 0.68
+     },
+     {
+      "t": "2006",
+      "v": 0.64
+     },
+     {
+      "t": "2007",
+      "v": 0.66
+     },
+     {
+      "t": "2008",
+      "v": 0.54
+     },
+     {
+      "t": "2009",
+      "v": 0.66
+     },
+     {
+      "t": "2010",
+      "v": 0.72
+     },
+     {
+      "t": "2011",
+      "v": 0.61
+     },
+     {
+      "t": "2012",
+      "v": 0.65
+     },
+     {
+      "t": "2013",
+      "v": 0.67
+     },
+     {
+      "t": "2014",
+      "v": 0.75
+     },
+     {
+      "t": "2015",
+      "v": 0.89
+     },
+     {
+      "t": "2016",
+      "v": 1.01
+     },
+     {
+      "t": "2017",
+      "v": 0.91
+     },
+     {
+      "t": "2018",
+      "v": 0.85
+     },
+     {
+      "t": "2019",
+      "v": 0.98
+     },
+     {
+      "t": "2020",
+      "v": 1.01
+     },
+     {
+      "t": "2021",
+      "v": 0.85
+     },
+     {
+      "t": "2022",
+      "v": 0.89
+     },
+     {
+      "t": "2023",
+      "v": 1.17
+     },
+     {
+      "t": "2024",
+      "v": 1.28
+     },
+     {
+      "t": "2025",
+      "v": 1.18
+     }
+    ]
+   },
+   "notes": "Values are temperature ANOMALIES in °C relative to the 1951–1980 mean of each grid cell, not absolute temperatures (+1 means 1 °C warmer than that place's 1951–1980 average). Source grid: GISTEMP v4 (GHCN v4 land stations + ERSST v5 sea surface), 2° cells, with each station's influence spread up to 1200 km (1200 km smoothing), so cells far from stations are interpolated. Annual value = mean of the monthly anomalies Jan–Dec; a cell needs at least 9 of 12 months, otherwise it is no data. Years 1880–2025: 2026 is left out because the file (created 2026-10-22) only runs to 2026-09; only complete calendar years are used. Early coverage is sparse: before ~1950 much of the Arctic and Antarctic, the Southern Ocean near the sea ice and parts of Africa and South America are no data, while most ice-free ocean is covered from 1880 because ERSST v5 is itself a statistical reconstruction (share of Earth's area with data — 1880: 83%, 1900: 90%, 1950: 95%, 2025: 99%). Seasonal sea-ice areas can stay no data in recent years too. Stored range -6…+6 °C (uint8 linear); 134 cell-years beyond it are clipped to the end codes. The picture palette (ColorBrewer RdBu, reversed) saturates at ±4 °C: anomalies beyond it are drawn in the end colour but stored up to ±6. Dark grey = no data. series.global is NASA's own global land–ocean annual mean (GLB.Ts+dSST.csv, J-D column), computed by GISS from the full analysis, not an average of these grids.",
+   "pack": "tanom/grids.json"
+  },
+  "lights": {
+   "key": "lights",
+   "title": "Black Marble night lights (EIC, annual)",
+   "unit": "index",
+   "simulated": false,
+   "encoding": {
+    "scale": "linear",
+    "min": 0,
+    "max": 100
+   },
+   "grid": {
+    "w": 360,
+    "h": 180,
+    "lat0": 89.5,
+    "lon0": -179.5,
+    "step": 1.0
+   },
+   "source": {
+    "kind": "eic-svs-movie",
+    "agency": "NASA/NOAA",
+    "product": "Black Marble (VIIRS, Suomi NPP)",
+    "svs": 5313,
+    "page": "https://svs.gsfc.nasa.gov/5313",
+    "url": "https://svs.gsfc.nasa.gov/vis/a000000/a005300/a005313/nightlights_flat_series_and_change_wZooms_13_EIC_2160p30_h265.mp4",
+    "citation": "NASA Scientific Visualization Studio, Earth Information Center visualization 5313: Change in Night Lights between 2012 and 2023 - EIC Version (visualizer Kel Elkins, USRA; scientists Zhuosen Wang, Miguel Román, Ranjay Shrestha, Srija Chakraborty, Virginia Kalb). Data: Black Marble: Next Generation, NASA/NOAA Suomi NPP VIIRS. https://svs.gsfc.nasa.gov/5313"
+   },
+   "time": {
+    "cadence": "P1Y",
+    "label": "year",
+    "timing": "annual average of night lights, one frame per year in NASA's visualization"
+   },
+   "steps": [
+    {
+     "t": "2012",
+     "grid": "lights/g2012.bin",
+     "image": "lights/o2012.webp",
+     "stats": {
+      "frame": 7,
+      "validCells": 64800
+     }
+    },
+    {
+     "t": "2013",
+     "grid": "lights/g2013.bin",
+     "image": "lights/o2013.webp",
+     "stats": {
+      "frame": 24,
+      "validCells": 64800
+     }
+    },
+    {
+     "t": "2014",
+     "grid": "lights/g2014.bin",
+     "image": "lights/o2014.webp",
+     "stats": {
+      "frame": 42,
+      "validCells": 64800
+     }
+    },
+    {
+     "t": "2015",
+     "grid": "lights/g2015.bin",
+     "image": "lights/o2015.webp",
+     "stats": {
+      "frame": 60,
+      "validCells": 64800
+     }
+    },
+    {
+     "t": "2016",
+     "grid": "lights/g2016.bin",
+     "image": "lights/o2016.webp",
+     "stats": {
+      "frame": 77,
+      "validCells": 64800
+     }
+    },
+    {
+     "t": "2017",
+     "grid": "lights/g2017.bin",
+     "image": "lights/o2017.webp",
+     "stats": {
+      "frame": 95,
+      "validCells": 64800
+     }
+    },
+    {
+     "t": "2018",
+     "grid": "lights/g2018.bin",
+     "image": "lights/o2018.webp",
+     "stats": {
+      "frame": 113,
+      "validCells": 64800
+     }
+    },
+    {
+     "t": "2019",
+     "grid": "lights/g2019.bin",
+     "image": "lights/o2019.webp",
+     "stats": {
+      "frame": 130,
+      "validCells": 64800
+     }
+    },
+    {
+     "t": "2020",
+     "grid": "lights/g2020.bin",
+     "image": "lights/o2020.webp",
+     "stats": {
+      "frame": 148,
+      "validCells": 64800
+     }
+    },
+    {
+     "t": "2021",
+     "grid": "lights/g2021.bin",
+     "image": "lights/o2021.webp",
+     "stats": {
+      "frame": 166,
+      "validCells": 64800
+     }
+    },
+    {
+     "t": "2022",
+     "grid": "lights/g2022.bin",
+     "image": "lights/o2022.webp",
+     "stats": {
+      "frame": 184,
+      "validCells": 64800
+     }
+    },
+    {
+     "t": "2023",
+     "grid": "lights/g2023.bin",
+     "image": "lights/o2023.webp",
+     "stats": {
+      "frame": 235,
+      "validCells": 64800
+     }
+    }
+   ],
+   "colorbar": {
+    "image": "lights/colorbar.png",
+    "scale": "linear",
+    "min": 0,
+    "max": 100
+   },
+   "picture": {
+    "mode": "lights",
+    "from": "NASA EIC frame (from NASA's movie of SVS 5313)"
+   },
+   "check": {
+    "positionR": 0.417,
+    "positionR2DegOff": 0.241,
+    "leftEdgeLon": -168.6,
+    "baseFrame": 289
+   },
+   "notes": "Light at night from NASA's Black Marble annual composites (VIIRS on Suomi NPP, NASA/NOAA), read from the EIC visualization SVS 5313, 2012-2023. The picture has no colour scale, so each value is a relative light index 0-100 (100 = a 1-degree cell fully at the picture's brightest), not radiance; compare places and years, not units. The frames come from NASA's movie of the visualization (its frame folder is not public): for each year, the middle frame of the stretch labelled with that year (frames 7, 24, 42, 60, 77, 95, 113, 130, 148, 166, 184, 235); the base map without lights (frame 289) is subtracted. Map position checked against NASA Black Marble 2016: correlation 0.42 at the calibrated position, 0.24 two degrees off. Summed over the globe, the index is +29% in 2023 against 2012.",
+   "pack": "lights/grids.json"
+  },
+  "lightning": {
+   "key": "lightning",
+   "title": "Lightning seen from the ISS (LIS, monthly, 2017-2023)",
+   "unit": "%",
+   "simulated": false,
+   "encoding": {
+    "scale": "log",
+    "min": 0.01,
+    "max": 100
+   },
+   "grid": {
+    "w": 360,
+    "h": 180,
+    "lat0": 89.5,
+    "lon0": -179.5,
+    "step": 1.0
+   },
+   "source": {
+    "kind": "eic-svs-movie",
+    "agency": "NASA",
+    "product": "ISS LIS lightning",
+    "svs": 5011,
+    "page": "https://svs.gsfc.nasa.gov/5011",
+    "url": "https://svs.gsfc.nasa.gov/vis/a000000/a005000/a005011/iss_lightning_sos_yearly_07312023_2048p60.mp4",
+    "citation": "NASA Scientific Visualization Studio, visualization 5011: Lightning Events Detected from the International Space Station (ISS) 2017-2023 (visualizers Michala Garrison, SSAI; Greg Shirah, NASA/GSFC; Kel Elkins, USRA; Alex Kekesi, GST). Data: Blakeslee, R. J. 2020, Quality Controlled Lightning Imaging Sensor (LIS) on International Space Station (ISS) Science Data, NASA Global Hydrometeorology Resource Center DAAC. https://svs.gsfc.nasa.gov/5011"
+   },
+   "time": {
+    "cadence": "P1M",
+    "label": "month",
+    "timing": "each calendar month averaged over 2017-2023, from 10-day windows of lightning seen by LIS on the ISS"
+   },
+   "steps": [
+    {
+     "t": "01",
+     "grid": "lightning/g01.bin",
+     "image": "lightning/o01.webp",
+     "stats": {
+      "windows": 18,
+      "firstYear": 2018,
+      "lastYear": 2023,
+      "maxPct": 52.69
+     }
+    },
+    {
+     "t": "02",
+     "grid": "lightning/g02.bin",
+     "image": "lightning/o02.webp",
+     "stats": {
+      "windows": 16,
+      "firstYear": 2018,
+      "lastYear": 2023,
+      "maxPct": 36.76
+     }
+    },
+    {
+     "t": "03",
+     "grid": "lightning/g03.bin",
+     "image": "lightning/o03.webp",
+     "stats": {
+      "windows": 21,
+      "firstYear": 2017,
+      "lastYear": 2023,
+      "maxPct": 44.26
+     }
+    },
+    {
+     "t": "04",
+     "grid": "lightning/g04.bin",
+     "image": "lightning/o04.webp",
+     "stats": {
+      "windows": 21,
+      "firstYear": 2017,
+      "lastYear": 2023,
+      "maxPct": 50.89
+     }
+    },
+    {
+     "t": "05",
+     "grid": "lightning/g05.bin",
+     "image": "lightning/o05.webp",
+     "stats": {
+      "windows": 21,
+      "firstYear": 2017,
+      "lastYear": 2023,
+      "maxPct": 53.84
+     }
+    },
+    {
+     "t": "06",
+     "grid": "lightning/g06.bin",
+     "image": "lightning/o06.webp",
+     "stats": {
+      "windows": 20,
+      "firstYear": 2017,
+      "lastYear": 2023,
+      "maxPct": 49.32
+     }
+    },
+    {
+     "t": "07",
+     "grid": "lightning/g07.bin",
+     "image": "lightning/o07.webp",
+     "stats": {
+      "windows": 21,
+      "firstYear": 2017,
+      "lastYear": 2023,
+      "maxPct": 54.01
+     }
+    },
+    {
+     "t": "08",
+     "grid": "lightning/g08.bin",
+     "image": "lightning/o08.webp",
+     "stats": {
+      "windows": 22,
+      "firstYear": 2017,
+      "lastYear": 2023,
+      "maxPct": 54.81
+     }
+    },
+    {
+     "t": "09",
+     "grid": "lightning/g09.bin",
+     "image": "lightning/o09.webp",
+     "stats": {
+      "windows": 16,
+      "firstYear": 2017,
+      "lastYear": 2022,
+      "maxPct": 48.56
+     }
+    },
+    {
+     "t": "10",
+     "grid": "lightning/g10.bin",
+     "image": "lightning/o10.webp",
+     "stats": {
+      "windows": 19,
+      "firstYear": 2017,
+      "lastYear": 2022,
+      "maxPct": 52.33
+     }
+    },
+    {
+     "t": "11",
+     "grid": "lightning/g11.bin",
+     "image": "lightning/o11.webp",
+     "stats": {
+      "windows": 16,
+      "firstYear": 2017,
+      "lastYear": 2022,
+      "maxPct": 54.39
+     }
+    },
+    {
+     "t": "12",
+     "grid": "lightning/g12.bin",
+     "image": "lightning/o12.webp",
+     "stats": {
+      "windows": 18,
+      "firstYear": 2017,
+      "lastYear": 2022,
+      "maxPct": 51.67
+     }
+    }
+   ],
+   "colorbar": {
+    "image": "lightning/colorbar.png",
+    "scale": "log",
+    "min": 0.01,
+    "max": 100
+   },
+   "picture": {
+    "mode": "lightning",
+    "from": "NASA visualization frames (Science On a Sphere copy of SVS 5011)"
+   },
+   "check": {
+    "method": 1,
+    "positionR": 0.451,
+    "positionR2DegOff": 0.377,
+    "shiftDeg": 0.0,
+    "windows": 229,
+    "polarPct": 0.0,
+    "northSummerRatio": 18.5,
+    "southSummerRatio": 4.1
+   },
+   "notes": "Lightning seen by the Lightning Imaging Sensor (LIS) on the International Space Station, read from the EIC visualization SVS 5011 (NASA's Science On a Sphere copy of it, a plain world map with a date for every frame). One frame every 10 days (229 non-overlapping 10-day windows, labelled 11 Mar 2017 to 22 Aug 2023); for each calendar month, the windows labelled in that month are averaged over the years. Each value is the share (0-100 %) of a 1-degree cell covered with NASA's lightning marks: a relative measure, since LIS sees each place for about 90 seconds per pass and the marks have a drawn size. NASA's label file writes 2023 as 2003; those labels come after 31 Dec 2022 and are read as 2023. Checks: map position against NASA Blue Marble, correlation 0.45 (2 degrees off 0.38); 0.00% of marks beyond 58 degrees; 30-50N has 19x more in June-August than December-February, 20-40S 4x more in December-February than June-August.",
+   "pack": "lightning/grids.json"
+  }
+ },
+ "errors": {},
+ "station": {
+  "file": "station.json",
+  "start": "2026-11-11T12:00:00Z",
+  "stop": "2026-11-26T12:00:00Z",
+  "created": "2026-11-12T14:08:28.056Z",
+  "states": 5402,
+  "source": "https://nasa-public-data.s3.amazonaws.com/iss-coords/current/ISS_OEM/ISS.OEM_J2K_EPH.txt",
+  "note": "added on 2026-11-13 with python -m hearthbeat_pipeline.station, after this build; the daily build now writes it"
+ }
+}

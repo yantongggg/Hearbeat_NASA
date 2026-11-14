@@ -1,0 +1,570 @@
+{
+  "en": {
+    "pdf_title": "Hearthbeat classroom pack",
+    "foot": "Hearthbeat classroom pack · NASA Space Apps 2026",
+    "kicker": "HEARTHBEAT · CLASSROOM PACK · TEACHER GUIDE",
+    "title": "Hear how home is doing",
+    "subtitle": "Rain, air quality and warming from NASA data, by ear, with eyes open or closed.",
+    "why_h": "Why",
+    "why": "NASA reports the condition of our planet as colour maps. A student who cannot see a map has to wait for someone to describe it, and a map that NASA updates every day cannot be made tactile every day. Hearthbeat turns NASA's maps into sound. A student chooses home, or any place on the globe, and hears three of its vital signs. An exact number is spoken whenever the student asks for it.",
+    "what_h": "What students do",
+    "what": [
+      "<b>Home.</b> Choose your home and press <i>Hear home</i>: the sounds of a home (public recordings, not your own home) with NASA's rain as drops on the window and the air as a heartbeat. Or press a question: Is it raining? Is the air clean? How much warmer than 1951–1980? Each answer is a short sound, then the NASA number. Compare home with any other city.",
+      "<b>Circulation (rain).</b> More raindrops mean harder rain. In Explore and the check-ups, a soft wash in the left or right ear tells which side nearby rain lies on.",
+      "<b>Breathing (air quality).</b> Dirtier air makes the music more muffled. Above the WHO guideline a heartbeat joins in, and the dirtier the air, the faster it beats.",
+      "<b>Fever (warming).</b> Each year from 1880 to 2025 plays one note. A higher note means a warmer year.",
+      "<b>Four check-ups.</b> Each is a real question about the newest NASA data. Hearthbeat checks the answer, times it and keeps a record."
+    ],
+    "contents_h": "In this pack",
+    "contents_head": [
+      "Pages",
+      "What"
+    ],
+    "contents": [
+      [
+        "1–3",
+        "Teacher guide: a 40-minute lesson, the check-ups at a glance, running a listening test, keys, and notes on the data"
+      ],
+      [
+        "4–7",
+        "Four check-up cards in large print, one per check-up. Read them aloud or give them to students."
+      ],
+      [
+        "8",
+        "A tactile map of Southeast Asia for swell (capsule) paper"
+      ]
+    ],
+    "need_h": "What you need",
+    "need": [
+      "A phone, tablet or computer with a current web browser (Chrome, Safari, Edge or Firefox).",
+      "<b>Stereo headphones.</b> A soft wash on the left or right tells which side nearby rain or haze lies on.",
+      "Optional: the tactile map (page 8) printed on swell paper, and a braille labeller."
+    ],
+    "link_line": "Hearthbeat link: ______________________________________________",
+    "lesson_h": "A 40-minute lesson",
+    "lesson_head": [
+      "Minutes",
+      "What happens",
+      "Tip"
+    ],
+    "lesson": [
+      [
+        "0–5",
+        "<b>Hear your home.</b> Start Hearthbeat with <i>Hear my home</i> and choose your town. Press <i>Hear home</i>, then the three questions. Ask: what did you hear, and what does it mean for us?",
+        "Keep the volume low. Some students are sensitive to sudden sounds."
+      ],
+      [
+        "5–10",
+        "<b>Learn the sounds.</b> Choose <i>Explore the globe</i>, then press L (<i>What am I hearing?</i>) on each track, 1, 2 and 3. Each one plays a low, a middle and a high example.",
+        "Ask a student to describe each sound in their own words."
+      ],
+      [
+        "10–30",
+        "<b>Check-ups in pairs.</b> One student listens, eyes open or closed. The other reads the card aloud if needed. Press K or choose <i>Check-ups for class</i>.",
+        "Let pairs swap roles after two check-ups."
+      ],
+      [
+        "30–40",
+        "<b>Talk about it.</b> Use the questions on each card. Open <i>Check-ups</i> to see times and results.",
+        "Ask: what did you hear that a number alone would not tell you?"
+      ]
+    ],
+    "before_h": "Before the lesson",
+    "before": [
+      "Open the link on every device once, and press <i>Explore the globe</i> to check that you hear music.",
+      "Choose a mode. <b>Eyes-closed mode</b> (E) turns the screen black, speaks everything, and shows large buttons for north, south, east and west.",
+      "If a student uses a screen reader, try eyes-closed mode first, because it speaks by itself. If the voices double up, turn one of them off.",
+      "Each check-up uses the newest NASA data the app has, so the answers change whenever the data is refreshed. The app works out the right answer itself and shows the date of its data."
+    ],
+    "glance_h": "The check-ups at a glance",
+    "glance_head": [
+      "Check-up",
+      "Question",
+      "Listen for"
+    ],
+    "glance": [
+      [
+        "1 · Circulation",
+        "Where is it raining hardest in Southeast Asia in the newest NASA data?",
+        "Drops getting denser. The <i>Hint</i> button says which direction to go and how far."
+      ],
+      [
+        "2 · Breathing",
+        "Whose air is dirtier in the newest NASA data: Kuala Lumpur or another city?",
+        "A faster heartbeat (and more muffled music) means dirtier air."
+      ],
+      [
+        "3 · Breathing over time",
+        "On which of the last five days was Kuala Lumpur's air at its worst?",
+        "Tap each day to hear its average. Choose the day with the fastest heartbeat."
+      ],
+      [
+        "4 · Fever",
+        "How much warmer was Kuala Lumpur in 2025 than in 1951–1980?",
+        "Play 1880 to 2025 (about 40 seconds). Listen to how high the last notes climb."
+      ]
+    ],
+    "curriculum_note": "Possible lesson topics: weather and climate, air pollution and haze, climate change, and directions and map skills. These are our assumptions and have not been checked against the curriculum. Please confirm them with a special-education teacher.",
+    "test_h": "Running a listening test",
+    "test_intro": "Use the check-ups to measure whether Hearthbeat helps. The app records each attempt: the time taken, the result, the number of hints, and whether eyes were open or closed. It does not record names.",
+    "test": [
+      "<b>Ask permission</b> from each participant, and from parents for children. Explain that they can stop at any time.",
+      "<b>Write down who takes part</b>, and report each group separately: visually impaired students, blindfolded sighted volunteers, and sighted students. A blindfolded volunteer is not a visually impaired user.",
+      "<b>Compare two ways of answering the same questions.</b> First, with the numbers read aloud one at a time by a screen reader or a teacher. Second, with Hearthbeat. Swap the order for every other participant.",
+      "<b>Save the results</b> after each session. Open <i>Check-ups</i>, choose <i>Copy results (CSV)</i>, and paste them into a spreadsheet. Results are kept only in that browser.",
+      "<b>Ask two questions at the end.</b> Which way was easier? What did you hear that the numbers did not tell you?"
+    ],
+    "keys_h": "Keys",
+    "keys_head": [
+      "Key",
+      "What it does"
+    ],
+    "keys": [
+      [
+        "Arrow keys",
+        "Move the stethoscope. Hold Shift to move further."
+      ],
+      [
+        "Enter",
+        "Read the value at the stethoscope."
+      ],
+      [
+        "V",
+        "Read all three vital signs at the stethoscope."
+      ],
+      [
+        "Space",
+        "Play or pause time."
+      ],
+      [
+        ", and .",
+        "Go to the previous or next time step."
+      ],
+      [
+        "1, 2, 3",
+        "Switch track: rain, air quality, climate."
+      ],
+      [
+        "L",
+        "What am I hearing? Plays low, middle and high examples."
+      ],
+      [
+        "D",
+        "Describe the whole picture."
+      ],
+      [
+        "C",
+        "Compare two places."
+      ],
+      [
+        "K",
+        "Open the check-ups and results."
+      ],
+      [
+        "E",
+        "Turn eyes-closed mode on or off."
+      ],
+      [
+        "H",
+        "Hear all the keys."
+      ]
+    ],
+    "data_h": "About the data",
+    "data": [
+      "<b>Rain and air quality</b> come from NASA's Earth Information Center maps. These maps are based on NASA's GEOS computer models, not on ground stations. The newest hours are short forecasts.",
+      "Rain that is hidden under clouds in NASA's picture is under-counted.",
+      "The air classes compare hourly values with the WHO 24-hour guideline. Treat them as a guide, not as a health warning.",
+      "<b>Fever</b> comes from NASA GISTEMP v4, which is built from weather stations and ships. It shows how much warmer or cooler each year was than the 1951–1980 average."
+    ],
+    "honest": "Hearthbeat passes automated accessibility checks (axe, WCAG 2.1 A/AA) and keyboard tests. It has not yet been tested with a screen reader by a blind or low-vision user, and has not been used in a classroom. Please tell us what did not work.",
+    "card_hear": "You will hear",
+    "card_how": "How to do it",
+    "card_talk": "Talk about it",
+    "card_keys": "Keys: arrows move · Enter (on the globe) reads the number · H lists all keys · E eyes-closed mode",
+    "cards": [
+      {
+        "sign": "rain",
+        "label": "CHECK-UP 1 · CIRCULATION · RAIN",
+        "q": "Where is it raining hardest in Southeast Asia in the newest NASA data?",
+        "hear": [
+          "Raindrops. The more drops you hear, the harder it rains where the stethoscope is.",
+          "A soft low note in heavy rain.",
+          "A soft wash in the left or right ear tells which side nearby rain lies on."
+        ],
+        "how": [
+          "Open Hearthbeat and choose <b>Check-ups for class</b>.",
+          "You start over the sea, away from the heavy rain. You hear soft music and few or no drops.",
+          "Move east with the arrow keys, or tap a place on the globe. Stop when you hear drops.",
+          "Follow the drops to where they are densest. Hearthbeat tells you when you reach the goal. If you are stuck, press <b>Hint</b> to hear which way to go."
+        ],
+        "talk": [
+          "Why does it rain so much near the equator?",
+          "Is it raining where you live in the newest data? Move the stethoscope there and listen."
+        ],
+        "data": "Data: NASA Earth Information Center, GEOS-FP precipitation (SVS 5149), every 6 hours over the last 5 days. The app checks your answer against that day's NASA data."
+      },
+      {
+        "sign": "air",
+        "label": "CHECK-UP 2 · BREATHING · AIR QUALITY",
+        "q": "Whose air is dirtier in the newest NASA data: Kuala Lumpur or the other city?",
+        "hear": [
+          "Clean air sounds like clear, open music.",
+          "Dirtier air makes the music muffled, as if you were listening through a mask.",
+          "Above the WHO guideline (15 µg/m³ of PM2.5), a soft heartbeat starts. The faster the heartbeat, the dirtier the air."
+        ],
+        "how": [
+          "Press <b>K</b> and choose check-up 2.",
+          "Press <b>Listen: Kuala Lumpur</b>, then <b>Listen</b> for the other city. Listen to each one for a few seconds.",
+          "Choose the city whose air is dirtier.",
+          "Hearthbeat tells you whether you are right and gives both numbers. Press <b>Read aloud</b> at any time (or Enter while the globe has focus) to hear the exact number."
+        ],
+        "talk": [
+          "What makes air dirty? Think of traffic, factories and forest fires.",
+          "What would you do on a day when the heartbeat is strong?"
+        ],
+        "data": "Data: the picture is from NASA Earth Information Center, GEOS-CF surface PM2.5 (SVS 5151). The numbers come straight from NASA's GEOS-CF model output for the same hour."
+      },
+      {
+        "sign": "air",
+        "label": "CHECK-UP 3 · BREATHING OVER TIME · HAZE",
+        "q": "On which of the last five days was Kuala Lumpur's air at its worst?",
+        "hear": [
+          "The same sounds as check-up 2: a heartbeat when the air is dirty. The faster it beats, the dirtier the air.",
+          "Each day button plays that day's average for a few seconds."
+        ],
+        "how": [
+          "Press <b>K</b> and choose check-up 3. The stethoscope stays on Kuala Lumpur.",
+          "Under <b>Listen</b>, tap a day to hear it. Compare two days at a time: which heartbeat is faster?",
+          "Keep the faster day and compare it with the next one. <b>Read aloud</b> (or Enter on the globe) reads the number for the time on screen.",
+          "Choose the worst day."
+        ],
+        "talk": [
+          "Haze can travel hundreds of kilometres from fires in other countries. Why might the air change from day to day? Think of wind and rain.",
+          "Rain washes particles out of the air. Was the air cleaner on a rainy day?"
+        ],
+        "data": "Data: NASA GEOS-CF surface PM2.5 for Kuala Lumpur, every 6 hours over the last 5 days. The answer is the day with the highest average."
+      },
+      {
+        "sign": "climate",
+        "label": "CHECK-UP 4 · FEVER · WARMING",
+        "q": "How much warmer was Kuala Lumpur in 2025 than in 1951–1980?",
+        "hear": [
+          "One note for each year from 1880 to 2025. A higher note means warmer than the 1951–1980 average.",
+          "A soft held chord is the whole planet. It rises as the Earth warms.",
+          "A soft tap instead of a note means there were no measurements that year."
+        ],
+        "how": [
+          "Press <b>K</b> and choose check-up 4. The years start playing from 1880 and take about 40 seconds.",
+          "Listen to the notes climb. Compare the last notes with the first ones.",
+          "At 2025, press <b>Read aloud</b> (or Enter on the globe) to hear the exact number.",
+          "Choose your answer."
+        ],
+        "talk": [
+          "How do we know the temperature in 1880? Weather stations and ships kept records.",
+          "Move the stethoscope to the Arctic and play the years again. Do the notes climb faster there?"
+        ],
+        "data": "Data: NASA GISTEMP v4 annual means, compared with the 1951–1980 average."
+      }
+    ],
+    "map_title": "Tactile map: Southeast Asia",
+    "map_intro": "Print this page on swell (capsule) paper and pass it through the heater, so that the black lines and shapes rise. Add braille labels with a braille labeller on the lines in the legend. Land has a dot texture and the sea is smooth. The dashed line is the equator.",
+    "legend_title": "Legend",
+    "legend_head": [
+      "Symbol",
+      "Place",
+      "Braille label"
+    ],
+    "legend": [
+      "Kuala Lumpur (circle)",
+      "Jakarta (square)",
+      "Kuching (triangle)",
+      "Bangkok (diamond)",
+      "Equator (dashed line)"
+    ],
+    "map_note": "Coastline lines are 1.5 mm wide and city symbols about 7 mm across, with a clear ring around each symbol. We have not yet tested this page on swell paper. Map data: Natural Earth (public domain)."
+  },
+  "zh": {
+    "pdf_title": "Hearthbeat 课堂资料包",
+    "foot": "Hearthbeat 课堂资料包 · NASA Space Apps 2026",
+    "kicker": "HEARTHBEAT · 课堂资料包 · 教师指南",
+    "title": "听听家好不好",
+    "subtitle": "用耳朵听 NASA 数据里的降雨、空气质量和变暖，睁眼闭眼都可以。",
+    "why_h": "为什么",
+    "why": "NASA 用彩色地图报告地球的状况。看不见地图的学生只能等别人描述，而 NASA 每天更新的地图，不可能每天都做成触觉图。Hearthbeat 把 NASA 的地图变成声音。学生选择自己的家，或地球上任何地方，就能听到那里的三项生命体征；需要准确数字时，随时可以让它读出来。",
+    "what_h": "学生做什么",
+    "what": [
+      "<b>家。</b>选你的家，按<i>听听家里</i>：一个家的声音（公开录音，不是你家的录音），窗上是 NASA 数据里的雨滴，空气变成心跳。也可以按一个问题：在下雨吗？空气干净吗？比 1951–1980 年暖了多少？每个答案先是一段短声音，再给出 NASA 的数字。还可以把家和任何城市对比。",
+      "<b>循环（降雨）。</b>雨滴越密，雨越大。在探索和检查里，附近的雨在哪一侧，左耳或右耳就有一层轻柔的沙沙声。",
+      "<b>呼吸（空气质量）。</b>空气越脏，音乐越闷；超过世卫组织指导值时加入心跳声，空气越脏，心跳越快。",
+      "<b>发烧（变暖）。</b>从 1880 到 2025 年，每年一个音；音越高，那一年越暖。",
+      "<b>四项检查。</b>每项都是关于最新 NASA 数据的真实问题。Hearthbeat 核对答案、计时并记录。"
+    ],
+    "contents_h": "资料包内容",
+    "contents_head": [
+      "页码",
+      "内容"
+    ],
+    "contents": [
+      [
+        "1–3",
+        "教师指南：40 分钟课堂、四项检查一览、如何做聆听测试、按键和数据说明"
+      ],
+      [
+        "4–7",
+        "四张大字检查卡，每项检查一张，可以念给学生听，也可以直接发给学生"
+      ],
+      [
+        "8",
+        "东南亚触觉地图，用于热敏膨胀纸（swell paper）"
+      ]
+    ],
+    "need_h": "需要准备",
+    "need": [
+      "手机、平板或电脑，安装较新的浏览器（Chrome、Safari、Edge 或 Firefox）。",
+      "<b>立体声耳机。</b>附近的雨或烟霾在哪一侧，左边或右边就有一层轻柔的沙沙声。",
+      "可选：用热敏膨胀纸打印的触觉地图（第 8 页），以及盲文标签机。"
+    ],
+    "link_line": "Hearthbeat 链接：______________________________________________",
+    "lesson_h": "40 分钟课堂",
+    "lesson_head": [
+      "分钟",
+      "做什么",
+      "提示"
+    ],
+    "lesson": [
+      [
+        "0–5",
+        "<b>听听自己的家。</b>用<i>听我的家</i>打开 Hearthbeat，选你们的城镇，先按<i>听听家里</i>，再按三个问题。问学生：你听到了什么？这对我们意味着什么？",
+        "音量调低。有些学生对突然的声音比较敏感。"
+      ],
+      [
+        "5–10",
+        "<b>认识声音。</b>选<i>探索整个地球</i>，在每首曲目（1、2、3）按 L（<i>这是什么声音？</i>），分别播放低、中、高三个例子。",
+        "请学生用自己的话描述每种声音。"
+      ],
+      [
+        "10–30",
+        "<b>两人一组做检查。</b>一人负责聆听（睁眼或闭眼），另一人在需要时念检查卡。按 K，或选择<i>课堂检查</i>。",
+        "做完两项检查后，两人交换角色。"
+      ],
+      [
+        "30–40",
+        "<b>讨论。</b>用每张卡上的问题讨论。打开<i>检查</i>，查看用时和结果。",
+        "问学生：你听到了哪些光看数字得不到的信息？"
+      ]
+    ],
+    "before_h": "上课前",
+    "before": [
+      "在每台设备上都打开一次链接，按<i>探索整个地球</i>，确认能听到音乐。",
+      "选择模式。<b>闭眼模式</b>（E）会让屏幕变黑，所有内容都会读出来，并显示东南西北的大按钮。",
+      "如果学生使用读屏软件，先试闭眼模式，因为它会自己朗读。如果两个声音重叠，关掉其中一个。",
+      "每项检查都用程序里最新的 NASA 数据，数据一更新，答案就会变。正确答案由程序自己算出，并显示数据的日期。"
+    ],
+    "glance_h": "四项检查一览",
+    "glance_head": [
+      "检查",
+      "问题",
+      "听什么"
+    ],
+    "glance": [
+      [
+        "1 · 循环",
+        "最新的 NASA 数据里，东南亚哪里雨下得最大？",
+        "雨滴越来越密。<i>提示</i>按钮会说出方向和距离。"
+      ],
+      [
+        "2 · 呼吸",
+        "最新的 NASA 数据里，谁的空气更脏：吉隆坡，还是另一个城市？",
+        "心跳越快（音乐越闷），空气越脏。"
+      ],
+      [
+        "3 · 五天的呼吸",
+        "过去五天里，吉隆坡哪一天的空气最差？",
+        "逐个点每一天听当天平均，选出心跳最快的那一天。"
+      ],
+      [
+        "4 · 发烧",
+        "2025 年的吉隆坡比 1951–1980 年暖了多少？",
+        "播放 1880 到 2025 年（约 40 秒），听最后几个音升得多高。"
+      ]
+    ],
+    "curriculum_note": "可能对应的课题：天气与气候、空气污染与烟霾、气候变化、方向与读图能力。这些是我们的设想，还没有对照课程标准核实，请与特殊教育教师确认。",
+    "test_h": "如何做聆听测试",
+    "test_intro": "可以用四项检查来衡量 Hearthbeat 是否有帮助。程序会记录每次作答：用时、结果、提示次数，以及是睁眼还是闭眼。不记录姓名。",
+    "test": [
+      "<b>征得同意。</b>每位参与者都要同意，儿童还需家长同意，并告诉他们随时可以停止。",
+      "<b>记下参与者是谁</b>，并按组分别报告：视障学生、蒙眼的明眼志愿者、明眼学生。蒙眼志愿者不等于视障用户。",
+      "<b>用两种方式回答同样的问题。</b>第一种，由读屏软件或老师逐个念出数字；第二种，用 Hearthbeat。每隔一位参与者调换顺序。",
+      "<b>每次测试后保存结果。</b>打开<i>检查</i>，选<i>复制结果（CSV）</i>，粘贴到电子表格里。结果只保存在那台设备的浏览器中。",
+      "<b>最后问两个问题。</b>哪种方式更容易？你听到了哪些数字没有告诉你的信息？"
+    ],
+    "keys_h": "按键",
+    "keys_head": [
+      "按键",
+      "作用"
+    ],
+    "keys": [
+      [
+        "方向键",
+        "移动听诊器，按住 Shift 移得更远"
+      ],
+      [
+        "Enter",
+        "读出听诊器所在位置的数值"
+      ],
+      [
+        "V",
+        "读出这里的三项生命体征"
+      ],
+      [
+        "空格",
+        "播放或暂停时间"
+      ],
+      [
+        "逗号、句号",
+        "上一个或下一个时间步"
+      ],
+      [
+        "1、2、3",
+        "切换曲目：降雨、空气质量、气候"
+      ],
+      [
+        "L",
+        "这是什么声音？播放低、中、高三个例子"
+      ],
+      [
+        "D",
+        "描述整幅画面"
+      ],
+      [
+        "C",
+        "对比两个地点"
+      ],
+      [
+        "K",
+        "打开检查和结果"
+      ],
+      [
+        "E",
+        "开关闭眼模式"
+      ],
+      [
+        "H",
+        "听全部按键说明"
+      ]
+    ],
+    "data_h": "关于数据",
+    "data": [
+      "<b>降雨和空气质量</b>来自 NASA 地球信息中心的地图。这些地图基于 NASA 的 GEOS 计算机模式，不是地面观测站；最新的几个小时是短期预报。",
+      "在 NASA 画面中被云遮住的雨，会被低估。",
+      "空气分级是把逐小时数值与世卫组织 24 小时指导值比较，只是参考，不是健康警报。",
+      "<b>发烧</b>来自 NASA GISTEMP v4，由气象站和船舶观测得到，表示每一年比 1951–1980 年平均暖或冷多少。"
+    ],
+    "honest": "Hearthbeat 通过了自动化无障碍检测（axe，WCAG 2.1 A/AA）和键盘操作测试，但还没有请视障用户用读屏软件实际测试过，也没有在课堂上用过。如有问题，请告诉我们。",
+    "card_hear": "你会听到",
+    "card_how": "怎么做",
+    "card_talk": "讨论",
+    "card_keys": "按键：方向键移动 · Enter（焦点在地球上时）读数字 · H 听全部按键 · E 闭眼模式",
+    "cards": [
+      {
+        "sign": "rain",
+        "label": "检查 1 · 循环 · 降雨",
+        "q": "最新的 NASA 数据里，东南亚哪里雨下得最大？",
+        "hear": [
+          "雨滴声。雨滴越密，听诊器所在的地方雨越大。",
+          "大雨时会有一个柔和的低音。",
+          "附近的雨在哪一侧，左耳或右耳就有一层轻柔的沙沙声。"
+        ],
+        "how": [
+          "打开 Hearthbeat，选<b>课堂检查</b>。",
+          "你从远离大雨的海面出发，只听到柔和的音乐，几乎没有雨滴。",
+          "用方向键向东移动，或点地球上的某个地方。听到雨滴就停下来。",
+          "跟着雨滴走到最密的地方，到达目标时 Hearthbeat 会告诉你。找不到的话，按<b>提示</b>，听该往哪个方向走。"
+        ],
+        "talk": [
+          "为什么赤道附近雨这么多？",
+          "最新的数据里，你住的地方在下雨吗？把听诊器移过去听听看。"
+        ],
+        "data": "数据：NASA 地球信息中心，GEOS-FP 降水（SVS 5149），过去 5 天每 6 小时一次。程序会用它最新的 NASA 数据核对你的答案。"
+      },
+      {
+        "sign": "air",
+        "label": "检查 2 · 呼吸 · 空气质量",
+        "q": "最新的 NASA 数据里，谁的空气更脏：吉隆坡，还是另一个城市？",
+        "hear": [
+          "干净的空气听起来清澈、开阔。",
+          "空气越脏，音乐越闷，像隔着口罩听。",
+          "超过世卫组织指导值（PM2.5 15 µg/m³）后，出现轻柔的心跳声。心跳越快，空气越脏。"
+        ],
+        "how": [
+          "按 <b>K</b>，选检查 2。",
+          "按<b>听：吉隆坡</b>，再按另一个城市的<b>听</b>，每个城市都听几秒。",
+          "选出空气更脏的城市。",
+          "Hearthbeat 会告诉你答对没有，并给出两个城市的数字。随时按<b>读出数值</b>（或在地球获得焦点时按 Enter）可以听到准确数字。"
+        ],
+        "talk": [
+          "什么会让空气变脏？想想交通、工厂和森林火灾。",
+          "如果某天心跳很强，你会怎么做？"
+        ],
+        "data": "数据：画面来自 NASA 地球信息中心，GEOS-CF 地面 PM2.5（SVS 5151）；数值直接来自 NASA GEOS-CF 模式同一小时的输出。"
+      },
+      {
+        "sign": "air",
+        "label": "检查 3 · 五天的呼吸 · 烟霾",
+        "q": "过去五天里，吉隆坡哪一天的空气最差？",
+        "hear": [
+          "和检查 2 一样：空气脏时有心跳声，心跳越快，空气越脏。",
+          "每个日期按钮会播放那一天的平均值，持续几秒。"
+        ],
+        "how": [
+          "按 <b>K</b>，选检查 3。听诊器会停在吉隆坡。",
+          "在<b>听</b>那一行点一个日期，听那一天。每次比较两天：哪一天的心跳更快？",
+          "留下较快的那天，再和下一天比较。按<b>读出数值</b>（或在地球上按 Enter）会读出屏幕上那个时间的数字。",
+          "选出最差的那一天。"
+        ],
+        "talk": [
+          "烟霾可以从其他国家的火灾飘来几百公里。为什么空气每天都不一样？想想风和雨。",
+          "雨会把空气中的颗粒冲走。下雨那天的空气是不是比较干净？"
+        ],
+        "data": "数据：NASA GEOS-CF 吉隆坡地面 PM2.5，过去 5 天每 6 小时一次。答案是日平均最高的那一天。"
+      },
+      {
+        "sign": "climate",
+        "label": "检查 4 · 发烧 · 变暖",
+        "q": "2025 年的吉隆坡比 1951–1980 年暖了多少？",
+        "hear": [
+          "从 1880 到 2025 年，每年一个音。音越高，比 1951–1980 年的平均越暖。",
+          "柔和的持续和弦代表全球，地球变暖时它会升高。",
+          "如果某年只有轻轻的一下敲击、没有音符，表示那一年没有观测数据。"
+        ],
+        "how": [
+          "按 <b>K</b>，选检查 4。年份会从 1880 年开始播放，大约 40 秒。",
+          "听音符怎样往上走，把最后几个音和开头的比一比。",
+          "到 2025 年时，按<b>读出数值</b>（或在地球上按 Enter）听准确数字。",
+          "选出答案。"
+        ],
+        "talk": [
+          "我们怎么知道 1880 年的气温？当时的气象站和船舶留下了记录。",
+          "把听诊器移到北极，再播放一次。那里的音升得更快吗？"
+        ],
+        "data": "数据：NASA GISTEMP v4 年平均，与 1951–1980 年平均相比。"
+      }
+    ],
+    "map_title": "触觉地图：东南亚",
+    "map_intro": "把这一页打印在热敏膨胀纸（swell / capsule paper）上，再放进加热机，黑色的线条和图形就会凸起。用盲文标签机在图例的横线上贴上盲文。陆地有点状纹理，海洋是平滑的，虚线是赤道。",
+    "legend_title": "图例",
+    "legend_head": [
+      "符号",
+      "地点",
+      "盲文标签"
+    ],
+    "legend": [
+      "吉隆坡（圆形）",
+      "雅加达（方形）",
+      "古晋（三角形）",
+      "曼谷（菱形）",
+      "赤道（虚线）"
+    ],
+    "map_note": "海岸线宽 1.5 毫米，城市符号约 7 毫米，每个符号周围留有空白圈。这一页还没有在膨胀纸上实际测试过。地图数据：Natural Earth（公有领域）。"
+  }
+}

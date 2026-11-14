@@ -1,0 +1,34 @@
+{
+  "name": "hearthbeat",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Hearthbeat, an Earth Information Jukebox: hear how home is doing. NASA Earth Information Center frames played as sound generated from their data, with an eyes-closed mode.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "test:all": "npm run typecheck && vitest run && playwright test"
+  },
+  "dependencies": {
+    "d3-geo": "3.1.0",
+    "three": "0.128.0",
+    "topojson-client": "3.1.0",
+    "world-atlas": "2.0.2"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.1",
+    "@playwright/test": "^1.48.2",
+    "@types/d3-geo": "3.1.0",
+    "@types/node": "^20.14.10",
+    "@types/three": "0.128.0",
+    "@types/topojson-client": "3.1.4",
+    "typescript": "5.4.5",
+    "vite": "5.2.11",
+    "vitest": "1.6.0"
+  }
+}

@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#010307">
+<title>Hearthbeat</title>
+<meta name="description" content="Hear how home is doing: choose your home and hear NASA Earth data as sound — is it raining, is the air clean, how much has it warmed — with your eyes open or closed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..700&family=Noto+Sans+SC:wght@300;400;500&display=swap">
+</head>
+<body>
+<a class="skiplink" href="#readout" data-i18n="skip">Skip to the listening point</a>
+<div class="app gated" id="app" data-theme="rain">
+  <div class="viz" id="viz">
+    <canvas id="gl" tabindex="0" role="application" aria-roledescription="interactive globe" aria-describedby="liveValue" data-i18n-aria="ariaGlobe"></canvas>
+    <canvas id="ov" aria-hidden="true"></canvas>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="porthole" aria-hidden="true"></div>
+  </div>
+
+  <header class="topbar">
+    <div class="brand">
+      <b>HEARTHBEAT</b>
+      <span data-i18n="tagline">Hear how home is doing</span>
+    </div>
+    <div class="topctl">
+      <button type="button" class="pill" id="startBtn"><span aria-hidden="true">‹ </span><span data-i18n="startPage">Start</span></button>
+      <button type="button" class="pill strong" id="homeBtn"><span data-i18n="homeBtn">Home</span></button>
+      <button type="button" class="pill" id="checkBtn" aria-haspopup="dialog"><span data-i18n="checkups">Check-ups</span></button>
+      <button type="button" class="pill" id="eyesBtn" aria-pressed="false"><span class="dot" aria-hidden="true"></span><span data-i18n="eyes">Eyes-closed mode</span></button>
+      <button type="button" class="pill" id="aboutBtn" aria-haspopup="dialog" data-i18n="about">About</button>
+      <span class="langsw" role="group" aria-label="Language / 语言"><button type="button" data-set-lang="en" aria-pressed="true">EN</button><i aria-hidden="true"></i><button type="button" class="zh" data-set-lang="zh" aria-pressed="false" lang="zh">中文</button></span>
+    </div>
+  </header>
+
+  <section class="home glass" id="home" hidden aria-labelledby="homeTitle"></section>
+  <section class="checkup glass" id="checkup" hidden aria-labelledby="cuTitle" aria-live="polite"></section>
+
+  <nav class="tracks glass" aria-labelledby="tracksH">
+    <h2 class="micro" id="tracksH" data-i18n="tracks">Jukebox tracks</h2>
+    <ol id="trackList"></ol>
+    <button type="button" class="song-btn" id="songBtn" aria-pressed="false"></button>
+  </nav>
+
+  <section class="readout glass" id="readout" aria-labelledby="placeName" tabindex="-1">
+    <div class="micro" data-i18n="listening">Listening point</div>
+    <h2 class="place" id="placeName">Kuala Lumpur</h2>
+    <div class="coords num" id="placeMeta">—</div>
+    <div class="value" id="liveValue" aria-live="off">
+      <div class="q micro" id="quantity">—</div>
+      <div class="big num"><span id="bigV">—</span><small id="bigU"></small></div>
+      <div class="cat" id="cat">—</div>
+      <p class="hearing" id="hearing"></p>
+      <div class="err micro" id="errNote"></div>
+    </div>
+    <div class="vitals" id="vitalsBox">
+      <div class="micro" data-i18n="vitalsHere">Vital signs here</div>
+      <ul class="vit" id="vitals"></ul>
+    </div>
+    <dl class="ctx" id="ctx"></dl>
+    <div class="acts">
+      <button type="button" class="act" id="readBtn"><span data-i18n="read">Read aloud</span><kbd>Enter</kbd></button>
+      <button type="button" class="act" id="reportBtn"><span data-i18n="report">Read all vital signs</span><kbd>V</kbd></button>
+      <button type="button" class="act" id="describeBtn"><span data-i18n="describe">Describe this frame</span><kbd>D</kbd></button>
+      <button type="button" class="act" id="legendBtn"><span data-i18n="legend">What am I hearing?</span><kbd>L</kbd></button>
+      <button type="button" class="act" id="compareBtn" aria-pressed="false"><span data-i18n="compare">Compare A / B</span><kbd>C</kbd></button>
+      <button type="button" class="act" id="nextPlaceBtn"><span data-i18n="nextPlace">Jump to next place</span><kbd>P</kbd></button>
+    </div>
+    <p class="desc" id="descOut" hidden></p>
+  </section>
+
+  <footer class="transport glass" aria-label="Playback" data-i18n-aria="ariaPlayback">
+    <button type="button" class="playbtn" id="playBtn" aria-label="Play"><svg viewBox="0 0 24 24" aria-hidden="true"><path id="playIcon" d="M8 5.5v13l11-6.5z"/></svg></button>
+    <button type="button" class="ibtn" id="prevBtn" aria-label="Previous step" data-i18n-aria="ariaPrev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+    <button type="button" class="ibtn" id="nextBtn" aria-label="Next step" data-i18n-aria="ariaNext"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+    <div class="timeline">
+      <div class="when"><b class="num" id="whenMain">—</b><select id="timeSel" class="jump" aria-label="Go to a time" data-i18n-aria="jumpTo"></select><span class="num" id="whenSub"></span></div>
+      <div class="ruler">
+        <input type="range" id="scrub" min="0" max="19" step="1" value="19" aria-label="Time" data-i18n-aria="ariaTime">
+        <div class="ticks" id="ticks" aria-hidden="true"></div>
+      </div>
+    </div>
+    <div class="tctl">
+      <label class="seg" title="Playback speed" data-i18n-title="speedTitle"><span class="micro" data-i18n="speed">Speed</span>
+        <select id="speedSel"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select>
+      </label>
+      <div class="seg" role="group" aria-labelledby="soundLbl"><span class="micro" id="soundLbl" data-i18n="sound">Sound</span>
+        <button type="button" id="mMusic" aria-pressed="true" data-i18n="musical">Musical</button>
+        <button type="button" id="mPrecise" aria-pressed="false" data-i18n="precise">Precise</button>
+      </div>
+    </div>
+  </footer>
+
+  <aside class="frame glass" id="frameInfo" aria-label="Current NASA frame" data-i18n-aria="ariaFrame">
+    <img id="cbImg" alt="" width="220" height="10">
+    <div class="cbl num" id="cbLbl"></div>
+    <div class="micro" id="srcLine"></div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" hidden></div>
+
+  <div class="gate" id="gate">
+    <div class="gate-in">
+      <div class="g-k micro" data-i18n="gateKicker">NASA Earth Information Center · in sound</div>
+      <h1 class="g-title">HEARTHBEAT</h1>
+      <p class="g-tag" data-i18n="gateTag">Hear how home is doing.</p>
+      <p class="g-lead" data-i18n="gateProblem">Astronauts can see home from orbit, but cannot hear it. A student who cannot see is shown home only as colour maps.</p>
+      <p class="g-lead g-sol" data-i18n="gateSolution">Hearthbeat turns NASA's Earth data into sound. Choose your home and hear it: Is it raining? Is the air clean? How much has it warmed?</p>
+      <div class="g-btns">
+        <button type="button" class="go" id="goCrew" data-i18n="startCrew" aria-haspopup="dialog" disabled>Sign in: astronaut or family</button>
+        <button type="button" class="go ghost strong" id="goHome" data-i18n="startHome" disabled>Hear my home</button>
+        <button type="button" class="go ghost" id="goCheck" data-i18n="startCheck" disabled>Check-ups for class</button>
+        <button type="button" class="go ghost" id="go" data-i18n="start" disabled>Explore the globe</button>
+        <button type="button" class="go ghost" id="goEyes" data-i18n="startEyes" disabled>Eyes-closed mode</button>
+      </div>
+      <p class="g-note" data-i18n="headphones">Made first for people who cannot read a colour map. At least 2.2 billion people live with some vision impairment (WHO). Best with headphones.</p>
+      <span class="langsw" role="group" aria-label="Language / 语言"><button type="button" data-set-lang="en" aria-pressed="true">EN</button><i aria-hidden="true"></i><button type="button" class="zh" data-set-lang="zh" aria-pressed="false" lang="zh">中文</button></span>
+      <div class="g-status micro" id="gateStatus" role="status">Loading NASA data…</div>
+    </div>
+  </div>
+
+  <div class="eyes" id="eyes" hidden role="region" aria-labelledby="eyesTitle">
+    <div class="eyes-in">
+      <div class="eyes-pulse" aria-hidden="true"></div>
+      <h2 class="eyes-title" id="eyesTitle" data-i18n="eyesTitle">Listening</h2>
+      <p class="eyes-status" id="eyesStatus" aria-live="polite"></p>
+      <div class="eyes-task" id="eyesHome" hidden></div>
+      <div class="eyes-task" id="eyesTask" hidden></div>
+      <div class="pad" role="group" aria-label="Move the listening point" data-i18n-aria="ariaMove">
+        <button type="button" class="k n" data-move="n" data-i18n-label="north">North</button>
+        <button type="button" class="k w" data-move="w" data-i18n-label="west">West</button>
+        <button type="button" class="k c" id="eyesRead" data-i18n-label="readHere">Read here</button>
+        <button type="button" class="k e" data-move="e" data-i18n-label="east">East</button>
+        <button type="button" class="k s" data-move="s" data-i18n-label="south">South</button>
+      </div>
+      <div class="eyes-row">
+        <button type="button" class="k" id="eyesPlay" data-i18n-label="playPause">Play / pause</button>
+        <button type="button" class="k" id="eyesPrev" data-i18n-label="earlier">Earlier</button>
+        <button type="button" class="k" id="eyesNext" data-i18n-label="later">Later</button>
+        <button type="button" class="k" id="eyesDescribe" data-i18n-label="describeShort">Describe</button>
+        <button type="button" class="k" id="eyesTrack" data-i18n-label="nextTrack">Next track</button>
+        <button type="button" class="k" id="eyesPlace" data-i18n-label="nextPlaceShort">Next place</button>
+        <button type="button" class="k" id="eyesHelp" data-i18n-label="help">Help</button>
+        <button type="button" class="k" id="eyesExit" data-i18n-label="openEyes">Open eyes</button>
+      </div>
+      <div class="eyes-keys" id="eyesKeys" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <dialog class="about signin" id="crew" aria-labelledby="crewTitle">
+    <div class="about-in si-in">
+      <header><h2 id="crewTitle" data-i18n="crewTitle">Sign in</h2><button type="button" class="close" id="crewClose" aria-label="Close" data-i18n-aria="ariaClose">×</button></header>
+      <p class="si-lead" data-i18n="crewLead">Two people, far apart: an astronaut on the space station, and their family at home. Each one hears where the other is.</p>
+      <div class="si-roles" role="radiogroup" aria-label="Who are you?" data-i18n-aria="crewWhoQ">
+        <button type="button" class="si-role" role="radio" aria-checked="true" data-role="astronaut">
+          <span class="si-av" aria-hidden="true"><svg viewBox="0 0 48 48" width="40" height="40"><circle cx="24" cy="22" r="15" fill="none" stroke="currentColor" stroke-width="2.4"/><rect x="14" y="16" width="20" height="12" rx="6" fill="currentColor" opacity=".35"/><path d="M12 44c2-6 7-9 12-9s10 3 12 9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span>
+          <span class="si-id"><b data-i18n="crewWho">Astronaut</b><span data-i18n="crewWhoSub">On the space station</span></span>
+        </button>
+        <button type="button" class="si-role" role="radio" aria-checked="false" data-role="family" tabindex="-1">
+          <span class="si-av" aria-hidden="true"><svg viewBox="0 0 48 48" width="40" height="40"><path d="M8 24 24 10l16 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 21v17h22V21" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><rect x="21" y="28" width="6" height="10" rx="1" fill="currentColor" opacity=".35"/></svg></span>
+          <span class="si-id"><b data-i18n="famWho">Family</b><span data-i18n="famWhoSub">At home on Earth</span></span>
+        </button>
+      </div>
+      <label class="si-field"><span data-i18n="crewHome">Home on Earth</span><select id="crewHomeSel"></select></label>
+      <button type="button" class="go si-go" id="crewGo" data-i18n="crewSignIn">Sign in</button>
+      <p class="si-note" data-i18n="crewNote">Demo sign-in: no password, and nothing is sent anywhere. Hearthbeat is an independent project, not a NASA system.</p>
+    </div>
+  </dialog>
+
+  <dialog class="about" id="results" aria-labelledby="resultsTitle">
+    <div class="about-in">
+      <header><h2 id="resultsTitle" data-i18n="checkupsTitle">Check-ups</h2><button type="button" class="close" id="resultsClose" aria-label="Close" data-i18n-aria="ariaClose">×</button></header>
+      <div id="resultsBody"></div>
+    </div>
+  </dialog>
+
+  <dialog class="about" id="about" aria-labelledby="aboutTitle">
+    <div class="about-in">
+      <header><h2 id="aboutTitle" data-i18n="aboutTitle">About Hearthbeat and its data</h2><button type="button" class="close" id="aboutClose" aria-label="Close" data-i18n-aria="ariaClose">×</button></header>
+      <div id="aboutBody"></div>
+    </div>
+  </dialog>
+
+  <div id="live" class="sr" aria-live="polite"></div>
+  <div id="alert" class="sr" role="alert"></div>
+</div>
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>

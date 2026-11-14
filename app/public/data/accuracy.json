@@ -1,0 +1,1649 @@
+{
+  "generated": "2026-11-05T20:01:56Z",
+  "seed": 2026,
+  "nRequested": 400,
+  "method": "Frames: newest SVS frame whose time T, and the raw times needed for the +-3 h scan, are covered by the raw OPeNDAP aggregation (frame times from build.discover); plus the frame 24 h earlier (extra.dayEarlier). Decoding: build.build_lut + build.decode, i.e. exactly the float grid the app quantises. Raw: GDS ASCII subsets (every 2nd 0.25-degree latitude, every 2nd longitude), averaged over the points inside each 1-degree cell (GEOS-FP 2-4 points, GEOS-CF 4 points). 'tavg1' sources are hourly means stamped mid-hour; the value at T is the mean of the hours T-1..T and T..T+1. Sampling: n cells without replacement, probability proportional to cos(latitude), numpy default_rng(seed), among cells where decoded and raw are both valid. Points whose raw value is outside the colorbar range are counted in 'clipped' and excluded from the stats. bias = mean(decoded - raw). Offset scan: same points, raw at T+h (h=-3..3) from the hourly source, clipped to the colorbar range; bestOffsetHours = argmax r (for the log-scale PM2.5 bar: argmax r of log10 values). extra.allCells: every valid unclipped cell, area-weighted, split into colour-measured cells and cells under the logo/date-label overlays that the decoder fills from neighbours. extra.forecastCheck: the same points against GEOS forecasts started in the 24 h before the frames were rendered; extra.forecastScan repeats the timing scan against the best-matching forecast. extra.impliedRange: least-squares fit of raw on decoded colorbar position, evaluated at the bar ends (diagnostic).",
+  "layers": {
+    "temp": {
+      "unit": "°C",
+      "colorbarRange": {
+        "scale": "linear",
+        "min": -40.0,
+        "max": 40.0
+      },
+      "timing": "hourly frames; last frame = 2026-11-04 20:00 UTC (20:00 UTC on the day of the Last-Modified of the last frame, 2026-11-04 07:30Z), one hour earlier per frame; checked against the burned-in US Eastern date labels",
+      "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005147/frames/2048x1024_2x1_12p/MC01_stage3_GMAO_near_surface_temperature_2048x1024_en-hwtool/00000370.png",
+      "frameTime": "2026-11-04T18:00Z",
+      "frameRendered": "2026-11-04T07:30Z",
+      "raw": {
+        "dataset": "GEOS-FP assim inst3_2d_asm_Nx",
+        "variable": "t2m - 273.15 (instantaneous)",
+        "url": "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/assim/inst3_2d_asm_Nx",
+        "time": "2026-11-04T18:00Z",
+        "rawSteps": [
+          "2026-11-04T18:00Z"
+        ],
+        "spatial": "mean of the raw points of the strided subset inside each 1-degree cell",
+        "requests": [
+          "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/assim/inst3_2d_asm_Nx.ascii?t2m[26086:26086][1:2:275][0:2:1150]",
+          "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/assim/inst3_2d_asm_Nx.ascii?t2m[26086:26086][277:2:551][0:2:1150]",
+          "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/assim/inst3_2d_asm_Nx.ascii?t2m[26086:26086][553:2:719][0:2:1150]"
+        ]
+      },
+      "sampled": 400,
+      "validCells": 62298,
+      "n": 396,
+      "bias": 0.214,
+      "mae": 0.4841,
+      "rmse": 0.7658,
+      "r": 0.9983,
+      "medianAbsErr": 0.2985,
+      "p90AbsErr": 1.0429,
+      "clipped": 4,
+      "sampledOverlayCells": 0,
+      "offsetScan": [
+        {
+          "h": -3,
+          "r": 0.9938,
+          "rmse": 1.3981
+        },
+        {
+          "h": -2,
+          "r": 0.9972,
+          "rmse": 0.9405
+        },
+        {
+          "h": -1,
+          "r": 0.9985,
+          "rmse": 0.7002
+        },
+        {
+          "h": 0,
+          "r": 0.9983,
+          "rmse": 0.7642
+        },
+        {
+          "h": 1,
+          "r": 0.9975,
+          "rmse": 0.9534
+        },
+        {
+          "h": 2,
+          "r": 0.9963,
+          "rmse": 1.1594
+        },
+        {
+          "h": 3,
+          "r": 0.9948,
+          "rmse": 1.3885
+        }
+      ],
+      "bestOffsetHours": -1,
+      "extra": {
+        "ols": {
+          "slope": 1.0072,
+          "intercept": 0.0874
+        },
+        "impliedRange": {
+          "min": -39.6061,
+          "max": 39.5507,
+          "labelled": [
+            -40.0,
+            40.0
+          ]
+        },
+        "clippedDetail": {
+          "belowMin": 4,
+          "aboveMax": 0,
+          "meanAbsErrVsClippedRaw": 0.2057
+        },
+        "allCells": {
+          "n": 60264,
+          "bias": 0.2104,
+          "mae": 0.5124,
+          "rmse": 0.7868,
+          "r": 0.9988,
+          "measured": {
+            "n": 60264,
+            "bias": 0.2104,
+            "mae": 0.5124,
+            "rmse": 0.7868,
+            "r": 0.9988
+          },
+          "overlayFilled": {
+            "n": 0,
+            "bias": null,
+            "mae": null,
+            "rmse": null,
+            "r": null
+          }
+        },
+        "hourlyMeanScan": {
+          "what": "each native hourly mean of t2m on its own; h = centre of the averaging hour minus frame time",
+          "scan": [
+            {
+              "h": -3.5,
+              "r": 0.9914,
+              "rmse": 1.6564
+            },
+            {
+              "h": -2.5,
+              "r": 0.9957,
+              "rmse": 1.1601
+            },
+            {
+              "h": -1.5,
+              "r": 0.9981,
+              "rmse": 0.7753
+            },
+            {
+              "h": -0.5,
+              "r": 0.9985,
+              "rmse": 0.7087
+            },
+            {
+              "h": 0.5,
+              "r": 0.9979,
+              "rmse": 0.8605
+            },
+            {
+              "h": 1.5,
+              "r": 0.9969,
+              "rmse": 1.0624
+            },
+            {
+              "h": 2.5,
+              "r": 0.9956,
+              "rmse": 1.2718
+            },
+            {
+              "h": 3.5,
+              "r": 0.9936,
+              "rmse": 1.5307
+            }
+          ]
+        },
+        "scanSource": {
+          "dataset": "GEOS-FP assim tavg1_2d_slv_Nx",
+          "variable": "t2m - 273.15 (mean of the two hourly means around T)",
+          "url": "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/assim/tavg1_2d_slv_Nx"
+        },
+        "fieldCheck": [
+          {
+            "variable": "t2m - 273.15 (instantaneous)",
+            "dataset": "GEOS-FP assim inst3_2d_asm_Nx",
+            "n": 396,
+            "bias": 0.214,
+            "rmse": 0.7658,
+            "r": 0.9983,
+            "slope": 1.0072,
+            "intercept": 0.0874
+          },
+          {
+            "variable": "t10m - 273.15",
+            "dataset": "GEOS-FP assim inst3_2d_asm_Nx",
+            "n": 396,
+            "bias": 0.171,
+            "rmse": 0.8197,
+            "r": 0.998,
+            "slope": 1.0116,
+            "intercept": -0.0315
+          }
+        ],
+        "forecastCheck": [
+          {
+            "init": "2026-11-04T06Z",
+            "leadHours": 12.0,
+            "url": "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/fcast/tavg1_2d_slv_Nx/tavg1_2d_slv_Nx.20261104_06",
+            "variable": "t2m - 273.15 (mean of the two hourly means around T)",
+            "n": 396,
+            "bias": 0.2165,
+            "mae": 0.4564,
+            "rmse": 0.7255,
+            "r": 0.9985
+          },
+          {
+            "init": "2026-11-04T00Z",
+            "leadHours": 18.0,
+            "url": "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/fcast/tavg1_2d_slv_Nx/tavg1_2d_slv_Nx.20261104_00",
+            "variable": "t2m - 273.15 (mean of the two hourly means around T)",
+            "n": 396,
+            "bias": 0.1967,
+            "mae": 0.4462,
+            "rmse": 0.7077,
+            "r": 0.9986
+          },
+          {
+            "init": "2026-11-03T18Z",
+            "url": "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/fcast/tavg1_2d_slv_Nx/tavg1_2d_slv_Nx.20261103_18",
+            "error": "time mismatch: server returned 2026-11-01 18:30Z at time index 27, DAS axis says 2026-11-04 18:30Z (https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/fcast/tavg1_2d_slv_Nx/tavg1_2d_slv_Nx.20261103_18.ascii?t2m[27:27][553:2:719][0:2:1150])"
+          },
+          {
+            "init": "2026-11-03T12Z",
+            "leadHours": 30.0,
+            "url": "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/fcast/tavg1_2d_slv_Nx/tavg1_2d_slv_Nx.20261103_12",
+            "variable": "t2m - 273.15 (mean of the two hourly means around T)",
+            "n": 396,
+            "bias": 0.1948,
+            "mae": 0.3797,
+            "rmse": 0.6226,
+            "r": 0.9989
+          }
+        ],
+        "forecastScan": {
+          "init": "2026-11-03T12Z",
+          "url": "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/fcast/tavg1_2d_slv_Nx/tavg1_2d_slv_Nx.20261103_12",
+          "offsetScan": [
+            {
+              "h": -3,
+              "r": 0.9941,
+              "rmse": 1.3668
+            },
+            {
+              "h": -2,
+              "r": 0.9976,
+              "rmse": 0.8698
+            },
+            {
+              "h": -1,
+              "r": 0.999,
+              "rmse": 0.5683
+            },
+            {
+              "h": 0,
+              "r": 0.9989,
+              "rmse": 0.6226
+            },
+            {
+              "h": 1,
+              "r": 0.9982,
+              "rmse": 0.8231
+            },
+            {
+              "h": 2,
+              "r": 0.9971,
+              "rmse": 1.0359
+            },
+            {
+              "h": 3,
+              "r": 0.9957,
+              "rmse": 1.2717
+            }
+          ],
+          "bestOffsetHours": -1,
+          "hourlyMeanScan": [
+            {
+              "h": -3.5,
+              "r": 0.9916,
+              "rmse": 1.6376
+            },
+            {
+              "h": -2.5,
+              "r": 0.9961,
+              "rmse": 1.1138
+            },
+            {
+              "h": -1.5,
+              "r": 0.9986,
+              "rmse": 0.6738
+            },
+            {
+              "h": -0.5,
+              "r": 0.9991,
+              "rmse": 0.5636
+            },
+            {
+              "h": 0.5,
+              "r": 0.9985,
+              "rmse": 0.7282
+            },
+            {
+              "h": 1.5,
+              "r": 0.9976,
+              "rmse": 0.9379
+            },
+            {
+              "h": 2.5,
+              "r": 0.9965,
+              "rmse": 1.1531
+            },
+            {
+              "h": 3.5,
+              "r": 0.9946,
+              "rmse": 1.4192
+            }
+          ]
+        },
+        "dayEarlier": {
+          "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005147/frames/2048x1024_2x1_12p/MC01_stage3_GMAO_near_surface_temperature_2048x1024_en-hwtool/00000346.png",
+          "frameTime": "2026-11-03T18:00Z",
+          "frameRendered": "2026-11-04T07:30Z",
+          "raw": {
+            "dataset": "GEOS-FP assim inst3_2d_asm_Nx",
+            "variable": "t2m - 273.15 (instantaneous)",
+            "url": "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/assim/inst3_2d_asm_Nx",
+            "time": "2026-11-03T18:00Z",
+            "rawSteps": [
+              "2026-11-03T18:00Z"
+            ],
+            "spatial": "mean of the raw points of the strided subset inside each 1-degree cell",
+            "requests": [
+              "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/assim/inst3_2d_asm_Nx.ascii?t2m[26078:26078][1:2:275][0:2:1150]",
+              "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/assim/inst3_2d_asm_Nx.ascii?t2m[26078:26078][277:2:551][0:2:1150]",
+              "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/assim/inst3_2d_asm_Nx.ascii?t2m[26078:26078][553:2:719][0:2:1150]"
+            ]
+          },
+          "sampled": 400,
+          "validCells": 62298,
+          "n": 397,
+          "bias": 0.163,
+          "mae": 0.3875,
+          "rmse": 0.5843,
+          "r": 0.9992,
+          "medianAbsErr": 0.2602,
+          "p90AbsErr": 0.8316,
+          "clipped": 3,
+          "sampledOverlayCells": 0,
+          "offsetScan": [
+            {
+              "h": -3,
+              "r": 0.9951,
+              "rmse": 1.2883
+            },
+            {
+              "h": -2,
+              "r": 0.998,
+              "rmse": 0.8222
+            },
+            {
+              "h": -1,
+              "r": 0.9992,
+              "rmse": 0.5347
+            },
+            {
+              "h": 0,
+              "r": 0.9992,
+              "rmse": 0.592
+            },
+            {
+              "h": 1,
+              "r": 0.9984,
+              "rmse": 0.8194
+            },
+            {
+              "h": 2,
+              "r": 0.9972,
+              "rmse": 1.0709
+            },
+            {
+              "h": 3,
+              "r": 0.9956,
+              "rmse": 1.3205
+            }
+          ],
+          "bestOffsetHours": 0,
+          "extra": {
+            "ols": {
+              "slope": 1.0158,
+              "intercept": -0.1111
+            },
+            "impliedRange": {
+              "min": -39.1756,
+              "max": 39.4499,
+              "labelled": [
+                -40.0,
+                40.0
+              ]
+            },
+            "clippedDetail": {
+              "belowMin": 3,
+              "aboveMax": 0,
+              "meanAbsErrVsClippedRaw": 0.2057
+            },
+            "allCells": {
+              "n": 59945,
+              "bias": 0.1997,
+              "mae": 0.4109,
+              "rmse": 0.651,
+              "r": 0.9994,
+              "measured": {
+                "n": 59945,
+                "bias": 0.1997,
+                "mae": 0.4109,
+                "rmse": 0.651,
+                "r": 0.9994
+              },
+              "overlayFilled": {
+                "n": 0,
+                "bias": null,
+                "mae": null,
+                "rmse": null,
+                "r": null
+              }
+            },
+            "hourlyMeanScan": {
+              "what": "each native hourly mean of t2m on its own; h = centre of the averaging hour minus frame time",
+              "scan": [
+                {
+                  "h": -3.5,
+                  "r": 0.9931,
+                  "rmse": 1.5357
+                },
+                {
+                  "h": -2.5,
+                  "r": 0.9967,
+                  "rmse": 1.0581
+                },
+                {
+                  "h": -1.5,
+                  "r": 0.9989,
+                  "rmse": 0.6342
+                },
+                {
+                  "h": -0.5,
+                  "r": 0.9993,
+                  "rmse": 0.5301
+                },
+                {
+                  "h": 0.5,
+                  "r": 0.9988,
+                  "rmse": 0.7008
+                },
+                {
+                  "h": 1.5,
+                  "r": 0.9978,
+                  "rmse": 0.9568
+                },
+                {
+                  "h": 2.5,
+                  "r": 0.9964,
+                  "rmse": 1.199
+                },
+                {
+                  "h": 3.5,
+                  "r": 0.9945,
+                  "rmse": 1.4641
+                }
+              ]
+            },
+            "scanSource": {
+              "dataset": "GEOS-FP assim tavg1_2d_slv_Nx",
+              "variable": "t2m - 273.15 (mean of the two hourly means around T)",
+              "url": "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/assim/tavg1_2d_slv_Nx"
+            },
+            "fieldCheck": [
+              {
+                "variable": "t2m - 273.15 (instantaneous)",
+                "dataset": "GEOS-FP assim inst3_2d_asm_Nx",
+                "n": 397,
+                "bias": 0.163,
+                "rmse": 0.5843,
+                "r": 0.9992,
+                "slope": 1.0158,
+                "intercept": -0.1111
+              },
+              {
+                "variable": "t10m - 273.15",
+                "dataset": "GEOS-FP assim inst3_2d_asm_Nx",
+                "n": 397,
+                "bias": 0.1169,
+                "rmse": 0.6716,
+                "r": 0.9989,
+                "slope": 1.0217,
+                "intercept": -0.2589
+              }
+            ]
+          }
+        }
+      },
+      "notes": "SVS 5147 samples GEOS-FP 3-D fields 3 m above the surface; that field is not published on OPeNDAP, so the nearest raw field, 2 m air temperature (t2m), is used (10 m shown as an alternative). The frame time must be a 3-hourly synoptic time because inst3 t2m is 3-hourly."
+    },
+    "precip": {
+      "unit": "mm/h",
+      "colorbarRange": {
+        "scale": "linear",
+        "min": 0.0,
+        "max": 20.0
+      },
+      "timing": "hourly frames; last frame = 2026-11-04 20:00 UTC (20:00 UTC on the day of the Last-Modified of the last frame, 2026-11-04 07:32Z), one hour earlier per frame; checked against the burned-in US Eastern date labels",
+      "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005149/frames/2048x1024_2x1_12p/MC03_stage3_GMAO_precipitation_2048x1024_en-hwtool/00000372.png",
+      "frameTime": "2026-11-04T20:00Z",
+      "frameRendered": "2026-11-04T07:32Z",
+      "raw": {
+        "dataset": "GEOS-FP assim tavg1_2d_flx_Nx",
+        "variable": "prectot * 3600 (mean of the two hourly means around T)",
+        "url": "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/assim/tavg1_2d_flx_Nx",
+        "time": "2026-11-04T20:00Z",
+        "rawSteps": [
+          "2026-11-04T19:30Z",
+          "2026-11-04T20:30Z"
+        ],
+        "spatial": "mean of the raw points of the strided subset inside each 1-degree cell",
+        "requests": [
+          "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/assim/tavg1_2d_flx_Nx.ascii?prectot[78259:78259][1:2:275][0:2:1150]",
+          "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/assim/tavg1_2d_flx_Nx.ascii?prectot[78259:78259][277:2:551][0:2:1150]",
+          "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/assim/tavg1_2d_flx_Nx.ascii?prectot[78259:78259][553:2:719][0:2:1150]",
+          "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/assim/tavg1_2d_flx_Nx.ascii?prectot[78260:78260][1:2:275][0:2:1150]",
+          "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/assim/tavg1_2d_flx_Nx.ascii?prectot[78260:78260][277:2:551][0:2:1150]",
+          "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/assim/tavg1_2d_flx_Nx.ascii?prectot[78260:78260][553:2:719][0:2:1150]"
+        ]
+      },
+      "sampled": 400,
+      "validCells": 62298,
+      "n": 106,
+      "bias": -0.0881,
+      "mae": 0.2773,
+      "rmse": 0.5236,
+      "r": 0.3332,
+      "medianAbsErr": 0.1597,
+      "p90AbsErr": 0.518,
+      "clipped": 0,
+      "sampledOverlayCells": 0,
+      "offsetScan": [
+        {
+          "h": -3,
+          "r": 0.3324,
+          "rmse": 0.3433
+        },
+        {
+          "h": -2,
+          "r": 0.4579,
+          "rmse": 0.2492
+        },
+        {
+          "h": -1,
+          "r": 0.5668,
+          "rmse": 0.213
+        },
+        {
+          "h": 0,
+          "r": 0.5396,
+          "rmse": 0.2706
+        },
+        {
+          "h": 1,
+          "r": 0.5518,
+          "rmse": 0.2556
+        },
+        {
+          "h": 2,
+          "r": 0.4916,
+          "rmse": 0.248
+        },
+        {
+          "h": 3,
+          "r": 0.4407,
+          "rmse": 0.2531
+        }
+      ],
+      "bestOffsetHours": -1,
+      "extra": {
+        "statsDefinition": "top-level error stats use rainy points only (decoded or raw >= 0.1 mm/h); allPoints includes dry points",
+        "allPoints": {
+          "n": 400,
+          "bias": -0.034,
+          "mae": 0.0855,
+          "rmse": 0.2706,
+          "r": 0.5396,
+          "medianAbsErr": 0.0171,
+          "p90AbsErr": 0.1991
+        },
+        "contingency": {
+          "threshold": 0.1,
+          "hits": 54,
+          "misses": 35,
+          "falseAlarms": 17,
+          "correctNegatives": 294,
+          "hitRate": 0.6067,
+          "falseAlarmRatio": 0.2394,
+          "frequencyBias": 0.7978
+        },
+        "contingencyAllCells": {
+          "threshold": 0.1,
+          "hits": 7575,
+          "misses": 4564,
+          "falseAlarms": 1882,
+          "correctNegatives": 48275,
+          "hitRate": 0.624,
+          "falseAlarmRatio": 0.199,
+          "frequencyBias": 0.7791
+        },
+        "olsRainy": {
+          "slope": 0.151,
+          "intercept": 0.2188
+        },
+        "impliedRange": {
+          "min": 0.1604,
+          "max": 14.8705,
+          "labelled": [
+            0.0,
+            20.0
+          ]
+        },
+        "meanRainy": {
+          "decoded": 0.2734,
+          "raw": 0.3615
+        },
+        "allCells": {
+          "n": 62296,
+          "bias": -0.0337,
+          "mae": 0.0911,
+          "rmse": 0.3741,
+          "r": 0.552,
+          "measured": {
+            "n": 62296,
+            "bias": -0.0337,
+            "mae": 0.0911,
+            "rmse": 0.3741,
+            "r": 0.552
+          },
+          "overlayFilled": {
+            "n": 0,
+            "bias": null,
+            "mae": null,
+            "rmse": null,
+            "r": null
+          }
+        },
+        "hourlyMeanScan": {
+          "what": "each native hourly mean of prectot on its own; h = centre of the averaging hour minus frame time",
+          "scan": [
+            {
+              "h": -3.5,
+              "r": 0.281,
+              "rmse": 0.4136
+            },
+            {
+              "h": -2.5,
+              "r": 0.3894,
+              "rmse": 0.2865
+            },
+            {
+              "h": -1.5,
+              "r": 0.5222,
+              "rmse": 0.2212
+            },
+            {
+              "h": -0.5,
+              "r": 0.5523,
+              "rmse": 0.2372
+            },
+            {
+              "h": 0.5,
+              "r": 0.506,
+              "rmse": 0.3242
+            },
+            {
+              "h": 1.5,
+              "r": 0.5313,
+              "rmse": 0.2372
+            },
+            {
+              "h": 2.5,
+              "r": 0.4319,
+              "rmse": 0.2733
+            },
+            {
+              "h": 3.5,
+              "r": 0.4285,
+              "rmse": 0.2477
+            }
+          ]
+        },
+        "scanSource": {
+          "dataset": "GEOS-FP assim tavg1_2d_flx_Nx",
+          "variable": "prectot * 3600",
+          "url": "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/assim/tavg1_2d_flx_Nx"
+        },
+        "fieldCheck": [
+          {
+            "variable": "prectot * 3600 (mean of the two hourly means around T)",
+            "dataset": "GEOS-FP assim tavg1_2d_flx_Nx",
+            "n": 400,
+            "bias": -0.034,
+            "rmse": 0.2706,
+            "r": 0.5396,
+            "slope": 0.2952,
+            "intercept": 0.0424,
+            "hitRate": 0.6067,
+            "falseAlarmRatio": 0.2394
+          },
+          {
+            "variable": "(prectot - precsno) * 3600 (liquid only)",
+            "dataset": "GEOS-FP assim tavg1_2d_flx_Nx",
+            "n": 400,
+            "bias": -0.0271,
+            "rmse": 0.271,
+            "r": 0.5295,
+            "slope": 0.2907,
+            "intercept": 0.0449,
+            "hitRate": 0.622,
+            "falseAlarmRatio": 0.2817
+          },
+          {
+            "variable": "preccon * 3600 (convective only)",
+            "dataset": "GEOS-FP assim tavg1_2d_flx_Nx",
+            "n": 400,
+            "bias": 0.032,
+            "rmse": 0.1539,
+            "r": 0.5197,
+            "slope": 0.8089,
+            "intercept": 0.0401,
+            "hitRate": 0.7115,
+            "falseAlarmRatio": 0.4789
+          }
+        ],
+        "forecastCheck": [
+          {
+            "init": "2026-11-04T06Z",
+            "leadHours": 14.0,
+            "url": "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/fcast/tavg1_2d_flx_Nx/tavg1_2d_flx_Nx.20261104_06",
+            "variable": "prectot * 3600",
+            "n": 400,
+            "bias": -0.0404,
+            "mae": 0.0867,
+            "rmse": 0.2866,
+            "r": 0.559,
+            "hitRate": 0.625,
+            "falseAlarmRatio": 0.2254
+          },
+          {
+            "init": "2026-11-04T00Z",
+            "leadHours": 20.0,
+            "url": "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/fcast/tavg1_2d_flx_Nx/tavg1_2d_flx_Nx.20261104_00",
+            "variable": "prectot * 3600",
+            "n": 400,
+            "bias": -0.0396,
+            "mae": 0.0805,
+            "rmse": 0.2885,
+            "r": 0.5585,
+            "hitRate": 0.6629,
+            "falseAlarmRatio": 0.169
+          },
+          {
+            "init": "2026-11-03T18Z",
+            "leadHours": 26.0,
+            "url": "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/fcast/tavg1_2d_flx_Nx/tavg1_2d_flx_Nx.20261103_18",
+            "variable": "prectot * 3600",
+            "n": 400,
+            "bias": -0.0541,
+            "mae": 0.0866,
+            "rmse": 0.4645,
+            "r": 0.517,
+            "hitRate": 0.7439,
+            "falseAlarmRatio": 0.1408
+          },
+          {
+            "init": "2026-11-03T12Z",
+            "leadHours": 32.0,
+            "url": "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/fcast/tavg1_2d_flx_Nx/tavg1_2d_flx_Nx.20261103_12",
+            "variable": "prectot * 3600",
+            "n": 400,
+            "bias": -0.0176,
+            "mae": 0.0422,
+            "rmse": 0.0851,
+            "r": 0.8987,
+            "hitRate": 0.7674,
+            "falseAlarmRatio": 0.0704
+          }
+        ],
+        "forecastScan": {
+          "init": "2026-11-03T12Z",
+          "url": "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/fcast/tavg1_2d_flx_Nx/tavg1_2d_flx_Nx.20261103_12",
+          "offsetScan": [
+            {
+              "h": -3,
+              "r": 0.4058,
+              "rmse": 0.4153
+            },
+            {
+              "h": -2,
+              "r": 0.4568,
+              "rmse": 0.3327
+            },
+            {
+              "h": -1,
+              "r": 0.7786,
+              "rmse": 0.137
+            },
+            {
+              "h": 0,
+              "r": 0.8987,
+              "rmse": 0.0851
+            },
+            {
+              "h": 1,
+              "r": 0.7557,
+              "rmse": 0.1445
+            },
+            {
+              "h": 2,
+              "r": 0.6124,
+              "rmse": 0.2006
+            },
+            {
+              "h": 3,
+              "r": 0.5125,
+              "rmse": 0.2393
+            }
+          ],
+          "bestOffsetHours": 0,
+          "hourlyMeanScan": [
+            {
+              "h": -3.5,
+              "r": 0.3907,
+              "rmse": 0.4538
+            },
+            {
+              "h": -2.5,
+              "r": 0.3422,
+              "rmse": 0.4826
+            },
+            {
+              "h": -1.5,
+              "r": 0.6152,
+              "rmse": 0.2128
+            },
+            {
+              "h": -0.5,
+              "r": 0.8886,
+              "rmse": 0.09
+            },
+            {
+              "h": 0.5,
+              "r": 0.8391,
+              "rmse": 0.1119
+            },
+            {
+              "h": 1.5,
+              "r": 0.6409,
+              "rmse": 0.1926
+            },
+            {
+              "h": 2.5,
+              "r": 0.5577,
+              "rmse": 0.2227
+            },
+            {
+              "h": 3.5,
+              "r": 0.4359,
+              "rmse": 0.2798
+            }
+          ]
+        },
+        "dayEarlier": {
+          "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005149/frames/2048x1024_2x1_12p/MC03_stage3_GMAO_precipitation_2048x1024_en-hwtool/00000348.png",
+          "frameTime": "2026-11-03T20:00Z",
+          "frameRendered": "2026-11-04T07:32Z",
+          "raw": {
+            "dataset": "GEOS-FP assim tavg1_2d_flx_Nx",
+            "variable": "prectot * 3600 (mean of the two hourly means around T)",
+            "url": "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/assim/tavg1_2d_flx_Nx",
+            "time": "2026-11-03T20:00Z",
+            "rawSteps": [
+              "2026-11-03T19:30Z",
+              "2026-11-03T20:30Z"
+            ],
+            "spatial": "mean of the raw points of the strided subset inside each 1-degree cell",
+            "requests": [
+              "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/assim/tavg1_2d_flx_Nx.ascii?prectot[78235:78235][1:2:275][0:2:1150]",
+              "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/assim/tavg1_2d_flx_Nx.ascii?prectot[78235:78235][277:2:551][0:2:1150]",
+              "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/assim/tavg1_2d_flx_Nx.ascii?prectot[78235:78235][553:2:719][0:2:1150]",
+              "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/assim/tavg1_2d_flx_Nx.ascii?prectot[78236:78236][1:2:275][0:2:1150]",
+              "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/assim/tavg1_2d_flx_Nx.ascii?prectot[78236:78236][277:2:551][0:2:1150]",
+              "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/assim/tavg1_2d_flx_Nx.ascii?prectot[78236:78236][553:2:719][0:2:1150]"
+            ]
+          },
+          "sampled": 400,
+          "validCells": 62298,
+          "n": 99,
+          "bias": -0.0235,
+          "mae": 0.1777,
+          "rmse": 0.2987,
+          "r": 0.8197,
+          "medianAbsErr": 0.1159,
+          "p90AbsErr": 0.3327,
+          "clipped": 0,
+          "sampledOverlayCells": 0,
+          "offsetScan": [
+            {
+              "h": -3,
+              "r": 0.6106,
+              "rmse": 0.2071
+            },
+            {
+              "h": -2,
+              "r": 0.7695,
+              "rmse": 0.1624
+            },
+            {
+              "h": -1,
+              "r": 0.8797,
+              "rmse": 0.12
+            },
+            {
+              "h": 0,
+              "r": 0.8739,
+              "rmse": 0.1504
+            },
+            {
+              "h": 1,
+              "r": 0.7771,
+              "rmse": 0.2223
+            },
+            {
+              "h": 2,
+              "r": 0.6955,
+              "rmse": 0.2307
+            },
+            {
+              "h": 3,
+              "r": 0.551,
+              "rmse": 0.2836
+            }
+          ],
+          "bestOffsetHours": -1,
+          "extra": {
+            "statsDefinition": "top-level error stats use rainy points only (decoded or raw >= 0.1 mm/h); allPoints includes dry points",
+            "allPoints": {
+              "n": 400,
+              "bias": -0.0162,
+              "mae": 0.0558,
+              "rmse": 0.1504,
+              "r": 0.8739,
+              "medianAbsErr": 0.0147,
+              "p90AbsErr": 0.1375
+            },
+            "contingency": {
+              "threshold": 0.1,
+              "hits": 71,
+              "misses": 19,
+              "falseAlarms": 9,
+              "correctNegatives": 301,
+              "hitRate": 0.7889,
+              "falseAlarmRatio": 0.1125,
+              "frequencyBias": 0.8889
+            },
+            "contingencyAllCells": {
+              "threshold": 0.1,
+              "hits": 8848,
+              "misses": 3115,
+              "falseAlarms": 744,
+              "correctNegatives": 49588,
+              "hitRate": 0.7396,
+              "falseAlarmRatio": 0.0776,
+              "frequencyBias": 0.8018
+            },
+            "olsRainy": {
+              "slope": 0.5643,
+              "intercept": 0.1514
+            },
+            "impliedRange": {
+              "min": -0.0485,
+              "max": 23.7627,
+              "labelled": [
+                0.0,
+                20.0
+              ]
+            },
+            "meanRainy": {
+              "decoded": 0.3779,
+              "raw": 0.4013
+            },
+            "allCells": {
+              "n": 62295,
+              "bias": -0.0308,
+              "mae": 0.0615,
+              "rmse": 0.3,
+              "r": 0.733,
+              "measured": {
+                "n": 62295,
+                "bias": -0.0308,
+                "mae": 0.0615,
+                "rmse": 0.3,
+                "r": 0.733
+              },
+              "overlayFilled": {
+                "n": 0,
+                "bias": null,
+                "mae": null,
+                "rmse": null,
+                "r": null
+              }
+            },
+            "hourlyMeanScan": {
+              "what": "each native hourly mean of prectot on its own; h = centre of the averaging hour minus frame time",
+              "scan": [
+                {
+                  "h": -3.5,
+                  "r": 0.426,
+                  "rmse": 0.2821
+                },
+                {
+                  "h": -2.5,
+                  "r": 0.6923,
+                  "rmse": 0.1849
+                },
+                {
+                  "h": -1.5,
+                  "r": 0.7957,
+                  "rmse": 0.1613
+                },
+                {
+                  "h": -0.5,
+                  "r": 0.9176,
+                  "rmse": 0.1002
+                },
+                {
+                  "h": 0.5,
+                  "r": 0.7986,
+                  "rmse": 0.2344
+                },
+                {
+                  "h": 1.5,
+                  "r": 0.718,
+                  "rmse": 0.2349
+                },
+                {
+                  "h": 2.5,
+                  "r": 0.6429,
+                  "rmse": 0.2446
+                },
+                {
+                  "h": 3.5,
+                  "r": 0.4391,
+                  "rmse": 0.3443
+                }
+              ]
+            },
+            "scanSource": {
+              "dataset": "GEOS-FP assim tavg1_2d_flx_Nx",
+              "variable": "prectot * 3600",
+              "url": "https://opendap.nccs.nasa.gov/dods/GEOS-5/fp/0.25_deg/assim/tavg1_2d_flx_Nx"
+            },
+            "fieldCheck": [
+              {
+                "variable": "prectot * 3600 (mean of the two hourly means around T)",
+                "dataset": "GEOS-FP assim tavg1_2d_flx_Nx",
+                "n": 400,
+                "bias": -0.0162,
+                "rmse": 0.1504,
+                "r": 0.8739,
+                "slope": 0.6864,
+                "intercept": 0.0188,
+                "hitRate": 0.7889,
+                "falseAlarmRatio": 0.1125
+              },
+              {
+                "variable": "(prectot - precsno) * 3600 (liquid only)",
+                "dataset": "GEOS-FP assim tavg1_2d_flx_Nx",
+                "n": 400,
+                "bias": -0.0078,
+                "rmse": 0.1668,
+                "r": 0.8281,
+                "slope": 0.6627,
+                "intercept": 0.0271,
+                "hitRate": 0.7882,
+                "falseAlarmRatio": 0.1625
+              },
+              {
+                "variable": "preccon * 3600 (convective only)",
+                "dataset": "GEOS-FP assim tavg1_2d_flx_Nx",
+                "n": 400,
+                "bias": 0.0601,
+                "rmse": 0.2155,
+                "r": 0.5124,
+                "slope": 1.3912,
+                "intercept": 0.0463,
+                "hitRate": 0.7963,
+                "falseAlarmRatio": 0.4625
+              }
+            ]
+          }
+        }
+      },
+      "notes": "GEOS-FP publishes precipitation on OPeNDAP only as hourly means (tavg1_2d_flx_Nx); no instantaneous rate is in the assimilation collections. Total precipitation (prectot, rain + snow) is the main candidate; liquid-only and convective-only are compared as alternatives. kg m-2 s-1 x 3600 = mm/h."
+    },
+    "pm25": {
+      "unit": "µg/m³",
+      "colorbarRange": {
+        "scale": "log",
+        "min": 0.4,
+        "max": 409.6
+      },
+      "timing": "hourly frames; last frame = 2026-11-04 20:00 UTC (20:00 UTC on the day of the Last-Modified of the last frame, 2026-11-04 07:33Z), one hour earlier per frame; checked against the burned-in US Eastern date labels",
+      "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005151/frames/2048x1024_2x1_12p/MC01_stage4_GMAO_pm25_2048x1024_en-hwtool/00000357.png",
+      "frameTime": "2026-11-04T05:00Z",
+      "frameRendered": "2026-11-04T07:33Z",
+      "raw": {
+        "dataset": "GEOS-CF v2 analysis aqc_tavg_1hr_glo_L1440x721_slv",
+        "variable": "pm25_rh35 (mean of the two hourly means around T)",
+        "url": "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv",
+        "time": "2026-11-04T05:00Z",
+        "rawSteps": [
+          "2026-11-04T04:30Z",
+          "2026-11-04T05:30Z"
+        ],
+        "spatial": "mean of the raw points of the strided subset inside each 1-degree cell",
+        "requests": [
+          "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv.ascii?pm25_rh35[10963:10963][0:0][1:2:221][1:2:1439]",
+          "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv.ascii?pm25_rh35[10963:10963][0:0][223:2:443][1:2:1439]",
+          "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv.ascii?pm25_rh35[10963:10963][0:0][445:2:665][1:2:1439]",
+          "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv.ascii?pm25_rh35[10963:10963][0:0][667:2:719][1:2:1439]",
+          "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv.ascii?pm25_rh35[10964:10964][0:0][1:2:221][1:2:1439]",
+          "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv.ascii?pm25_rh35[10964:10964][0:0][223:2:443][1:2:1439]",
+          "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv.ascii?pm25_rh35[10964:10964][0:0][445:2:665][1:2:1439]",
+          "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv.ascii?pm25_rh35[10964:10964][0:0][667:2:719][1:2:1439]"
+        ]
+      },
+      "sampled": 400,
+      "validCells": 62298,
+      "n": 400,
+      "bias": -6.1641,
+      "mae": 6.1641,
+      "rmse": 12.7826,
+      "r": 0.8603,
+      "medianAbsErr": 2.5103,
+      "p90AbsErr": 14.5091,
+      "clipped": 0,
+      "sampledOverlayCells": 0,
+      "offsetScan": [
+        {
+          "h": -3,
+          "r": 0.9082,
+          "rmse": 16.9003,
+          "rLog": 0.943
+        },
+        {
+          "h": -2,
+          "r": 0.9005,
+          "rmse": 15.3658,
+          "rLog": 0.9465
+        },
+        {
+          "h": -1,
+          "r": 0.8785,
+          "rmse": 13.907,
+          "rLog": 0.9476
+        },
+        {
+          "h": 0,
+          "r": 0.8603,
+          "rmse": 12.7826,
+          "rLog": 0.9461
+        },
+        {
+          "h": 1,
+          "r": 0.8473,
+          "rmse": 11.8608,
+          "rLog": 0.9416
+        },
+        {
+          "h": 2,
+          "r": 0.8339,
+          "rmse": 11.2175,
+          "rLog": 0.9337
+        },
+        {
+          "h": 3,
+          "r": 0.8211,
+          "rmse": 10.8568,
+          "rLog": 0.9255
+        }
+      ],
+      "bestOffsetHours": -1,
+      "extra": {
+        "ols": {
+          "slope": 0.2308,
+          "intercept": -0.2149
+        },
+        "impliedRange": {
+          "min": 1.1959,
+          "max": 15413.1501,
+          "labelled": [
+            0.4,
+            409.6
+          ]
+        },
+        "log": {
+          "log10Bias": -0.6148,
+          "log10Mae": 0.6148,
+          "log10Rmse": 0.6426,
+          "rLog": 0.9461,
+          "medianRelErr": 0.7614,
+          "p90RelErr": 0.8568,
+          "fac2": 0.065
+        },
+        "allCells": {
+          "n": 62250,
+          "bias": -5.6319,
+          "mae": 5.8235,
+          "rmse": 12.0476,
+          "r": 0.4622,
+          "measured": {
+            "n": 62250,
+            "bias": -5.6319,
+            "mae": 5.8235,
+            "rmse": 12.0476,
+            "r": 0.4622
+          },
+          "overlayFilled": {
+            "n": 0,
+            "bias": null,
+            "mae": null,
+            "rmse": null,
+            "r": null
+          }
+        },
+        "hourlyMeanScan": {
+          "what": "each native hourly mean of pm25_rh35 on its own; h = centre of the averaging hour minus frame time",
+          "scan": [
+            {
+              "h": -3.5,
+              "r": 0.9068,
+              "rmse": 17.5549,
+              "rLog": 0.94
+            },
+            {
+              "h": -2.5,
+              "r": 0.9084,
+              "rmse": 16.2752,
+              "rLog": 0.945
+            },
+            {
+              "h": -1.5,
+              "r": 0.8882,
+              "rmse": 14.5345,
+              "rLog": 0.947
+            },
+            {
+              "h": -0.5,
+              "r": 0.8656,
+              "rmse": 13.3302,
+              "rLog": 0.9468
+            },
+            {
+              "h": 0.5,
+              "r": 0.853,
+              "rmse": 12.2672,
+              "rLog": 0.9441
+            },
+            {
+              "h": 1.5,
+              "r": 0.8397,
+              "rmse": 11.4833,
+              "rLog": 0.9374
+            },
+            {
+              "h": 2.5,
+              "r": 0.8265,
+              "rmse": 10.9762,
+              "rLog": 0.9287
+            },
+            {
+              "h": 3.5,
+              "r": 0.8134,
+              "rmse": 10.773,
+              "rLog": 0.9212
+            }
+          ]
+        },
+        "scanSource": {
+          "dataset": "GEOS-CF v2 analysis aqc_tavg_1hr_glo_L1440x721_slv",
+          "variable": "pm25_rh35",
+          "url": "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv"
+        },
+        "fieldCheck": [
+          {
+            "variable": "pm25_rh35 (mean of the two hourly means around T)",
+            "dataset": "GEOS-CF v2 analysis aqc_tavg_1hr_glo_L1440x721_slv",
+            "n": 400,
+            "bias": -6.1641,
+            "rmse": 12.7826,
+            "r": 0.8603,
+            "slope": 0.2308,
+            "intercept": -0.2149,
+            "log10Bias": -0.6148,
+            "rLog": 0.9461
+          },
+          {
+            "variable": "pm25 * 1e9 (GEOS-FP GOCART dry PM2.5, kg m-3 -> ug/m3)",
+            "dataset": "GEOS-FP assim inst1_2d_hwl_Nx",
+            "n": 400,
+            "bias": -9.3206,
+            "rmse": 13.732,
+            "r": 0.5982,
+            "slope": 0.1933,
+            "intercept": -0.5346,
+            "log10Bias": -0.8785,
+            "rLog": 0.5853
+          }
+        ],
+        "forecastCheck": [
+          {
+            "init": "2026-11-03T09Z",
+            "leadHours": 20.0,
+            "url": "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/fcst/aqc_tavg_1hr_glo_L1440x721_slv/aqc_tavg_1hr_glo_L1440x721_slv.20261103_09z",
+            "variable": "pm25_rh35",
+            "n": 400,
+            "bias": -6.0522,
+            "mae": 6.0522,
+            "rmse": 11.9354,
+            "r": 0.8772
+          }
+        ],
+        "forecastScan": {
+          "init": "2026-11-03T09Z",
+          "url": "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/fcst/aqc_tavg_1hr_glo_L1440x721_slv/aqc_tavg_1hr_glo_L1440x721_slv.20261103_09z",
+          "offsetScan": [
+            {
+              "h": -3,
+              "r": 0.9262,
+              "rmse": 16.8463,
+              "rLog": 0.9475
+            },
+            {
+              "h": -2,
+              "r": 0.9179,
+              "rmse": 15.2829,
+              "rLog": 0.9527
+            },
+            {
+              "h": -1,
+              "r": 0.8997,
+              "rmse": 13.5049,
+              "rLog": 0.9545
+            },
+            {
+              "h": 0,
+              "r": 0.8772,
+              "rmse": 11.9354,
+              "rLog": 0.9525
+            },
+            {
+              "h": 1,
+              "r": 0.8552,
+              "rmse": 10.8737,
+              "rLog": 0.9469
+            },
+            {
+              "h": 2,
+              "r": 0.8343,
+              "rmse": 10.2384,
+              "rLog": 0.9393
+            },
+            {
+              "h": 3,
+              "r": 0.8162,
+              "rmse": 9.8715,
+              "rLog": 0.9314
+            }
+          ],
+          "bestOffsetHours": -1,
+          "hourlyMeanScan": [
+            {
+              "h": -3.5,
+              "r": 0.9271,
+              "rmse": 17.5298,
+              "rLog": 0.9434
+            },
+            {
+              "h": -2.5,
+              "r": 0.9234,
+              "rmse": 16.2014,
+              "rLog": 0.9505
+            },
+            {
+              "h": -1.5,
+              "r": 0.9086,
+              "rmse": 14.4368,
+              "rLog": 0.954
+            },
+            {
+              "h": -0.5,
+              "r": 0.8867,
+              "rmse": 12.6368,
+              "rLog": 0.9539
+            },
+            {
+              "h": 0.5,
+              "r": 0.8644,
+              "rmse": 11.2812,
+              "rLog": 0.9496
+            },
+            {
+              "h": 1.5,
+              "r": 0.8438,
+              "rmse": 10.4946,
+              "rLog": 0.9429
+            },
+            {
+              "h": 2.5,
+              "r": 0.8231,
+              "rmse": 10.0039,
+              "rLog": 0.9347
+            },
+            {
+              "h": 3.5,
+              "r": 0.8079,
+              "rmse": 9.7575,
+              "rLog": 0.9268
+            }
+          ]
+        },
+        "dayEarlier": {
+          "frame": "https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005151/frames/2048x1024_2x1_12p/MC01_stage4_GMAO_pm25_2048x1024_en-hwtool/00000333.png",
+          "frameTime": "2026-11-03T05:00Z",
+          "frameRendered": "2026-11-04T07:33Z",
+          "raw": {
+            "dataset": "GEOS-CF v2 analysis aqc_tavg_1hr_glo_L1440x721_slv",
+            "variable": "pm25_rh35 (mean of the two hourly means around T)",
+            "url": "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv",
+            "time": "2026-11-03T05:00Z",
+            "rawSteps": [
+              "2026-11-03T04:30Z",
+              "2026-11-03T05:30Z"
+            ],
+            "spatial": "mean of the raw points of the strided subset inside each 1-degree cell",
+            "requests": [
+              "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv.ascii?pm25_rh35[10939:10939][0:0][1:2:221][1:2:1439]",
+              "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv.ascii?pm25_rh35[10939:10939][0:0][223:2:443][1:2:1439]",
+              "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv.ascii?pm25_rh35[10939:10939][0:0][445:2:665][1:2:1439]",
+              "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv.ascii?pm25_rh35[10939:10939][0:0][667:2:719][1:2:1439]",
+              "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv.ascii?pm25_rh35[10940:10940][0:0][1:2:221][1:2:1439]",
+              "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv.ascii?pm25_rh35[10940:10940][0:0][223:2:443][1:2:1439]",
+              "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv.ascii?pm25_rh35[10940:10940][0:0][445:2:665][1:2:1439]",
+              "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv.ascii?pm25_rh35[10940:10940][0:0][667:2:719][1:2:1439]"
+            ]
+          },
+          "sampled": 400,
+          "validCells": 62298,
+          "n": 400,
+          "bias": -5.721,
+          "mae": 5.721,
+          "rmse": 10.1761,
+          "r": 0.7991,
+          "medianAbsErr": 2.3946,
+          "p90AbsErr": 14.0133,
+          "clipped": 0,
+          "sampledOverlayCells": 0,
+          "offsetScan": [
+            {
+              "h": -3,
+              "r": 0.8421,
+              "rmse": 14.4516,
+              "rLog": 0.9565
+            },
+            {
+              "h": -2,
+              "r": 0.8239,
+              "rmse": 12.654,
+              "rLog": 0.9574
+            },
+            {
+              "h": -1,
+              "r": 0.8089,
+              "rmse": 11.081,
+              "rLog": 0.9573
+            },
+            {
+              "h": 0,
+              "r": 0.7991,
+              "rmse": 10.1761,
+              "rLog": 0.9552
+            },
+            {
+              "h": 1,
+              "r": 0.7822,
+              "rmse": 9.7289,
+              "rLog": 0.9508
+            },
+            {
+              "h": 2,
+              "r": 0.7627,
+              "rmse": 9.4869,
+              "rLog": 0.9437
+            },
+            {
+              "h": 3,
+              "r": 0.7445,
+              "rmse": 9.3883,
+              "rLog": 0.9359
+            }
+          ],
+          "bestOffsetHours": -2,
+          "extra": {
+            "ols": {
+              "slope": 0.2305,
+              "intercept": -0.2126
+            },
+            "impliedRange": {
+              "min": 1.1175,
+              "max": 22735.4388,
+              "labelled": [
+                0.4,
+                409.6
+              ]
+            },
+            "log": {
+              "log10Bias": -0.6082,
+              "log10Mae": 0.6082,
+              "log10Rmse": 0.6367,
+              "rLog": 0.9552,
+              "medianRelErr": 0.7539,
+              "p90RelErr": 0.8553,
+              "fac2": 0.07
+            },
+            "allCells": {
+              "n": 62292,
+              "bias": -5.5829,
+              "mae": 5.7826,
+              "rmse": 11.557,
+              "r": 0.412,
+              "measured": {
+                "n": 62292,
+                "bias": -5.5829,
+                "mae": 5.7826,
+                "rmse": 11.557,
+                "r": 0.412
+              },
+              "overlayFilled": {
+                "n": 0,
+                "bias": null,
+                "mae": null,
+                "rmse": null,
+                "r": null
+              }
+            },
+            "hourlyMeanScan": {
+              "what": "each native hourly mean of pm25_rh35 on its own; h = centre of the averaging hour minus frame time",
+              "scan": [
+                {
+                  "h": -3.5,
+                  "r": 0.849,
+                  "rmse": 15.2896,
+                  "rLog": 0.9554
+                },
+                {
+                  "h": -2.5,
+                  "r": 0.8315,
+                  "rmse": 13.6758,
+                  "rLog": 0.9567
+                },
+                {
+                  "h": -1.5,
+                  "r": 0.8099,
+                  "rmse": 11.7295,
+                  "rLog": 0.9572
+                },
+                {
+                  "h": -0.5,
+                  "r": 0.8046,
+                  "rmse": 10.485,
+                  "rLog": 0.9562
+                },
+                {
+                  "h": 0.5,
+                  "r": 0.7913,
+                  "rmse": 9.8971,
+                  "rLog": 0.9532
+                },
+                {
+                  "h": 1.5,
+                  "r": 0.7718,
+                  "rmse": 9.5764,
+                  "rLog": 0.9471
+                },
+                {
+                  "h": 2.5,
+                  "r": 0.7526,
+                  "rmse": 9.4085,
+                  "rLog": 0.9394
+                },
+                {
+                  "h": 3.5,
+                  "r": 0.7354,
+                  "rmse": 9.3787,
+                  "rLog": 0.9308
+                }
+              ]
+            },
+            "scanSource": {
+              "dataset": "GEOS-CF v2 analysis aqc_tavg_1hr_glo_L1440x721_slv",
+              "variable": "pm25_rh35",
+              "url": "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv"
+            },
+            "fieldCheck": [
+              {
+                "variable": "pm25_rh35 (mean of the two hourly means around T)",
+                "dataset": "GEOS-CF v2 analysis aqc_tavg_1hr_glo_L1440x721_slv",
+                "n": 400,
+                "bias": -5.721,
+                "rmse": 10.1761,
+                "r": 0.7991,
+                "slope": 0.2305,
+                "intercept": -0.2126,
+                "log10Bias": -0.6082,
+                "rLog": 0.9552
+              },
+              {
+                "variable": "pm25 * 1e9 (GEOS-FP GOCART dry PM2.5, kg m-3 -> ug/m3)",
+                "dataset": "GEOS-FP assim inst1_2d_hwl_Nx",
+                "n": 400,
+                "bias": -9.9983,
+                "rmse": 15.3011,
+                "r": 0.4975,
+                "slope": 0.1196,
+                "intercept": 0.0696,
+                "log10Bias": -0.8991,
+                "rLog": 0.6186
+              }
+            ]
+          }
+        }
+      },
+      "notes": "GEOS-CF surface PM2.5 at 35 % RH (pm25_rh35, ug/m3, lowest model level 72). The v1 collection gmao/geos-cf/assim/aqc_tavg_1hr_g1440x721_v1 (pm25_rh35_gcc) ends 2026-01-02 11:30Z, so the v2 analysis collection is used. GEOS-FP hyperwall pm25 is compared as an alternative source."
+    }
+  },
+  "errors": {}
+}

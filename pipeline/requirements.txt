@@ -1,0 +1,6 @@
+numpy
+pillow
+requests
+certifi
+pytest
+netCDF4

@@ -1,0 +1,111 @@
+name: Build and deploy
+
+# Every day: fetch the newest NASA EIC frames and GISTEMP, validate them, run every test,
+# build the site, and (when enabled) publish it to GitHub Pages.
+# Publishing needs Pages, which on the free plan needs a public repo: set the repository
+# variable DEPLOY_PAGES=true to turn it on. Until then each run still refreshes, validates,
+# tests and builds, and the built site is attached to the run as "hearthbeat-site".
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: '30 9 * * *'     # SVS re-renders the EIC frames around 07:30 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: pipeline/requirements.txt
+      - name: Pipeline tests (offline)
+        working-directory: pipeline
+        run: |
+          pip install -r requirements.txt
+          python -m pytest -q
+
+      - name: ffmpeg (reads NASA's night-lights and lightning movies)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends ffmpeg && ffmpeg -version | head -1
+
+      - name: Restore NASA download cache
+        uses: actions/cache@v4
+        with:
+          path: pipeline/cache
+          key: nasa-cache-${{ github.run_id }}
+          restore-keys: nasa-cache-
+
+      - name: Fetch today's NASA data (validated before it replaces the committed snapshot)
+        if: github.event_name != 'pull_request'
+        id: fetch
+        continue-on-error: true   # NASA unreachable or validation failed -> keep the committed, validated snapshot
+        working-directory: pipeline
+        run: python -m hearthbeat_pipeline.build --out ../app/public/data
+
+      - name: Accuracy test against NASA raw model data
+        if: github.event_name != 'pull_request' && steps.fetch.outcome == 'success'
+        continue-on-error: true
+        working-directory: pipeline
+        run: |
+          python -m hearthbeat_pipeline.accuracy --out ../app/public/data/accuracy.json
+          python -m hearthbeat_pipeline.validate ../app/public/data --write
+
+      - name: Check the data that will be published
+        working-directory: pipeline
+        run: python -m hearthbeat_pipeline.validate ../app/public/data
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - name: Unit tests, type check, build
+        working-directory: app
+        run: |
+          npm ci
+          npm run typecheck
+          npm test
+          npm run build
+      - name: End-to-end and accessibility tests (Playwright + axe)
+        working-directory: app
+        run: |
+          npx playwright install --with-deps chromium
+          npx playwright test
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: app/test-results
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hearthbeat-site
+          path: app/dist
+      - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request' && vars.DEPLOY_PAGES == 'true'
+        with:
+          path: app/dist
+
+  deploy:
+    if: github.event_name != 'pull_request' && vars.DEPLOY_PAGES == 'true'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,39 @@
+name: Probe new NASA sources
+
+# Run this when the challenge publishes its resource list (13 Nov 2026).
+# Paste the resource page text, links or SVS ids into the "sources" box. The probe finds every
+# SVS page id, checks its frames and colorbar, and attaches a report plus draft entries for
+# pipeline/sources.json. Drafts stay disabled until someone reads min/max off the colorbar labels.
+on:
+  workflow_dispatch:
+    inputs:
+      sources:
+        description: 'SVS ids, SVS URLs or pasted resource text'
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Probe
+        working-directory: pipeline
+        env:
+          SOURCES_TEXT: ${{ github.event.inputs.sources }}
+        run: |
+          pip install -r requirements.txt
+          printf '%s' "$SOURCES_TEXT" > /tmp/sources.txt
+          python -m hearthbeat_pipeline.probe --from-text /tmp/sources.txt --out probe-report.json --stubs probe-stubs.json | tee probe.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: probe
+          path: |
+            pipeline/probe.txt
+            pipeline/probe-report.json
+            pipeline/probe-stubs.json

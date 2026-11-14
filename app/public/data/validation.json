@@ -1,0 +1,65 @@
+{
+ "ok": true,
+ "checked": "2026-11-14T03:38:48Z",
+ "errors": [],
+ "warnings": [],
+ "layers": {
+  "precip": {
+   "steps": 20,
+   "nodataFraction": {
+    "min": 0.039,
+    "max": 0.039
+   },
+   "first": "2026-11-08T00:00Z",
+   "last": "2026-11-12T18:00Z",
+   "newestAgeHours": 10.6
+  },
+  "pm25": {
+   "steps": 20,
+   "nodataFraction": {
+    "min": 0.0,
+    "max": 0.0
+   },
+   "first": "2026-11-08T00:00Z",
+   "last": "2026-11-12T18:00Z",
+   "newestAgeHours": 10.6
+  },
+  "temp": {
+   "steps": 20,
+   "nodataFraction": {
+    "min": 0.039,
+    "max": 0.039
+   },
+   "first": "2026-11-08T00:00Z",
+   "last": "2026-11-12T18:00Z",
+   "newestAgeHours": 10.6
+  },
+  "tanom": {
+   "steps": 146,
+   "nodataFraction": {
+    "min": 0.011,
+    "max": 0.32
+   },
+   "first": "1880",
+   "last": "2025"
+  },
+  "lights": {
+   "steps": 12,
+   "nodataFraction": {
+    "min": 0.0,
+    "max": 0.0
+   },
+   "first": "2012",
+   "last": "2023"
+  },
+  "lightning": {
+   "steps": 12,
+   "nodataFraction": {
+    "min": 0.0,
+    "max": 0.0
+   },
+   "first": "01",
+   "last": "12"
+  }
+ }
+}

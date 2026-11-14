@@ -1,0 +1,84 @@
+{
+  "_doc": "Hearthbeat data sources. Adding a NASA EIC visualization = adding an entry under layers (run `python -m hearthbeat_pipeline.probe <svs id>` to generate one). Themes pick which layer each experience plays. See pipeline/README.md.",
+  "playback": { "days": 5, "stepHours": 6, "imageWidth": 2048, "webpQuality": 70, "webpAlphaQuality": 50 },
+  "themes": {
+    "rain": { "layer": "precip", "context": ["temp", "pm25"] },
+    "air": { "layer": "pm25", "context": ["temp", "precip"] },
+    "climate": { "layer": "tanom" },
+    "lights": { "layer": "lights" },
+    "lightning": { "layer": "lightning" }
+  },
+  "layers": {
+    "precip": {
+      "adapter": "eic-svs", "enabled": true,
+      "svs": 5149, "title": "GEOS-FP precipitation", "agency": "NASA GMAO", "product": "GEOS-FP",
+      "unit": "mm/h", "scale": "linear", "min": 0.0, "max": 20.0,
+      "colorbar": "Precipitation_colorbar_plain.png", "frames_dir": "precipitation", "cadence": "hourly",
+      "max_dist": 30.0, "min_chroma": 60, "unmatched_value": 0.0, "agg": "mean",
+      "overlays": "gmao", "fill": "overlays",
+      "out_scale": "log", "out_min": 0.1, "out_max": 20.0,
+      "picture": { "mode": "rain-clouds", "rain_alpha": 0.95, "rain_alpha_min": 0.6, "rain_full_pos": 0.25 },
+      "notes": "Precipitation rate from GEOS-FP, recovered only where rain colours are visible. Pixels showing clouds, land or ocean count as no rain, so rain under thick cloud is under-counted. Cell value = mean over the 1° cell. Stored log 0.1–20 mm/h; the lowest code (0.1) means dry or ≤0.1 mm/h. The newest steps are short forecasts. Cells under the NASA logo and date label have no data."
+    },
+    "pm25": {
+      "adapter": "eic-svs", "enabled": true,
+      "svs": 5151, "title": "GEOS-CF surface PM2.5", "agency": "NASA GMAO", "product": "GEOS-CF",
+      "unit": "µg/m³", "scale": "log", "min": 0.4, "max": 409.6,
+      "colorbar": "PM2.5_colorbar_plain.png", "frames_dir": "pm25", "cadence": "hourly",
+      "max_dist": 12.0, "overlays": "gmao",
+      "values": {
+        "from": "opendap", "variable": "pm25_rh35", "has_lev": true, "time": "bracket-hourly-means",
+        "datasets": ["https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/ana/aqc_tavg_1hr_glo_L1440x721_slv",
+                     "https://opendap.nccs.nasa.gov/dods/gmao/geos-cf/v2/fcst/aqc_tavg_1hr_glo_L1440x721_slv.latest"],
+        "label": "GEOS-CF v2 surface PM2.5 at 35% relative humidity (analysis, then the latest forecast), NASA NCCS OPeNDAP"
+      },
+      "picture": { "mode": "field", "alpha_from": 0.08, "alpha_to": 0.5, "alpha_max": 0.85 },
+      "notes": "Surface fine particulate matter (PM2.5) from NASA's GEOS-CF composition model, not ground stations. The globe shows the EIC frame's colours (more opaque where the air is dirtier); the numbers come directly from GEOS-CF output at the same hour (analysis, then the latest forecast for the newest hours), because the accuracy test found the frame's colours do not follow its colorbar (values read from the picture were about 4x too low)."
+    },
+    "temp": {
+      "adapter": "eic-svs", "enabled": true,
+      "svs": 5147, "title": "GEOS-FP near-surface temperature", "agency": "NASA GMAO", "product": "GEOS-FP",
+      "unit": "°C", "scale": "linear", "min": -40.0, "max": 40.0,
+      "colorbar": "NearSurfaceTemperature_colorbar_plain.png", "frames_dir": "near_surface_temperature", "cadence": "hourly",
+      "max_dist": 14.0, "overlays": "gmao",
+      "blends": [{ "toward": [0, 0, 0], "t_max": 0.35, "p_max": 0.01, "steps": 7 }],
+      "picture": { "mode": "none" },
+      "notes": "Air temperature about 3 m above the surface from GEOS-FP; clipped to the colorbar range −40…40 °C (−40 means −40 or colder). The newest steps are short forecasts. Cells under the NASA logo and date label (part of West Antarctica and the far North Pacific) have no data."
+    },
+    "wind": {
+      "adapter": "eic-svs", "enabled": false,
+      "disabled_reason": "Calm air (<3.5 m/s) is drawn transparent over a grey land map, so wind over land cannot be recovered from the picture (27% of cells read as calm). Re-enable only with a fix.",
+      "svs": 5148, "title": "GEOS-FP near-surface wind speed", "agency": "NASA GMAO", "product": "GEOS-FP",
+      "unit": "m/s", "scale": "linear", "min": 0.0, "max": 40.0,
+      "colorbar": "NearSurfaceWindSpeed_colorbar_plain.png", "frames_dir": "near_surface_wind", "cadence": "hourly",
+      "max_dist": 15.0,
+      "blends": [{ "toward": [30, 30, 30], "t_max": 0.8, "p_max": 0.25, "steps": 8 },
+                 { "toward": [200, 200, 200], "t_max": 0.7, "p_max": 0.25, "steps": 7 },
+                 { "toward": [255, 255, 255], "t_max": 0.4, "p_max": 1.0, "steps": 4 }],
+      "drop_grey_lut": true, "grey_value": 1.75, "overlays": "gmao"
+    },
+    "ndvi": {
+      "adapter": "eic-svs", "enabled": false,
+      "disabled_reason": "The SVS near-real-time NDVI series stopped on 2026-06-13 and its colorbar has no numbers, so it cannot sit next to November data.",
+      "svs": 5544, "title": "VIIRS near-real-time NDVI", "agency": "NASA", "product": "VIIRS NDVI",
+      "unit": "", "scale": "linear", "min": -0.1, "max": 0.9,
+      "colorbar": "NDVI_colorbar.png", "frames_dir": "4096x2048_2x1_30p/equirectangular_w_dates", "cadence": "daily",
+      "max_dist": 25.0, "blends": [{ "toward": [0, 0, 0], "t_max": 0.4, "p_max": 1.0, "steps": 4 }],
+      "white_invalid": true, "fill": "none",
+      "exclude_colors": [[8, 123, 176], [255, 235, 231], [122, 112, 111]],
+      "overlays": [[0.0, 0.9, 0.17, 1.0]]
+    },
+    "tanom": {
+      "adapter": "gistemp", "enabled": true,
+      "min_months": 9, "jpeg_quality": 80
+    },
+    "lights": {
+      "adapter": "svs-movie-lights", "enabled": true, "svs": 5313,
+      "_doc": "NASA EIC night lights 2012-2023 (SVS 5313, in the challenge resources), read from NASA's movie of the visualization (hearthbeat_pipeline/nightlights.py). The visualization does not change, so a failed run keeps the previous layer."
+    },
+    "lightning": {
+      "adapter": "svs-movie-lightning", "enabled": true, "svs": 5011,
+      "_doc": "Lightning seen from the ISS by LIS, 2017-2023 (SVS 5011, in the challenge resources), read from NASA's Science On a Sphere movie of the visualization and its frame dates (hearthbeat_pipeline/lightning.py). Twelve calendar months averaged over the years. The visualization is finished, so the published layer is reused unless the code's METHOD or the movie URL changes."
+    }
+  }
+}
