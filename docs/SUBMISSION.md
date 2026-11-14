@@ -12,7 +12,7 @@ the [Participant Terms and Conditions](https://www.spaceappschallenge.org/legal/
 2. **Public links.** The demo link and the final-project link "should not require a password,
    permission, or registration". The public repository is
    <https://github.com/yantongggg/Hearbeat_NASA>. The demo site is
-   <https://yantongggg.github.io/hearthbeat/>. Test both links in a private browser window before submitting.
+   <https://yantongggg.github.io/Hearbeat_NASA/>. Test both links in a private browser window before submitting.
 3. **Demo.** A video of 30 seconds or less, or a slide deck of at most 7 slides including the
    title slide. Going over either limit makes the project ineligible for global judging. A
    non-English video needs English subtitles. Scripts for both are below.
@@ -47,7 +47,7 @@ low-vision student has to wait for someone else to describe them.
 
 ## Link to Final Project
 
-<https://github.com/yantongggg/Hearbeat_NASA> · demo: <https://yantongggg.github.io/hearthbeat/>
+<https://github.com/yantongggg/Hearbeat_NASA> · demo: <https://yantongggg.github.io/Hearbeat_NASA/>
 
 ## Detailed Project Description
 

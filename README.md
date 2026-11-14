@@ -8,12 +8,12 @@
 (*The Earth Information Jukebox*, Kuala Lumpur), by Team D3stiny.
 
 [![Build and deploy](https://github.com/yantongggg/Hearbeat_NASA/actions/workflows/deploy.yml/badge.svg)](https://github.com/yantongggg/Hearbeat_NASA/actions/workflows/deploy.yml)
-[![Live app](https://img.shields.io/badge/live%20app-yantongggg.github.io%2Fhearthbeat-f0b56a)](https://yantongggg.github.io/hearthbeat/)
+[![Live app](https://img.shields.io/badge/live%20app-yantongggg.github.io%2FHearbeat_NASA-f0b56a)](https://yantongggg.github.io/Hearbeat_NASA/)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 ![NASA open data](https://img.shields.io/badge/data-NASA%20EIC%20·%20GEOS%20·%20GISTEMP%20·%20ISS-0b3d91)
 ![Tests](https://img.shields.io/badge/tests-190%20automated-2e7d32)
 
-**[Try it](https://yantongggg.github.io/hearthbeat/)** ·
+**[Try it](https://yantongggg.github.io/Hearbeat_NASA/)** ·
 [Demo videos](https://drive.google.com/drive/folders/19wLiQuMWGdlQFvEEmqjHYQK5JBhnh27x) ·
 [Project document (PDF)](docs/Hearthbeat-D3stiny-project-document.pdf) ·
 [Pitch](docs/PITCH.md) ·
@@ -38,7 +38,7 @@ Hearthbeat is an independent project for the NASA Space Apps Challenge 2026. It 
 3. [From NASA data to sound](#3-from-nasa-data-to-sound)
 4. [System architecture](#4-system-architecture)
 5. [Verification and validation](#5-verification-and-validation)
-6. [Challenge requirements, traced](#6-challenge-requirements-traced)
+6. [Challenge requirements, traced](#6-challenge-requirements-traced) · [Judging criteria](#2026-judging-criteria)
 7. [Accessibility](#7-accessibility)
 8. [Open science](#8-open-science)
 9. [Run it locally](#9-run-it-locally)
@@ -181,6 +181,20 @@ page shows.
 | Use of the NASA visualizations listed for the challenge | SVS 5313 (night lights) and SVS 5011 (ISS lightning) are tracks; SVS 5533 and 13786 are cited for comparison | pipeline tests; data tests of seasons |
 | Accessibility as a core theme | Eyes-closed mode, keyboard control, screen-reader text, speech, haptics, English and 中文 | axe WCAG 2.1 A/AA scans; keyboard tests |
 | Musical sound, not noise | Major keys, measured levels, one voice per track | level tests (dBFS, energy below 150 Hz) |
+
+### 2026 judging criteria
+
+The [NASA Space Apps Judging & Awards Guide](https://www.spaceappschallenge.org/resources/judging-awards-guide/#judging-criteria) evaluates each project on a **1-to-5 scale in five criteria**. Hearthbeat addresses each one with inspectable work below. The judges assign the scores; this is an evidence map, not a self-awarded rating.
+
+| Criterion | What the official guide assesses | How Hearthbeat responds |
+|---|---|---|
+| **Impact** | The significance of the problem and the quality and reach of the potential benefit. | The [mission and research](#1-mission) identify a specific access gap in visual Earth data. [Hear my home, Explore and the classroom check-ups](#2-what-it-does) give listeners ways to hear and compare places. The [impact test plan](#12-limits-and-next-steps) names measurable tasks; benefit to blind and low-vision users has **not yet been measured**. |
+| **Creativity** | Originality, innovation and a meaningful improvement over existing approaches. | [Five live, place-based data voices](#3-from-nasa-data-to-sound), the combined *Home song*, and the astronaut/family [Together views](#2-what-it-does) turn changing NASA data into an interactive story. The [architecture](#4-system-architecture) shows how the sounds are synthesized for a selected place and time rather than played as fixed recordings. |
+| **Validity** | Scientific grounding; technical, functional or logical feasibility; real-world usability and accessibility. | The [data-to-sound rules](#3-from-nasa-data-to-sound) are tied to named NASA sources. The [accuracy report and automated tests](#5-verification-and-validation) check values and behaviour; the PM2.5 method was changed after a failed reconstruction check. The [accessibility work](#7-accessibility) is implemented, while [real-device and target-user testing remain open](#12-limits-and-next-steps). |
+| **Relevance** | A direct answer to the chosen challenge with NASA data at the core of the solution. | The [challenge trace](#6-challenge-requirements-traced) connects EIC visual frames to sound generated in the browser from the matching data step. The [source list](#13-data-sources-and-credits), [data contract](docs/DATA.md) and [pipeline](#4-system-architecture) make NASA data essential and traceable. |
+| **Presentation** | Clear, engaging communication of the challenge, solution and significance; judges consider both the demo and the full project. | The [live app](https://yantongggg.github.io/Hearbeat_NASA/), [demo-video folder](https://drive.google.com/drive/folders/19wLiQuMWGdlQFvEEmqjHYQK5JBhnh27x), [screenshots](#2-what-it-does), [project document](docs/Hearthbeat-D3stiny-project-document.pdf), and this README present the problem, method, results and limits. The short demonstration should be submitted as its own publicly accessible link on the official project page. |
+
+The [limits and next steps](#12-limits-and-next-steps) distinguish what works today from results that still need testing with people.
 
 ## 7. Accessibility
 
