@@ -328,24 +328,10 @@ The app stays free and open source; running costs are close to zero (static host
 
 ## 14. Team, disclosure and licence
 
-**Team D3stiny:** Chye Yan Tong · Hong Rui Yi. NASA Space Apps Challenge 2026, Kuala Lumpur.
+**Team D3stiny:** Chye Yan Tong · Hong Rui Yi. NASA Space Apps Challenge, Kuala Lumpur.
 
-This repository publishes a snapshot of existing work. Its first commit marks publication of this snapshot.
+**Project and materials.** This repository publishes a snapshot of Hearthbeat's source code and supporting materials. The app brings together five NASA data-to-sound tracks, *Hear my home*, the *Home song*, and distinct views for an astronaut and their family. The repository also includes the project document, team poster, and links to the short demo and full project video.
 
-**Updates on 14 November 2026:**
+**AI assistance (SI).** The team directed and reviewed the project, including its interaction and sound design. An AI coding assistant helped produce most of the code, tests, and documentation; AI tools also assisted with the poster, videos, and project document. The app synthesizes its sounds from NASA data at run time in [`app/src/audio/engine.ts`](app/src/audio/engine.ts). Household sounds are credited recordings, NASA imagery is identified in [`NOTICE`](NOTICE), and the screenshots in [`docs/media/`](docs/media/) show the app itself. AI-assisted presentation materials carry a visible “AI-assisted (SI)” label.
 
-- Track 05: lightning seen from the ISS, from NASA SVS 5011 (one of the challenge's listed visualizations), also on the station's side in *Together*.
-- *Home song*: all five tracks as one song for one place.
-- The public repository and the live site, rebuilt every day from NASA's newest data after every test passes.
-- *Hear my home* and the astronaut page kept apart; the *Together* pages fitted to short laptop windows and phones.
-- The 30-second demo, the 4½-minute project video, the team poster and the project document.
-
-**Use of AI (the Space Apps form calls it Super Intelligence, SI).** Most of the code, tests and documentation were
-written with an AI coding assistant, directed and reviewed by the team. The sounds are synthesized at run time by
-[`app/src/audio/engine.ts`](app/src/audio/engine.ts) from NASA data, the home sounds are recordings made by people, and
-the globe pictures are NASA's. The screenshots in [`docs/media/`](docs/media/) are captures of the app; the team
-poster, the demo videos and the project document were assembled with AI assistance from screen recordings of the app
-and carry a visible "AI-assisted (SI)" mark.
-
-**Licence.** Code and documentation: Apache License 2.0 ([`LICENSE`](LICENSE)). Third-party material keeps its own
-terms ([`NOTICE`](NOTICE)).
+**Licence.** Code and documentation are released under the Apache License 2.0 ([`LICENSE`](LICENSE)). Third-party materials retain their own terms ([`NOTICE`](NOTICE)).
