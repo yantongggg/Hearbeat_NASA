@@ -34,9 +34,9 @@ Other material
 
 Use of AI
 Most of the code, tests and documentation were written with an AI coding
-assistant, directed and reviewed by the team; many commits in the git history
-carry a Co-Authored-By trailer. The sounds are synthesized at run
-time by app/src/audio/engine.ts from NASA data, the home sounds are
+assistant (a large language model), directed and reviewed by the team. No
+generative image, video, music or voice model was used. The sounds are
+synthesized at run time by app/src/audio/engine.ts from NASA data, the home sounds are
 recordings made by people, and the globe pictures are NASA's. The team
 poster, demo videos and project document were assembled with AI assistance
 from screen recordings of the app and carry a visible "AI-assisted (SI)" mark.
