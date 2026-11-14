@@ -1,0 +1,31 @@
+name: Deploy tested site snapshot
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: Successful build run containing the hearthbeat-site artifact
+        required: true
+        default: '43597421494'
+
+permissions:
+  actions: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.pages.outputs.page_url }}
+    steps:
+      - name: Download previously tested site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download '${{ inputs.run_id }}' --repo '${{ github.repository }}' --name hearthbeat-site --dir site
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: pages
+        uses: actions/deploy-pages@v4
