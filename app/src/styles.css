@@ -293,6 +293,11 @@ kbd { font-family: var(--f); font-size: .62rem; font-weight: 500; color: var(--f
   .g-title { font-size: clamp(1.4rem, 8vw, 3rem); letter-spacing: .18em; padding-left: .18em; white-space: nowrap; overflow-wrap: normal; }
   .viz { height: min(47vh, 500px); min-height: 300px; }
 }
+/* wide screens: above about 1000px the title (5.4vw) is wider than the 640px column. Centre it over the column so it
+   spills evenly on both sides; otherwise it widens the column to the right and the whole start screen sits off-centre */
+@media (min-width: 861px) {
+  .g-title { max-width: none; justify-self: center; margin-inline: -200px; }
+}
 
 /* ---- stethoscope concept: start screen, check-ups, vital signs ---- */
 .g-tag { margin: -6px 0 0; font-size: clamp(1.1rem, 2.4vw, 1.5rem); font-weight: 300; letter-spacing: .01em; color: var(--ink); }
