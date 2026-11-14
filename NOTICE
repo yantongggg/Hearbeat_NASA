@@ -28,7 +28,11 @@ Other material
 - Libraries: three.js (MIT), d3-geo (ISC), topojson-client (ISC), Vite (MIT),
   Vitest (MIT), Playwright (Apache-2.0), axe-core (MPL-2.0), TypeScript
   (Apache-2.0); numpy (BSD-3-Clause), Pillow (MIT-CMU), requests (Apache-2.0),
-  netCDF4 (MIT), reportlab (BSD-3-Clause).
+  netCDF4 (MIT), reportlab (BSD-3-Clause), certifi (MPL-2.0), pytest (MIT).
+- Tools used to make the project document, poster and videos (not shipped in
+  the app): Matplotlib (Matplotlib License, PSF-based) for the charts, FFmpeg
+  (LGPL-2.1+/GPL) for reading NASA's movies and editing the videos, and
+  qrcode-generator (MIT) for the poster's QR code.
 - Fonts, loaded from Google Fonts: Archivo and Noto Sans SC (SIL Open Font
   License 1.1).
 
